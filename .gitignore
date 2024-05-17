@@ -25,6 +25,7 @@
 
 # Visual Studio cache directory
 .vs/
+*.so
 
 # Gradle cache directory
 .gradle/
@@ -70,3 +71,4 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+2d Runner/Library/il2cpp_android_arm64-v8a/il2cpp_cache/linkresult_0ED9DEA64141A26CB4562A04A9957D25/libil2cpp.so

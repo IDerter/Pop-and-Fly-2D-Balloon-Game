@@ -1,0 +1,5 @@
+title  My\nTitle
+play   Buano
+opts   Configuraciones
+exit   Desconectarse
+    

@@ -1,0 +1,12 @@
+My Title
+Play
+Settings
+Exit
+Мое название
+Играть
+Параметры
+Выйти
+Titlo
+Jugar
+Configuraciones
+Desconectarse

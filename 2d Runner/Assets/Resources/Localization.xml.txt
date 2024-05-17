@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Keys xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Key Name="Play">
+		<Translates>
+			<en-us>Play</en-us>
+			<ru>Играть</ru>
+			<ua>Jugar</ua>
+		</Translates>
+	</Key>
+	<Key Name="Exit">
+		<Translates>
+			<en-us>Exit</en-us>
+			<ru>Выйти</ru>
+			<ua>Salida</ua>
+		</Translates>
+	</Key>
+	<Key Name="Settings">
+		<Translates>
+			<en-us>Settings</en-us>
+			<ru>Настройки</ru>
+			<ua>Configuraciones</ua>
+		</Translates>
+	</Key>
+	<Key Name="Language">
+		<Translates>
+			<en-us>Languages</en-us>
+			<ru>Языки</ru>
+			<ua>Idiomas</ua>
+		</Translates>
+	</Key>
+	<Key Name="Are you sure you want to quit the game?">
+		<Translates>
+			<en-us>Are you sure you want to quit the game?</en-us>
+			<ru>Вы уверены что хотите выйти из игры?</ru>
+			<ua>¿Estás segura de que quieres salir del juego?</ua>
+		</Translates>
+	</Key>
+	<Key Name="Yes">
+		<Translates>
+			<en-us>Yes</en-us>
+			<ru>Да</ru>
+			<ua>Si</ua>
+		</Translates>
+	</Key>
+	<Key Name="No">
+		<Translates>
+			<en-us>No</en-us>
+			<ru>Нет</ru>
+			<ua>No</ua>
+		</Translates>
+	</Key>
+	<Key Name="Return">
+		<Translates>
+			<en-us>Return</en-us>
+			<ru>Вернуться</ru>
+			<ua>Regreso</ua>
+		</Translates>
+	</Key>
+	<Key Name="Restart">
+		<Translates>
+			<en-us>Restart</en-us>
+			<ru>Рестарт</ru>
+			<ua>Reiniciar</ua>
+		</Translates>
+	</Key>
+	<Key Name="Click">
+		<Translates>
+			<en-us>Click on the highlighted part of the screen to move to the corresponding side</en-us>
+			<ru>Нажмите на выделенную часть экрана, чтобы переместиться на соответствующую сторону</ru>
+			<ua>Haga clic en la parte resaltada de la pantalla para moverse al lado correspondiente</ua>
+		</Translates>
+	</Key>
+	<Key Name="Collect green balls but watch out for enemies of red blue and yellow">
+		<Translates>
+			<en-us>Collect green balls but watch out for enemies of red blue and yellow</en-us>
+			<ru>Собирай зеленые шарики, но остерегайся врагов красного, синего и желтого цвета</ru>
+			<ua>Recoge bolas verdes pero ten cuidado con los enemigos de rojo, azul y amarillo.</ua>
+		</Translates>
+	</Key>
+	<Key Name="You only have 1 life so collect magnets and shields to play longer. The shield grants invulnerability for 5 seconds">
+		<Translates>
+			<en-us>You only have 1 life so collect magnets and shields to play longer. The shield grants invulnerability for 5 seconds</en-us>
+			<ru>У тебя всего 1 жизнь, поэтому собирай магниты и щиты для того,чтобы играть дольше. Щит дает неуязвимость на 5 секунд</ru>
+			<ua>Solo tienes 1 vida, así que recolecta imanes y escudos para jugar más tiempo. El escudo otorga invulnerabilidad durante 5 segundos.</ua>
+		</Translates>
+	</Key>
+	<Key Name="Collect 10 points to complete the tutorial">
+		<Translates>
+			<en-us>Collect 10 points to complete the tutorial</en-us>
+			<ru>Чтобы завершить обучение наберите 10 очков</ru>
+			<ua>Obtén 10 puntos para completar el tutorial</ua>
+		</Translates>
+	</Key>
+	<Key Name="Complete the tutorial?">
+		<Translates>
+			<en-us>Complete the tutorial?</en-us>
+			<ru>Завершить туториал?</ru>
+			<ua>¿Completa el tutorial?</ua>
+		</Translates>
+	</Key>
+	<Key Name="The best score:">
+		<Translates>
+			<en-us>The best score:</en-us>
+			<ru>Лучший счет:</ru>
+			<ua>La mejor puntuación:</ua>
+		</Translates>
+	</Key>
+	<Key Name="Try again">
+		<Translates>
+			<en-us>Try again</en-us>
+			<ru>Попробуйте снова</ru>
+			<ua>Inténtalo de nuevo</ua>
+		</Translates>
+	</Key>
+	<Key Name="Reborn?">
+		<Translates>
+			<en-us>Reborn?</en-us>
+			<ru>Возродиться?</ru>
+			<ua>¿Renacido?</ua>
+		</Translates>
+	</Key>
+	<Key Name="Your Score:">
+		<Translates>
+			<en-us>Your Score:</en-us>
+			<ru>Ваш Результат:</ru>
+			<ua>Tu resultado:</ua>
+		</Translates>
+	</Key>
+	<Key Name="Score x2">
+		<Translates>
+			<en-us>Score x2</en-us>
+			<ru>Результат x2</ru>
+			<ua>Resultado x2</ua>
+		</Translates>
+	</Key>
+	<Key Name="Continue">
+		<Translates>
+			<en-us>Continue</en-us>
+			<ru>Продолжить</ru>
+			<ua>Continuar</ua>
+		</Translates>
+	</Key>
+	<Key Name="Now you are not afraid of the blue enemy, because now it does not damage the hero!">
+		<Translates>
+			<en-us>Now you are not afraid of the blue enemy, because now it does not damage the hero!</en-us>
+			<ru>Теперь вам не страшен синий враг, т.к теперь он не наносит урон герою!</ru>
+			<ua>¡Ahora no le tienes miedo al enemigo azul, porque ahora no daña al héroe!</ua>
+		</Translates>
+	</Key>
+	<Key Name="The magnet is given initially and does not disappear until death">
+		<Translates>
+			<en-us>The magnet is given initially and does not disappear until death</en-us>
+			<ru>Магнит дается изначально и не пропадает до смерти</ru>
+			<ua>El imán se administra inicialmente y no desaparece hasta la muerte.</ua>
+		</Translates>
+	</Key>
+	<Key Name="The red enemy does not damage you!">
+		<Translates>
+			<en-us>The red enemy does not damage you!</en-us>
+			<ru>Красный враг не наносит вам урона!</ru>
+			<ua>¡El enemigo rojo no te hace daño!</ua>
+		</Translates>
+	</Key>
+	<Key Name="The number of coins picked is doubled">
+		<Translates>
+			<en-us>The number of coins picked is doubled</en-us>
+			<ru>Количество подобранных монет увеличивается вдвое</ru>
+			<ua>El número de monedas recogidas se duplica.</ua>
+		</Translates>
+	</Key>
+	<Key Name="Character speed increases!">
+		<Translates>
+			<en-us>Character speed increases!</en-us>
+			<ru>Скорость персонажа увеличивается!</ru>
+			<ua>¡La velocidad de los personajes aumenta!</ua>
+		</Translates>
+	</Key>
+	<Key Name="The most tolerant skin!">
+		<Translates>
+			<en-us>The most tolerant skin!</en-us>
+			<ru>Самый толерантный скин!</ru>
+			<ua>¡La piel más tolerante!</ua>
+		</Translates>
+	</Key>
+	<Key Name="Now you are not afraid of the yellow enemy, because now it does not damage the hero!">
+		<Translates>
+			<en-us>Now you are not afraid of the yellow enemy, because now it does not damage the hero!</en-us>
+			<ru>Теперь вам не страшен желтый враг, ведь теперь он не наносит урон герою!</ru>
+			<ua>¡Ahora no le tienes miedo al enemigo amarillo, porque ahora no daña al héroe!</ua>
+		</Translates>
+	</Key>
+	<Key Name="The iron enemy can be killed by clicking on it on the screen.">
+		<Translates>
+			<en-us>The iron enemy can be killed by clicking on it on the screen.</en-us>
+			<ru>Железного врага можно убить, нажав по нему на экране.</ru>
+			<ua>El enemigo de hierro puede morir haciendo clic en él en la pantalla.</ua>
+		</Translates>
+	</Key>
+	<Key Name="Now you are not afraid: red, blue, yellow and iron enemies, because now they do not cause damage to the hero!">
+		<Translates>
+			<en-us>Now you are not afraid: red, blue, yellow and iron enemies, because now they do not cause damage to the hero!</en-us>
+			<ru>Теперь вам не страшен: красный, синий, желтый и железный враг, ведь теперь они не наносят урон герою!</ru>
+			<ua>Ahora no tienes miedo: enemigos rojos, azules, amarillos y de hierro, ¡porque ahora no dañan al héroe!</ua>
+		</Translates>
+	</Key>
+	<Key Name="Snow location">
+		<Translates>
+			<en-us>Snow location</en-us>
+			<ru>Снежная локация</ru>
+			<ua>Ubicación de la nieve</ua>
+		</Translates>
+	</Key>
+	<Key Name="Swamp location">
+		<Translates>
+			<en-us>Swamp location</en-us>
+			<ru>Болотная локация</ru>
+			<ua>Ubicación del pantano</ua>
+		</Translates>
+	</Key>
+	<Key Name="Fiery location">
+		<Translates>
+			<en-us>Fiery location</en-us>
+			<ru>Огненная локация</ru>
+			<ua>Ubicación ardiente</ua>
+		</Translates>
+	</Key>
+	<Key Name="Regular skin">
+		<Translates>
+			<en-us>Regular skin</en-us>
+			<ru>Обычный скин</ru>
+			<ua>Piel normal</ua>
+		</Translates>
+	</Key>
+	<Key Name="Skip">
+		<Translates>
+			<en-us>Skip</en-us>
+			<ru>Пропустить</ru>
+			<ua>Omitir</ua>
+		</Translates>
+	</Key>
+	<Key Name="MusicOff">
+		<Translates>
+			<en-us>MusicOff</en-us>
+			<ru>ВыклАудио</ru>
+			<ua>Aplamúsica</ua>
+		</Translates>
+	</Key>
+	<Key Name="MusicOn">
+		<Translates>
+			<en-us>MusicOn</en-us>
+			<ru>ВклАудио</ru>
+			<ua>Apmúsica</ua>
+		</Translates>
+	</Key>
+	<Key Name="Дается дополнительная жизнь">
+		<Translates>
+			<en-us>Extra life is given</en-us>
+			<ru>Дается дополнительная жизнь</ru>
+			<ua>Se da vida extra</ua>
+		</Translates>
+	</Key>
+</Keys>

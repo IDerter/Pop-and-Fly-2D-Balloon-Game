@@ -1,0 +1,5 @@
+title  MyGreat\nGame
+play   Play
+opts   Settings
+exit   Exit
+    
