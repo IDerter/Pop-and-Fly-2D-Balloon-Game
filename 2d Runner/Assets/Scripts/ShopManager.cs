@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using GooglePlayGames;
-using GooglePlayGames.BasicApi;
 using UnityEngine.SocialPlatforms;
+
 [RequireComponent(typeof(TextMeshProUGUI))]
 public class ShopManager : MonoBehaviour {
     public Image button1;
@@ -52,20 +51,12 @@ public class ShopManager : MonoBehaviour {
         countopenskin = PlayerPrefs.GetInt("CountSkin");
         score = PlayerPrefs.GetInt("coin");
         scoreText.text = score.ToString();
-        score1 = PlayerPrefs.GetInt("coin1");
-        score1Text.text = score1.ToString();
         priceText.text = price[index].ToString();
         //priceTextyellow.text = priceyellow[index].ToString();
         Skin();
         //SetLanguage = PlayerPrefs.GetInt("KeyId");
     }
-    private void GetTheAchiv(string id)
-    {
-        Social.ReportProgress(id, 100.0f, (bool success) =>
-        {
-            if (success) print("Получено достижение" + id);
-        });
-    }
+  
     public void Update()
     {
        
@@ -764,7 +755,6 @@ public class ShopManager : MonoBehaviour {
                 PlayerPrefs.SetInt("CountSkin", countopenskin);
                 if(PlayerPrefs.GetInt("CountSkin") == 14)
                     {
-                    GetTheAchiv(achiv5);
                     Debug.Log("Моднявый!!!");
                 }
             }
@@ -780,7 +770,6 @@ public class ShopManager : MonoBehaviour {
                 PlayerPrefs.SetInt("CountSkin", countopenskin);
                 if (PlayerPrefs.GetInt("CountSkin") == 14)
                 {
-                    GetTheAchiv(achiv5);
                     Debug.Log("Моднявый!!!");
                 }
             }

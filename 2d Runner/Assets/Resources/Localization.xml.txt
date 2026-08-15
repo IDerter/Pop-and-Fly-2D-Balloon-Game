@@ -259,4 +259,32 @@
 			<ua>Se da vida extra</ua>
 		</Translates>
 	</Key>
+	<Key Name="game_over_title">
+		<Translates>
+			<en-us>AM NYAM IS HUNGRY</en-us>
+			<ru>АМ НЯМ ГОЛОДЕН</ru>
+			<ua>AM NYAM TIENE HAMBRE</ua>
+		</Translates>
+	</Key>
+	<Key Name="score_label">
+		<Translates>
+			<en-us>SCORE</en-us>
+			<ru>СЧЕТ</ru>
+			<ua>PUNTUACIÓN</ua>
+		</Translates>
+	</Key>
+	<Key Name="record_label">
+		<Translates>
+			<en-us>BEST</en-us>
+			<ru>РЕКОРД</ru>
+			<ua>MEJOR</ua>
+		</Translates>
+	</Key>
+	<Key Name="reborn_button">
+		<Translates>
+			<en-us>Reborn</en-us>
+			<ru>Возродиться</ru>
+			<ua>Renacer</ua>
+		</Translates>
+	</Key>
 </Keys>

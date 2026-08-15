@@ -2,7 +2,7 @@
 using UnityEngine;
 using System.Xml;
 
-public class ManagerLocalization : MonoBehaviour
+public class ManagerLocalization : SingletonBase<ManagerLocalization>
 {
     public static int SelectedLanguage { get; private set; }
 
@@ -13,16 +13,20 @@ public class ManagerLocalization : MonoBehaviour
 
     [SerializeField]
     private TextAsset textFile;
-    private void Start()
+
+    protected override void Awake()
     {
-        SelectedLanguage = PlayerPrefs.GetInt("KeyId", SelectedLanguage); //присваиваем значение из PlayerPrefs(сохранения)
-        SetLanguage(SelectedLanguage);
-    }
-    private void Awake()
-    {
-        
+        // Обязательно вызываем базовый Awake, чтобы сработал SingletonBase (проверка дубликатов и DontDestroyOnLoad)
+        base.Awake();
+
         if (localization == null)
             LoadLocalization();
+    }
+
+    private void Start()
+    {
+        SelectedLanguage = PlayerPrefs.GetInt("KeyId", SelectedLanguage); // присваиваем значение из PlayerPrefs (сохранения)
+        SetLanguage(SelectedLanguage);
     }
 
     public void SetLanguage(int id)
@@ -31,9 +35,9 @@ public class ManagerLocalization : MonoBehaviour
         Debug.Log("Selectedlanguage");
         PlayerPrefs.SetInt("KeyId", SelectedLanguage);
         OnLanguageChange?.Invoke();
-        panelloc.SetActive(false);
-
-        //PlayerPrefs.SetInt(key, (int) SelectedLanguage);
+        
+        if (panelloc != null)
+            panelloc.SetActive(false);
     }
 
     private void LoadLocalization()
@@ -61,11 +65,9 @@ public class ManagerLocalization : MonoBehaviour
         if (languageId == -1)
             languageId = SelectedLanguage;
         
-
-        if (localization.ContainsKey(key))
+        if (localization != null && localization.ContainsKey(key))
             return localization[key][languageId];
         
         return key;
-        
     }
 }

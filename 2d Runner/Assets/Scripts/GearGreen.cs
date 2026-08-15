@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using DG.Tweening; 
 
 public class GearGreen : MonoBehaviour
 {
@@ -13,57 +12,95 @@ public class GearGreen : MonoBehaviour
     public GameObject sound;
     public bool IsEntrance = true;
     public CircleCollider2D collider2d;
+    public SpriteRenderer spriteRenderer;
     public SetSkin scriptskin;
+
     void Start()
     {
         anim = GetComponent<Animator>();
-        GameObject.Find("AllObjectOnScene");
-        scriptskin = GameObject.FindGameObjectWithTag("Player").GetComponent<SetSkin>();
+        
+        if (spriteRenderer == null)
+        {
+            spriteRenderer = GetComponent<SpriteRenderer>();
+        }
+
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        if (playerObj != null)
+        {
+            scriptskin = playerObj.GetComponent<SetSkin>();
+        }
     }
+
     private void FixedUpdate()
     {
-        scriptskin = GameObject.FindGameObjectWithTag("Player").GetComponent<SetSkin>();
         transform.Translate(Vector2.down * speed);
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject.CompareTag("Enemy"))
         {
-           
             Instantiate(effect, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
-        else if(other.gameObject.tag == "CentrePlayer")
+        else if (other.gameObject.CompareTag("CentrePlayer"))
         {
             speed = 0f;
         }
-        if (other.CompareTag("Player") &&IsEntrance == true&&scriptskin.index!=7)
+        
+        // Столкновение с игроком (Ам Нямом)
+        else if (other.CompareTag("Player") && IsEntrance == true)
         {
-            other.GetComponent<Player>().score += yellowballon;
-            other.GetComponent<Player>().coin += yellowballon;
+            Player playerScript = other.GetComponent<Player>();
+            
+            if (playerScript != null)
+            {
+                // 1. Анимация еды и "глоток" персонажа
+                playerScript.PlayEatJuice();
+
+                // 2. Начисление очков через наш новый метод с событием (х2 для 7-го скина)
+                int pointsToAdd = yellowballon;
+               // if (scriptskin != null && scriptskin.index == 7) // пока отключаю, потом можно добавить x2 от скина
+               // {
+              //      pointsToAdd *= 2;
+              //  }
+
+                // Вызываем метод AddScore, который триггерит событие для UI!
+                playerScript.AddScore(pointsToAdd);
+            }
+
+            // 3. Звук и эффекты
             Instantiate(sound, transform.position, Quaternion.identity);
             IsEntrance = false;
-            anim.SetInteger("greenfly", 2);
+            
+            if (anim != null) 
+            {
+                anim.SetInteger("greenfly", 2);
+            }
+            
             Instantiate(effect, transform.position, Quaternion.identity);
-            Destroy(gameObject,0.5f);
-         
+
+            // 4. Мгновенное удаление с растворением (Fade Out)
+            if (collider2d != null) collider2d.enabled = false;
+            
+            if (spriteRenderer != null)
+            {
+                spriteRenderer.DOFade(0f, 0.15f).OnComplete(() => Destroy(gameObject));
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+            
+            return;
         }
-        else if(other.CompareTag("Player") && IsEntrance == true && scriptskin.index == 7)
-        {
-            other.GetComponent<Player>().score += yellowballon+yellowballon;
-            other.GetComponent<Player>().coin += yellowballon + yellowballon;
-            Instantiate(sound, transform.position, Quaternion.identity);
-            IsEntrance = false;
-            anim.SetInteger("greenfly", 2);
-            Instantiate(effect, transform.position, Quaternion.identity);
-            Destroy(gameObject, 0.5f);
-        }
-        if (other.gameObject.tag == "DiagonalEnemy"|| other.gameObject.tag == "EnemyTeleport"|| other.gameObject.tag == "IronEnemy")
+        
+        else if (other.gameObject.CompareTag("DiagonalEnemy") || other.gameObject.CompareTag("EnemyTeleport") || other.gameObject.CompareTag("IronEnemy"))
         {
             Instantiate(effect, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
+        
         istrigger = true;
     }
-   
 }

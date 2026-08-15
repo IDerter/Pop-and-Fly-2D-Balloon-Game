@@ -1,27 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
+using TMPro;
 
 public class LocalizedText : MonoBehaviour
 {
-    [SerializeField]
-    private string key;
+    [SerializeField] private string key; // Ключ для локализации
 
-    private LocalizationManager localizationManager;
-    private Text text;
+    private TextMeshProUGUI textMesh;
 
     void Awake()
     {
-        if (localizationManager == null)
+        if (textMesh == null)
         {
-            localizationManager = GameObject.FindGameObjectWithTag("LocalizationManager").GetComponent<LocalizationManager>();
+            textMesh = GetComponent<TextMeshProUGUI>();
         }
-        if (text == null)
-        {
-            text = GetComponent<Text>();
-        }
-        //localizationManager.OnLanguageChanged += UpdateText;
     }
 
     void Start()
@@ -29,23 +20,29 @@ public class LocalizedText : MonoBehaviour
         UpdateText();
     }
 
-    private void OnDestroy()
+    private void OnEnable()
     {
-        //localizationManager.OnLanguageChanged -= UpdateText;
+        // Подписываемся на событие смены языка, чтобы текст обновлялся на лету
+        ManagerLocalization.OnLanguageChange += UpdateText;
     }
 
-    virtual protected void UpdateText()
+    private void OnDisable()
     {
-        if (gameObject == null) return;
+        // Обязательно отписываемся
+        ManagerLocalization.OnLanguageChange -= UpdateText;
+    }
 
-        if (localizationManager == null)
+    public void UpdateText()
+    {
+        if (textMesh == null)
         {
-            localizationManager = GameObject.FindGameObjectWithTag("LocalizationManager").GetComponent<LocalizationManager>();
+            textMesh = GetComponent<TextMeshProUGUI>();
         }
-        if (text == null)
+
+        if (textMesh != null && !string.IsNullOrEmpty(key))
         {
-            text = GetComponent<Text>();
+            // Обращаемся напрямую к синглтону через статический метод
+            textMesh.text = ManagerLocalization.GetTranslate(key);
         }
-        text.text = localizationManager.GetLocalizedValue(key);
     }
 }

@@ -1,0 +1,515 @@
+fileFormatVersion: 2
+guid: 526944f1268ed624591770ab32a403be
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_0"
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 584
+        width: 265
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c812871368435ab4abfea3af23da8702
+      internalID: -782802566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_1"
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 584
+        width: 263
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba19ba601e87dc341bc8ea1be6ffe9af
+      internalID: -1487202571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_2"
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 584
+        width: 263
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d4c532a36a02eb48a6fb002e1cb202c
+      internalID: 1911787107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_3"
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 584
+        width: 261
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8877ee1374798b40bbde55a036176c1
+      internalID: 652568432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_9"
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 391
+        width: 260
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f067fd32186b845a1c26ff1dae58f0
+      internalID: -1350791116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_10"
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 391
+        width: 262
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77973fa40cdfe534aba9cccf9bf5d525
+      internalID: -1245876664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_11"
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 388
+        width: 260
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78a10a28e36785b4e8ca1cac3f4e5885
+      internalID: 1531867408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_12"
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 391
+        width: 260
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecb4b9cd78c18c0479ced17b1df0d257
+      internalID: -682338317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_14"
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 199
+        width: 248
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b62c8b0f1fac6b649958c38e65b6b6ee
+      internalID: -1066817211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_15"
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 200
+        width: 255
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d57ec32e3fedf7c4299b894fae872467
+      internalID: -1272979078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_16"
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 201
+        width: 259
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e6edddff6a61204b9e43d5ae6736706
+      internalID: -763170627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_17"
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 200
+        width: 261
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e730002b24ca4b541a921110a46ef74a
+      internalID: -2127898821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_22"
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 8
+        width: 275
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71011460f9bbc7e4b8227e5544152272
+      internalID: 1495993255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_23"
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 8
+        width: 275
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ca67854849578c41879f299899b3111
+      internalID: -1262962984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_24"
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 9
+        width: 275
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6600f053e038a234586b02086011700d
+      internalID: 1873491047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_25"
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 8
+        width: 276
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad4b582dd5826ac468af9439ef1b028c
+      internalID: 81578047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_0": -782802566
+      "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_1": -1487202571
+      "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_10": -1245876664
+      "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_11": 1531867408
+      "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_12": -682338317
+      "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_13": -852156230
+      "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_14": -1066817211
+      "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_15": -1272979078
+      "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_16": -763170627
+      "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_17": -2127898821
+      "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_18": -2055013669
+      "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_19": -353782282
+      "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_2": 1911787107
+      "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_20": -422563266
+      "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_21": 22460460
+      "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_22": 1495993255
+      "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_23": -1262962984
+      "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_24": 1873491047
+      "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_25": 81578047
+      "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_3": 652568432
+      "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_4": 458954071
+      "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_5": -539381116
+      "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_6": -964399294
+      "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_7": 366159506
+      "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_8": -2067637067
+      "Green_monster_death_animation_sp\u2026_202608131717-Photoroom_9": -1350791116
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,33 +1,32 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SetSkin : MonoBehaviour {
-
     public int index;
-    [SerializeField] private Sprite[] bodySprite;//, leftHandSprite, rightHandSprite, leftFootSprite, rightFootSprite;
-    private SpriteRenderer body;//, leftHand, rightHand, leftFoot, rightFoot;
+    
+    // Вместо спрайтов теперь массив контроллеров анимаций для каждого скина
+    [SerializeField] private RuntimeAnimatorController[] skinControllers; 
+    
+    // Ссылка на аниматор (вешаем его на тот же объект, где раньше был SpriteRenderer)
+    private Animator animator; 
+
     private void Awake()
     {
         index = PlayerPrefs.GetInt("index");
+        // Предполагаем, что Animator висит на первом дочернем объекте, как и раньше
+        animator = transform.GetChild(0).GetComponent<Animator>();
     }
+
     private void Start()
     {
-        body = transform.GetChild(0).GetComponent<SpriteRenderer>();
-        //leftHand = transform.GetChild(1).GetComponent<SpriteRenderer>();
-        //rightHand = transform.GetChild(2).GetComponent<SpriteRenderer>();
-        //leftFoot = transform.GetChild(3).GetComponent<SpriteRenderer>();
-        // rightFoot = transform.GetChild(4).GetComponent<SpriteRenderer>();
-       
         UpdateSkin(index);
     }
 
     public void UpdateSkin(int index)
     {
-        body.sprite = bodySprite[index];
-       // leftHand.sprite = leftHandSprite[index];
-        //rightHand.sprite = rightHandSprite[index];
-       // leftFoot.sprite = leftFootSprite[index];
-        //rightFoot.sprite = rightFootSprite[index];
+        // Меняем логику контроллера, оставляя стейт-машину нетронутой
+        if (skinControllers.Length > index && skinControllers[index] != null)
+        {
+            animator.runtimeAnimatorController = skinControllers[index];
+        }
     }
 }

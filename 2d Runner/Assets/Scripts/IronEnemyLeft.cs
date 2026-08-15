@@ -1,8 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using GooglePlayGames;
-using GooglePlayGames.BasicApi;
 using UnityEngine.SocialPlatforms;
 public class IronEnemyLeft : MonoBehaviour
 {
@@ -20,13 +18,7 @@ public class IronEnemyLeft : MonoBehaviour
         scriptskin = GameObject.FindGameObjectWithTag("Player").GetComponent<SetSkin>();
         countenemies = PlayerPrefs.GetInt("CountIronEnemy");
     }
-    private void GetTheAchiv(string id)
-    {
-        Social.ReportProgress(id, 100.0f, (bool success) =>
-        {
-            if (success) print("Получено достижение" + id);
-        });
-    }
+
     // Update is called once per frame
     void Update()
     {
@@ -45,11 +37,6 @@ public class IronEnemyLeft : MonoBehaviour
         Instantiate(effect, transform.position, Quaternion.identity);
         countenemies += 1;
         PlayerPrefs.SetInt("CountIronEnemy", countenemies);
-        if (PlayerPrefs.GetInt("CountIronEnemy") >= 10)
-        {
-            GetTheAchiv(achiv8);
-            Debug.Log("YbrbnfLox");
-        }
     }
     void Achiv()
     {

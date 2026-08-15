@@ -1,21 +1,40 @@
 ﻿{
-"items":[
-{
-"key":"Russian",
-"value":"Russian"
-},
-{
-"key":"Play",
-"value":"Play"
-},
-"key":"Exit",
-"value":"Exit"
-},
-"key":"Settings",
-"value":"Settings"
-},
-"key":"Languages",
-"value":"Languages"
-},
-]
+  "items": [
+    {
+      "key": "Russian",
+      "value": "Russian"
+    },
+    {
+      "key": "Play",
+      "value": "Play"
+    },
+    {
+      "key": "Exit",
+      "value": "Exit"
+    },
+    {
+      "key": "Settings",
+      "value": "Settings"
+    },
+    {
+      "key": "Languages",
+      "value": "Languages"
+    },
+    {
+      "key": "reborn_button",
+      "value": "Reborn"
+    },
+    {
+      "key": "score_label",
+      "value": "SCORE"
+    },
+    {
+      "key": "record_label",
+      "value": "BEST"
+    },
+    {
+        "key": "game_over_title",
+        "value": "AM NYAM IS HUNGRY"
+    }
+  ]
 }

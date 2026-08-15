@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
 using System;
-using GooglePlayGames;
-using GooglePlayGames.BasicApi;
 using UnityEngine.SocialPlatforms;
 using UnityEngine.Advertisements;
 using System.Collections;
 public class SceneAchivandBoard : MonoBehaviour
 {
+    /*
     public GameObject buttonachiv;
     public GameObject buttontablelid;
     public static int countopen = 0;
@@ -14,8 +13,7 @@ public class SceneAchivandBoard : MonoBehaviour
     public void Awake()
     {
 
-        countopen = PlayerPrefs.GetInt("CountOpen");
-       /* PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().Build();
+        countopen = PlayerPrefs.GetInt("CountOpen"); PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().Build();
         PlayGamesPlatform.InitializeInstance(config);
         PlayGamesPlatform.Activate();
         Social.localUser.Authenticate((bool success) =>
@@ -27,7 +25,6 @@ public class SceneAchivandBoard : MonoBehaviour
             else
                 print("удачно вошел!");
         });
-        */
              if (countopen != 1)
              {
 
@@ -100,4 +97,5 @@ public class SceneAchivandBoard : MonoBehaviour
     {
         
     }
+    */
 }
