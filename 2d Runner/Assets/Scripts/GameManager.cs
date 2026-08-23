@@ -12,54 +12,36 @@ public class GameManager : MonoBehaviour
 
     [Header("Game Objects & Scripts")]
     public Player script;
-    public GameObject allobject;
-    public AudioSource sound;
-    public GameObject spawnergreen;
-    public GameObject spawneryellow;
+
     public SpriteRenderer player;
     public SpriteRenderer saw;
     public Spawner scriptspanwer;
-    public SpriteRenderer mainfon;
     public SpawnerYellowBallon[] scriptspawneryellowballon;
     public Rigidbody2D rb2d;
     
     [Header("Parallax & Backgrounds")]
-    public GameObject paralaxfonswamp;
-    public GameObject ParalaxFonFire;
-    public GameObject ParalaxFonSnow;
-    public GameObject spawnsnow;
-    public GameObject spawnsnowwhite;
-    public SetSkinFons script1;
     public GameOverUIManager gameOverUI;
 
     private bool isGameOver = false;
 
     private void Start()
     {
-        allobject.SetActive(true);
         canvas.SetActive(true);
         gameOverCanvas.SetActive(false); // Убеждаемся, что экран проигрыша скрыт при старте
     }
 
-    private void Update()
+    public void GameContinue()
     {
-        // Убрали сохранение счета отсюда ради оптимизации производительности
+        isGameOver = false;
 
-        // Включение нужных фонов (можно позже оптимизировать через Switch)
-        if (script1.index1 == 0)
-        {
-            paralaxfonswamp.SetActive(true);
-        }
-        else if (script1.index1 == 1)
-        {
-            ParalaxFonSnow.SetActive(true);
-            spawnsnow.SetActive(true);
-            spawnsnowwhite.SetActive(true);
-        }
-        else if (script1.index1 == 2)
-        {
-            ParalaxFonFire.SetActive(true);
-        }
+        // 1. Вызываем плавное скрытие вместо резкого gameOverCanvas.SetActive(false);
+        if (gameOverUI != null) gameOverUI.HidePanel();
+        
+        if (canvas != null) canvas.SetActive(true);
+
+        // 2. Включаем видимость персонажа и пилы
+        if (saw != null) saw.GetComponent<SpriteRenderer>().enabled = true;
+        if (player != null) player.GetComponent<SpriteRenderer>().enabled = true;
     }
 
     public void GameOver()
@@ -69,7 +51,6 @@ public class GameManager : MonoBehaviour
         isGameOver = true;
 
         // 1. Отключаем игровые объекты
-        allobject.SetActive(false);
         canvas.SetActive(false);
         saw.GetComponent<SpriteRenderer>().enabled = false;
         player.GetComponent<SpriteRenderer>().enabled = false;
@@ -91,14 +72,6 @@ public class GameManager : MonoBehaviour
 
         // 3. Запускаем красивую анимацию, передавая текущий счет и рекорд
         gameOverUI.AnimateGameOver(script.score, bestScore);
-
-        if (paralaxfonswamp.activeSelf) 
-        {
-            paralaxfonswamp.GetComponent<Paralax>().enabled = false;
-        }
-        // То же самое для других фонов, если они активны
-        if (ParalaxFonFire.activeSelf) ParalaxFonFire.GetComponent<Paralax>().enabled = false;
-        if (ParalaxFonSnow.activeSelf) ParalaxFonSnow.GetComponent<Paralax>().enabled = false;
     }
 
     public void Break()
@@ -112,7 +85,6 @@ public class GameManager : MonoBehaviour
         isGameOver = false;
 
         Debug.Log("GameStart");
-        allobject.SetActive(true);
         canvas.SetActive(true);
         gameOverCanvas.SetActive(false);
         saw.GetComponent<SpriteRenderer>().enabled = true;
@@ -125,7 +97,6 @@ public class GameManager : MonoBehaviour
     public void GameStartTrue()
     {
         Debug.Log("GameStartTrue");
-        allobject.SetActive(true);
         canvas.SetActive(true);
         gameOverCanvas.SetActive(false);
         saw.GetComponent<SpriteRenderer>().enabled = true;
@@ -137,14 +108,12 @@ public class GameManager : MonoBehaviour
             scriptspawneryellowballon[i].enabled = true;
         }
         
-        mainfon.GetComponent<SpriteRenderer>().sortingOrder = -5;
         rb2d.constraints = RigidbodyConstraints2D.None;
         rb2d.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
     public void Replay()
     {
-        Instantiate(sound, transform.position, Quaternion.identity);
         // Используем современный метод загрузки сцены вместо устаревшего Application.LoadLevel
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Перезагружает текущую сцену
     }

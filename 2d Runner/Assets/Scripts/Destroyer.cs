@@ -1,54 +1,65 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using DG.Tweening; // Обязательно подключаем DOTween
+using DG.Tweening;
 
 public class Destroyer : MonoBehaviour
 {
-    public float lifeTime = 6f; // Общее время жизни
-    public float fadeDuration = 1f; // За сколько секунд до смерти начинать анимацию
+    public float lifeTime = 6f; 
+    public float fadeDuration = 1f; 
+    
+    // НОВАЯ ГАЛОЧКА: по умолчанию включена для пула (врагов)
+    public bool isPooledObject = true; 
 
-    void Start()
+    private LineRenderer web;
+    private SpriteRenderer sprite;
+    private float defaultLineWidth;
+
+    private void Awake()
     {
-        // Запускаем корутину вместо обычного Destroy
+        web = GetComponentInChildren<LineRenderer>();
+        sprite = GetComponentInChildren<SpriteRenderer>();
+
+        if (web != null) defaultLineWidth = web.startWidth;
+    }
+
+    private void OnEnable()
+    {
+        if (web != null) { web.startWidth = defaultLineWidth; web.endWidth = defaultLineWidth; }
+        if (sprite != null) { sprite.DOKill(); sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 1f); }
+
         StartCoroutine(DestroyWithAnimation());
-    } 
+    }
+
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+        if (sprite != null) sprite.DOKill();
+        DOTween.Kill(this);
+    }
 
     IEnumerator DestroyWithAnimation()
     {
-        // 1. Ждем основное время жизни МИНУС время на анимацию
         float waitTime = lifeTime - fadeDuration;
-        if (waitTime > 0)
-        {
-            yield return new WaitForSeconds(waitTime);
-        }
+        if (waitTime > 0) yield return new WaitForSeconds(waitTime);
 
-        // ==========================================
-        // 2. НАЧИНАЕТСЯ КРАСИВАЯ АНИМАЦИЯ ИСЧЕЗНОВЕНИЯ
-        // ==========================================
-
-        // АНИМАЦИЯ ПАУТИНЫ: Ищем LineRenderer
-        LineRenderer web = GetComponentInChildren<LineRenderer>();
         if (web != null)
         {
-            // Берем текущую ширину и плавно сужаем её до нуля за fadeDuration секунд.
-            // Паутина будет выглядеть так, словно она истаяла в воздухе.
             float currentWidth = web.startWidth;
-            DOTween.To(() => currentWidth, x => { web.startWidth = x; web.endWidth = x; }, 0f, fadeDuration);
+            DOTween.To(() => currentWidth, x => { web.startWidth = x; web.endWidth = x; }, 0f, fadeDuration).SetId(this);
         }
 
-        // АНИМАЦИЯ САМОГО ВРАГА: Ищем SpriteRenderer
-        SpriteRenderer sprite = GetComponentInChildren<SpriteRenderer>();
-        if (sprite != null)
-        {
-            // Плавно растворяем врага (уводим альфа-канал в 0)
-            sprite.DOFade(0f, fadeDuration);
-        }
+        if (sprite != null) sprite.DOFade(0f, fadeDuration);
 
-        // 3. Ждем, пока анимация (fadeDuration) полностью проиграется
         yield return new WaitForSeconds(fadeDuration);
 
-        // 4. Окончательно удаляем пустой и прозрачный объект
-        Destroy(gameObject);
+        // ВОТ ОНО: Разделяем логику!
+        if (isPooledObject && gameObject.activeInHierarchy)
+        {
+            ObjectPoolManager.Instance.ReturnToPool(gameObject); // Враги идут в пул
+        }
+        else
+        {
+            Destroy(gameObject); // Папки Variant просто удаляются
+        }
     }
 }

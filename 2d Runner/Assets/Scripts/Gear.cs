@@ -5,57 +5,46 @@ using UnityEngine;
 public class Gear : MonoBehaviour
 {
     public float speed;
-    public Transform gear;//позиция красного шарика
+    public Transform gear; 
     public GameObject effect;
-    private Rigidbody2D rb2d;
     public GameObject sound;
-    public GameObject sound1;
-    public SetSkin scriptskin;
     public bool isdamage = true;
-    void Start()
+
+    // Срабатывает при доставании из пула — сбрасываем логику урона
+    private void OnEnable()
     {
-        GameObject.Find("AllObjectOnScene");
-        scriptskin = GameObject.FindGameObjectWithTag("Player").GetComponent<SetSkin>();
+        isdamage = true;
     }
 
     private void FixedUpdate()
     {
-        scriptskin = GameObject.FindGameObjectWithTag("Player").GetComponent<SetSkin>();
         transform.Translate(Vector2.down * speed);
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-
-        if (other.CompareTag("Player") && (scriptskin.index != 12 && scriptskin.index != 13)&&isdamage == true)
+        if (other.CompareTag("Player") && isdamage)
         {
-            Instantiate(effect, transform.position, Quaternion.identity);
-            Instantiate(sound, transform.position, Quaternion.identity);
-            other.GetComponent<Player>().health -= 1;
-            Destroy(gameObject);
+            if (effect != null) Instantiate(effect, transform.position, Quaternion.identity);
+            if (sound != null) Instantiate(sound, transform.position, Quaternion.identity);
+            
+            Player playerScript = other.GetComponent<Player>();
+            if (playerScript != null)
+            {
+                playerScript.health -= 1;
+            }
+            
             isdamage = false;
+            ObjectPoolManager.Instance.ReturnToPool(gameObject);
         }
-        else if (other.CompareTag("Player")&&(scriptskin.index == 12|| scriptskin.index == 13))
+        else if (other.CompareTag("DiagonalEnemy") || other.CompareTag("EnemyTeleport") || other.CompareTag("IronEnemy"))
         {
-            Instantiate(effect, transform.position, Quaternion.identity);
-            Instantiate(sound1, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            if (effect != null) Instantiate(effect, transform.position, Quaternion.identity);
+            ObjectPoolManager.Instance.ReturnToPool(gameObject);
         }
-        if (other.gameObject.tag == "DiagonalEnemy" || other.gameObject.tag == "EnemyTeleport" || other.gameObject.tag == "IronEnemy")
+        else if (other.CompareTag("Destroyer"))
         {
-
-            Instantiate(effect, transform.position, Quaternion.identity);
-            Destroy(gameObject);
-        }
-        if (other.CompareTag("Destroyer"))
-        {
-            Destroy(gameObject);
+            ObjectPoolManager.Instance.ReturnToPool(gameObject);
         }
     }
-
-
-    /*private void Update()
- {
-     scriptskin = GameObject.FindGameObjectWithTag("Player").GetComponent<SetSkin>();
- }
- */
 }

@@ -1,194 +1,219 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
+// Гарантирует наличие AudioSource на объекте
+[RequireComponent(typeof(AudioSource))]
 public class Menu : MonoBehaviour
 {
-    public GameObject panel;
-    public GameObject gameOverCanvas;
-    public GameObject Canvas;
-    public GameObject exitbutton;
-    public GameObject playbutton;
-    public GameObject settingsbutton;
-    public GameObject volume1button;
-    public GameObject volume2button;
-    public GameObject vkbutton;
-    public GameObject levelChanger;
-    public GameObject ExitPanel;
-    public GameObject PanelShop;
-    public GameObject mainfon;
-    public GameObject ButtonShopText;
-    public GameObject audiomusic;
-    public GameObject buttonmusic1;
-    public GameObject buttonmusic2;
-    public Animator anim;
-    public GameObject player;
-    public int LevelToLoad;
-    public GameObject exitmenu;
-    public static bool musicon = true;
-    //public GameObject Engbutton;
-    //public GameObject Rusbutton;
-    public GameObject panelLoc;
-    static int numberdeaths = 0;
-    public static int music = 0;
+    [Header("Панели и Холсты")]
+    [SerializeField] private GameObject mainMenuPanel;    // Родительский объект со всеми кнопками главного меню
+    [SerializeField] private GameObject settingsPanel;
+    [SerializeField] private GameObject exitConfirmPanel;
+    [SerializeField] private GameObject shopPanel;
+    [SerializeField] private GameObject localizationPanel;
+    [SerializeField] private GameObject backgroundFon;
+
+    [Header("Анимация и Персонаж")]
+    [SerializeField] private Animator fadeAnimator;
+    [SerializeField] private GameObject playerObject;
+
+    [Header("Настройки Аудио")]
+    [SerializeField] private GameObject musicSourceObject; // Объект, где висит фоновая музыка
+    [SerializeField] private GameObject musicOnButton;      // Кнопка "Вкл музыку"
+    [SerializeField] private GameObject musicOffButton;     // Кнопка "Выкл музыку"
+    [SerializeField] private GameObject soundOnButton;      // Кнопка "Вкл звук"
+    [SerializeField] private GameObject soundOffButton;     // Кнопка "Выкл звук"
+
+    [Header("Имена Сцен")]
+    [SerializeField] private string chooseLocationSceneName = "ChooseLocation";
+    [SerializeField] private string mainLevelSceneName = "MainLvl";
+
+    // Кэшированные компоненты
+    private AudioSource clickAudioSource;
+
+    // Состояния настроек
+    private static bool isMusicEnabled = true;
+    private static bool isSoundEnabled = true;
+
+    private const string MusicPrefsKey = "checkmusic"; // 0 - On, 1 - Off
+
+    private void Awake()
+    {
+        // Кэшируем компоненты при старте для производительности
+        clickAudioSource = GetComponent<AudioSource>();
+    }
 
     private void Start()
     {
-        if(musicon == false)
-        {
-            audiomusic.SetActive(false);
-        }
+        LoadSettings();
+        UpdateUI();
     }
-    public void FadeToLevel()
+
+    // --- ЛОГИКА ЗАГРУЗКИ И ПЕРЕКЛЮЧЕНИЯ ---
+
+    public void StartFadeToLevel()
     {
-        anim.SetTrigger("fade");
-        GetComponent<AudioSource>().Play();
+        PlayClickSound();
+        fadeAnimator.SetTrigger("fade");
     }
+
+    // Этот метод должен вызываться событием из анимации Fade
     public void OnFadeComplete()
     {
-        SceneManager.LoadScene(2);
+        // Загружаем сцену по индексу (как в старом скрипте)
+        SceneManager.LoadScene(2); 
     }
-        public void Settings()
-    {
-        GetComponent<AudioSource>().Play();
-        playbutton.SetActive(false);
-        exitbutton.SetActive(false);
-        settingsbutton.SetActive(false);
-        panel.SetActive(true);
-        volume1button.SetActive(true);
-        volume2button.SetActive(true);
-        player.SetActive(false);
-        exitmenu.SetActive(true);
-    }
-    public void OnClickExit()
-    {
-        GetComponent<AudioSource>().Play();
-        playbutton.SetActive(false);
-        exitbutton.SetActive(false);
-        settingsbutton.SetActive(false);
-        ExitPanel.SetActive(true);
-        player.SetActive(false);
 
-        //Application.Quit();
-    }
-    public void ExitPanel1()
+    public void PlayChooseLocation()
     {
-        GetComponent<AudioSource>().Play();
-        panel.SetActive(false);
-        playbutton.SetActive(true);
-        exitbutton.SetActive(true);
-        settingsbutton.SetActive(true);
-        player.SetActive(true);
-        exitmenu.SetActive(false);
+        PlayClickSound();
+        SceneManager.LoadScene(chooseLocationSceneName);
     }
-    public void Play()
-    {
-        GetComponent<AudioSource>().Play();
 
-        Application.LoadLevel("ChooseLocation");
-    }
-    public void PlayGame()
+    public void PlayMainLevel()
     {
-        GetComponent<AudioSource>().Play();
+        PlayClickSound();
+        SceneManager.LoadScene(mainLevelSceneName);
+    }
 
-        Application.LoadLevel("MainLvl");
-    }
-    public void Volume()
-    {
-        GetComponent<AudioSource>().Play();
-        AudioListener.volume = 1;
-        volume2button.SetActive(true);
-        volume1button.SetActive(false);
+    // --- УПРАВЛЕНИЕ ПАНЕЛЯМИ ---
 
-    }
-    public void MusicOff()
+    public void OpenSettings()
     {
-        GetComponent<AudioSource>().Play();
-        musicon = false;
-        audiomusic.SetActive(false);
-        buttonmusic2.SetActive(true);
-        buttonmusic1.SetActive(false);
-        music = 1;
-        PlayerPrefs.SetInt("checkmusic", music);
+        PlayClickSound();
+        SetMainElementsActive(false);
+        settingsPanel.SetActive(true);
     }
-    public void MusicOn()
-    {
-        GetComponent<AudioSource>().Play();
-        audiomusic.SetActive(true);
-        musicon = true;
-        buttonmusic2.SetActive(false);
-        buttonmusic1.SetActive(true);
-        music = 0;
-        PlayerPrefs.SetInt("checkmusic", music);
 
-    }
-    public void DontVolume()
+    public void CloseSettings()
     {
-        GetComponent<AudioSource>().Play();
-        AudioListener.volume = 0;
-        volume2button.SetActive(false);
-        volume1button.SetActive(true);
+        PlayClickSound();
+        settingsPanel.SetActive(false);
+        SetMainElementsActive(true);
     }
-    public void VK()
+
+    public void OpenExitConfirmation()
     {
-        GetComponent<AudioSource>().Play();
-        Application.OpenURL("https://vk.com/public181912670");
+        PlayClickSound();
+        SetMainElementsActive(false);
+        exitConfirmPanel.SetActive(true);
     }
-    public void OnClickNo()
+
+    public void CloseExitConfirmation()
     {
-        playbutton.SetActive(true);
-        exitbutton.SetActive(true);
-        settingsbutton.SetActive(true);
-        GetComponent<AudioSource>().Play();
-        ExitPanel.SetActive(false);
-        player.SetActive(true);
+        PlayClickSound();
+        exitConfirmPanel.SetActive(false);
+        SetMainElementsActive(true);
     }
-    public void OnClickYes()
+
+    public void OpenShop()
     {
-        GetComponent<AudioSource>().Play();
+        PlayClickSound();
+        shopPanel.SetActive(true);
+        // В старом коде фон и кнопки выключались. Правильнее выключать только кнопки.
+        mainMenuPanel.SetActive(false);
+    }
+
+    public void CloseShop()
+    {
+        PlayClickSound();
+        // В старом скрипте ExitShop перезагружал сцену "Menu". 
+        // Если это отдельная панель, лучше просто закрыть её.
+        shopPanel.SetActive(false);
+        mainMenuPanel.SetActive(true);
+
+        // Если Shop - это действительно отдельная сцена:
+        // SceneManager.LoadScene("Menu");
+    }
+
+    public void OpenLocalization()
+    {
+        PlayClickSound();
+        localizationPanel.SetActive(true);
+    }
+
+    public void CloseLocalization()
+    {
+        PlayClickSound();
+        localizationPanel.SetActive(false);
+    }
+
+    public void ConfirmQuitGame()
+    {
+        PlayClickSound();
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #else
         Application.Quit();
+        #endif
     }
-    public void ShopSceneOpen()
+
+    // --- НАСТРОЙКИ (АУДИО) ---
+
+    public void ToggleMusic()
     {
-        GetComponent<AudioSource>().Play();
-        Application.LoadLevel("Shop");
-    }
-    public void Shop()
-    {
-        GetComponent<AudioSource>().Play();
-        PanelShop.SetActive(true);
-        mainfon.SetActive(false);
-        settingsbutton.SetActive(false);
-        playbutton.SetActive(false);
-        exitbutton.SetActive(false);
-        ButtonShopText.SetActive(true);
-    }
-    public void ExitShop()
-    {
-        GetComponent<AudioSource>().Play();
-        Application.LoadLevel("Menu");
-       // PanelShop.SetActive(false);
-       // mainfon.SetActive(true);
-       // settingsbutton.SetActive(true);
-       // playbutton.SetActive(true);
-       // exitbutton.SetActive(true);
-       // ButtonShopText.SetActive(false);
-    }
-   public void Localizition()
-    {
-        GetComponent<AudioSource>().Play();
-        panelLoc.SetActive(true);
+        PlayClickSound();
+        isMusicEnabled = !isMusicEnabled;
         
-    }
-    public void ExitLocalizition()
-    {
-        GetComponent<AudioSource>().Play();
-        panelLoc.SetActive(false);
+        // Сохраняем состояние (0 - On, 1 - Off для совместимости со старым кодом)
+        PlayerPrefs.SetInt(MusicPrefsKey, isMusicEnabled ? 0 : 1);
+        PlayerPrefs.Save();
 
+        UpdateUI();
     }
-    public void Sound()
-    {
-        GetComponent<AudioSource>().Play();
 
+    public void ToggleSoundMute()
+    {
+        PlayClickSound();
+        isSoundEnabled = !isSoundEnabled;
+
+        // Управление общей громкостью игры
+        AudioListener.volume = isSoundEnabled ? 1f : 0f;
+
+        UpdateUI();
+    }
+
+    // --- ВСПОМОГАТЕЛЬНЫЕ МЕТОДЫ ---
+
+    private void PlayClickSound()
+    {
+        if (clickAudioSource != null && isSoundEnabled)
+        {
+            clickAudioSource.Play();
+        }
+    }
+
+    // Управляет видимостью основных элементов меню (персонажа, кнопок Play/Settings/Exit)
+    private void SetMainElementsActive(bool active)
+    {
+        if (mainMenuPanel != null) mainMenuPanel.SetActive(active);
+        if (playerObject != null) playerObject.SetActive(active);
+        // Фон обычно должен оставаться включенным
+    }
+
+    private void LoadSettings()
+    {
+        // Загружаем музыку. По умолчанию (если ключа нет) - Включена (0).
+        isMusicEnabled = PlayerPrefs.GetInt(MusicPrefsKey, 0) == 0;
+
+        // Звук (общий AudioListener) по умолчанию Включен
+        AudioListener.volume = isSoundEnabled ? 1f : 0f;
+    }
+
+    private void UpdateUI()
+    {
+        // Управление фоновой музыкой
+        if (musicSourceObject != null)
+        {
+            musicSourceObject.SetActive(isMusicEnabled);
+        }
+
+        // Обновление кнопок в настройках
+        if (musicOnButton != null) musicOnButton.SetActive(isMusicEnabled);
+        if (musicOffButton != null) musicOffButton.SetActive(!isMusicEnabled);
+
+        if (soundOnButton != null) soundOnButton.SetActive(isSoundEnabled);
+        if (soundOffButton != null) soundOffButton.SetActive(!isSoundEnabled);
     }
 }

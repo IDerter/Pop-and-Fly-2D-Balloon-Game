@@ -1,11 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Point : MonoBehaviour {
-    public GameObject gear;
-    void Start () {
+public class Point : MonoBehaviour 
+{
+    public GameObject gear; // Префаб конкретного врага (например, SpiderEnemy)
 
-        Instantiate(gear, transform.position, Quaternion.identity);
+    void Start () 
+    {
+        if (gear != null)
+        {
+            // ВАЖНО: Последний параметр — null! Враг появляется и летит сам по себе, 
+            // независимо от того, что произойдет с папкой Variant.
+            ObjectPoolManager.Instance.SpawnFromPool(gear, transform.position, Quaternion.identity, null);
+        }
     }
 }

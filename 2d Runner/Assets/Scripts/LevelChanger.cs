@@ -22,7 +22,6 @@ public class LevelChanger : MonoBehaviour
     public void FadeToLevel()
     {
         anim.SetTrigger("fade");
-        GetComponent<AudioSource>().Play();
     }
     public void OnFadeComplete()
     {

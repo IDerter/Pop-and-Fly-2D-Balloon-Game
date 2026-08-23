@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: UpgradeDescription Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: UpgradeDescription
+  m_TableCollectionNameGuidString: b4e1c1df6e8ad0f4f876aedda4ce3130
+  m_Entries:
+  - m_Id: 25707458560
+    m_Key: NoAds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23348864659456
+    m_Key: UpgradeShield
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33839053844480
+    m_Key: 'UpgradeMagnit
+
+'
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 997101447500529694
+  references:
+    version: 2
+    RefIds:
+    - rid: 997101447500529694
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1787492598661

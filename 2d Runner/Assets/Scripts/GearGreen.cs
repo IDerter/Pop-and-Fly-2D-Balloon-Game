@@ -9,25 +9,27 @@ public class GearGreen : MonoBehaviour
     public Transform yellowballon1;
     Animator anim;
     public bool istrigger = true;
-    public GameObject sound;
     public bool IsEntrance = true;
     public CircleCollider2D collider2d;
-    public SpriteRenderer spriteRenderer;
-    public SetSkin scriptskin;
 
-    void Start()
+    private float initialSpeed; // Чтобы помнить стартовую скорость
+
+    void Awake()
     {
         anim = GetComponent<Animator>();
-        
-        if (spriteRenderer == null)
-        {
-            spriteRenderer = GetComponent<SpriteRenderer>();
-        }
+        initialSpeed = speed; // Сохраняем исходную скорость
+    }
 
-        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-        if (playerObj != null)
+    // Срабатывает при рождении из пула — включаем всё обратно
+    private void OnEnable()
+    {
+        IsEntrance = true;
+        istrigger = true;
+        speed = initialSpeed; // Возвращаем скорость, если она сбрасывалась об CentrePlayer
+
+        if (collider2d != null)
         {
-            scriptskin = playerObj.GetComponent<SetSkin>();
+            collider2d.enabled = true; // Включаем коллайдер
         }
     }
 
@@ -41,36 +43,23 @@ public class GearGreen : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             Instantiate(effect, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            ObjectPoolManager.Instance.ReturnToPool(gameObject);
         }
         else if (other.gameObject.CompareTag("CentrePlayer"))
         {
             speed = 0f;
         }
-        
-        // Столкновение с игроком (Ам Нямом)
-        else if (other.CompareTag("Player") && IsEntrance == true)
+        else if (other.CompareTag("Player") && IsEntrance)
         {
             Player playerScript = other.GetComponent<Player>();
             
             if (playerScript != null)
             {
-                // 1. Анимация еды и "глоток" персонажа
                 playerScript.PlayEatJuice();
-
-                // 2. Начисление очков через наш новый метод с событием (х2 для 7-го скина)
-                int pointsToAdd = yellowballon;
-               // if (scriptskin != null && scriptskin.index == 7) // пока отключаю, потом можно добавить x2 от скина
-               // {
-              //      pointsToAdd *= 2;
-              //  }
-
-                // Вызываем метод AddScore, который триггерит событие для UI!
-                playerScript.AddScore(pointsToAdd);
+                playerScript.AddScore(yellowballon);
             }
 
-            // 3. Звук и эффекты
-            Instantiate(sound, transform.position, Quaternion.identity);
+            Sound.PopUp.Play();
             IsEntrance = false;
             
             if (anim != null) 
@@ -80,25 +69,15 @@ public class GearGreen : MonoBehaviour
             
             Instantiate(effect, transform.position, Quaternion.identity);
 
-            // 4. Мгновенное удаление с растворением (Fade Out)
             if (collider2d != null) collider2d.enabled = false;
             
-            if (spriteRenderer != null)
-            {
-                spriteRenderer.DOFade(0f, 0.15f).OnComplete(() => Destroy(gameObject));
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
-            
+            ObjectPoolManager.Instance.ReturnToPool(gameObject);
             return;
         }
-        
         else if (other.gameObject.CompareTag("DiagonalEnemy") || other.gameObject.CompareTag("EnemyTeleport") || other.gameObject.CompareTag("IronEnemy"))
         {
             Instantiate(effect, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            ObjectPoolManager.Instance.ReturnToPool(gameObject);
         }
         
         istrigger = true;

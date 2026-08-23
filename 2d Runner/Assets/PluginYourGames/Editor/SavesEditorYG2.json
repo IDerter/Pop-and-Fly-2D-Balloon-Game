@@ -1,0 +1,29 @@
+{
+    "stringKeys": [],
+    "stringValues": [],
+    "floatKeys": [],
+    "floatValues": [],
+    "intKeys": [],
+    "intValues": [],
+    "intExample": 5,
+    "strExample": "Hello!",
+    "boolExample": [
+        false,
+        false,
+        false,
+        false
+    ],
+    "idSave": 35,
+    "upgradeNames": [],
+    "upgradeLevels": [],
+    "coin": 0,
+    "bestScore": 0,
+    "completedTutorialSteps": [],
+    "musicVolume": 0.9982857704162598,
+    "soundsVolume": 0.977573037147522,
+    "isSFXEnabled": true,
+    "boughtStars": 0,
+    "lastDailyRewardDate": "",
+    "dailyRewardDayIndex": 0,
+    "isTutorialCompleted": false
+}

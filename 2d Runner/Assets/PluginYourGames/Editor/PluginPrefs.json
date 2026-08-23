@@ -1,0 +1,19 @@
+{
+    "stringPrefs": [
+        {
+            "key": "PluginYG_URLCloudInfo",
+            "value": "https://max-games.ru/public/pluginYG2/data.json"
+        },
+        {
+            "key": "SelectModuleToggle_YG2",
+            "value": "RewardedAdv;Leaderboards"
+        }
+    ],
+    "intPrefs": [
+        {
+            "key": "FirstStartup_YG2",
+            "value": 2
+        }
+    ],
+    "floatPrefs": []
+}

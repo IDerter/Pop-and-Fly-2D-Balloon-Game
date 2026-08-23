@@ -1,18 +1,43 @@
 using UnityEngine;
 using TMPro;
-using DG.Tweening; // Твой знакомый DOTween
+using DG.Tweening; 
 
 public class GameOverUIManager : MonoBehaviour
 {
     [Header("UI Elements")]
     public Transform cookiePanel;           // Сюда перетащи PanelCookie
-    public CanvasGroup backgroundDim;       // Сюда перетащи темный фон (добавь на него CanvasGroup, если нет)
+    public CanvasGroup backgroundDim;       // Сюда перетащи темный фон с CanvasGroup
     public TextMeshProUGUI currentScoreText; // Текст "1200"
     public TextMeshProUGUI bestScoreText;    // Текст рекорда "12"
 
+    // Срабатывает автоматически при gameObject.SetActive(true)
+    private void OnEnable()
+    {
+        if (backgroundDim != null)
+        {
+            backgroundDim.blocksRaycasts = true;
+        }
+    }
+
+    // Срабатывает автоматически при gameObject.SetActive(false)
+    private void OnDisable()
+    {
+        if (backgroundDim != null)
+        {
+            // Обязательно "убиваем" анимацию прозрачности, если она еще не успела закончиться
+            backgroundDim.DOKill(); 
+            
+            // Снимаем блокировку кликов
+            backgroundDim.blocksRaycasts = false; 
+            
+            // ВОТ ОН ФИКС: Сбрасываем прозрачность обратно в ноль!
+            backgroundDim.alpha = 0f; 
+        }
+    }
+
     public void AnimateGameOver(int currentScore, int bestScore)
     {
-        gameObject.SetActive(true);
+        gameObject.SetActive(true); // Это автоматически вызовет OnEnable()
 
         // 1. Сброс состояний (прячем печеньку, обнуляем счет)
         cookiePanel.localScale = Vector3.zero;
@@ -31,6 +56,24 @@ public class GameOverUIManager : MonoBehaviour
         });
     }
 
+    public void HidePanel()
+    {
+        // Убиваем текущие анимации, чтобы не было конфликтов
+        backgroundDim.DOKill();
+        cookiePanel.DOKill();
+
+        backgroundDim.blocksRaycasts = false;
+
+        // Плавно убираем затемнение
+        backgroundDim.DOFade(0f, 0.3f);
+
+        // Печенька "улетает" обратно, и только когда анимация закончится — выключаем объект
+        cookiePanel.DOScale(0f, 0.3f).SetEase(Ease.InBack).OnComplete(() =>
+        {
+            gameObject.SetActive(false);
+        });
+    }
+
     private void AnimateScoreUp(int targetScore)
     {
         int displayScore = 0;
@@ -41,7 +84,7 @@ public class GameOverUIManager : MonoBehaviour
             {
                 currentScoreText.text = displayScore.ToString();
                 
-                // Перенес твою логику изменения размера шрифта сюда!
+                // Логика изменения размера шрифта
                 if (displayScore >= 1000)
                 {
                     currentScoreText.fontSize = 60;

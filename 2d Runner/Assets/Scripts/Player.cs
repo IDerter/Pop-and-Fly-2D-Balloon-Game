@@ -7,6 +7,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SocialPlatforms;
 using DG.Tweening; 
+using YG;
 
 public class Player : MonoBehaviour 
 {
@@ -18,8 +19,6 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb2d;
     public Rigidbody2D rb;
     public CapsuleCollider2D collider2d;
-    public AudioSource sound;
-    public AudioSource soundenemy;
 
     [Header("Stats & Physics")]
     public int health = 1;
@@ -46,10 +45,7 @@ public class Player : MonoBehaviour
 
     [Header("Managers & Scripts")]
     public GameManager gameManager;
-    public SetSkin scriptskin;
     public Spawner scriptspanwer;
-    public Paralax script;
-    public Paralax script1;
     public Paralax backgroundParallax;
     public SpawnerYellowBallon[] scriptspawneryellowballon;
 
@@ -61,7 +57,6 @@ public class Player : MonoBehaviour
     public GameObject buttoncontinue, buttoncontinue10score, buttoncontinue1score;
     public GameObject leftfinger, rightfinger;
     public GameObject iconShield, iconMagnit;
-    public SpriteRenderer mainfon;
 
     [Header("Spawners & Objects")]
     public GameObject effect, lefteffect, righteffect;
@@ -87,15 +82,6 @@ public class Player : MonoBehaviour
     // Событие изменения счета (без Update!)
     public event Action<int> OnScoreChanged;
 
-    private const string achiv1 = "CgkIu-eNx_IEEAIQAQ";
-    private const string achiv2 = "CgkIu-eNx_IEEAIQAw";
-    private const string achiv3 = "CgkIu-eNx_IEEAIQBA";
-    private const string achiv4 = "CgkIu-eNx_IEEAIQBQ";
-    private const string achiv5 = "CgkIu-eNx_IEEAIQBg";
-    private const string achiv7 = "CgkIu-eNx_IEEAIQCA";
-    private const string achiv8 = "CgkIu-eNx_IEEAIQCg";
-    private const string achiv9 = "CgkIu-eNx_IEEAIQCw";
-    private const string leaderboard = "CgkIu-eNx_IEEAIQAA";
 
     private Vector3 defaultScale;
 
@@ -113,7 +99,6 @@ public class Player : MonoBehaviour
     {
         if (characterAnimator != null) characterAnimator.enabled = false; 
 
-        InitializeSkinAndHealth();
         InitializeBackgrounds();
 
         if ((test >= 1 && firsttest == 1) || firstgame == 0)
@@ -130,6 +115,25 @@ public class Player : MonoBehaviour
         if (newgame == 0 || a != 0) DisableTutorialUI();
     }
 
+    private void OnEnable()
+    {
+        RewardedAds.RewardOn += HandleRewardReceived;
+    }
+
+    private void OnDisable()
+    {
+        RewardedAds.RewardOn -= HandleRewardReceived;
+    }
+
+    // Обработчик награды
+    private void HandleRewardReceived(string rewardType)
+    {
+        if (rewardType == TypeReward.Reborn.ToString())
+        {
+            Reborn();
+        }
+    }
+
     private void Update()
     {
         if (health <= 0)
@@ -139,7 +143,6 @@ public class Player : MonoBehaviour
         }
 
         CheckScoreMilestones();
-        HandleMagnitSkinLogic();
     }
 
     private void FixedUpdate()
@@ -169,9 +172,9 @@ public class Player : MonoBehaviour
 
         if (firstclick == 1)
         {
-            Instantiate(sound, transform.position, Quaternion.identity);
+            Sound.PlayerSound.Play();
             DisableFingersUI();
-            ActivateCurrentSkinEnemies();
+            ActivateEnemies();
         }
 
         rb2d.velocity = new Vector2(speed * direction, rb2d.velocity.y);
@@ -191,7 +194,7 @@ public class Player : MonoBehaviour
         if (characterAnimator != null) characterAnimator.enabled = true; 
 
         ActivateBackgroundScripts();
-        ActivateCurrentSkinEnemies();
+        ActivateEnemies();
 
         texttap.SetActive(false);
         table.SetActive(false);
@@ -199,9 +202,6 @@ public class Player : MonoBehaviour
         panel2.SetActive(false);
 
         if (newgame == 1 && a == 0 && firstgameеtest1 == 1) ShowTutorialDialogs();
-
-        script1.enabled = true;
-        script.enabled = true;
     }
 
     // ==========================================
@@ -212,6 +212,7 @@ public class Player : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Invulnerable"))
         {
+            Sound.PopUp.Play();
             PlayEatJuice();
             IsDamage = false;
             health = 100;
@@ -222,6 +223,7 @@ public class Player : MonoBehaviour
         }
         else if (col.gameObject.CompareTag("Magnit"))
         {
+            Sound.PopUp.Play();
             PlayEatJuice();
             point.enabled = true;
             collider2d.enabled = true;
@@ -232,14 +234,13 @@ public class Player : MonoBehaviour
         }
         else if (col.gameObject.CompareTag("Ship"))
         {
-            Instantiate(soundenemy, transform.position, Quaternion.identity);
+            Sound.EnemyDie.Play();
             if (IsDamage) health = 0;
         }
     }
 
     private void HandleDeath()
     {
-        Invoke(nameof(TimeSleep), 0.5f);
         rb.constraints = RigidbodyConstraints2D.FreezePositionX;
 
         magnitobject.SetActive(false);
@@ -267,7 +268,51 @@ public class Player : MonoBehaviour
 
     public void achivOpen() { Social.ShowAchievementsUI(); }
     public void leaderboardOpen() { Social.ShowLeaderboardUI(); }
-    public void Reborn() { Invoke(nameof(ReloadLevel), 0f); }
+
+    // Обновленный метод возрождения
+    public void Reborn() 
+    {
+        // 1. Отменяем отложенные вызовы смерти/перезагрузки, если они висят в очереди
+        CancelInvoke(nameof(ReloadLevel));
+
+        // 2. Восстанавливаем здоровье и включаем временный щит (бессмертие на 3 сек)
+        health = 1;
+        IsDamage = false;
+        if (areol != null) areol.SetActive(true);
+        if (iconShield != null) iconShield.SetActive(true);
+        Invoke(nameof(ResetDamage), 3f);
+
+        // 3. Размораживаем физику и возвращаем возможность двигаться
+        rb.constraints = RigidbodyConstraints2D.None;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+        // 4. Включаем видимость спрайтов и сбрасываем анимацию смерти
+        if (player1 != null) player1.enabled = true;
+        if (saw != null) saw.GetComponent<SpriteRenderer>().enabled = true;
+        
+        if (characterAnimator != null) 
+        {
+            characterAnimator.Rebind(); 
+            characterAnimator.enabled = true;
+        }
+
+        // 5. Зачищаем ближайших врагов вокруг, чтобы сразу же снова не погибнуть
+        DestroyGameObjectsWithTags(new[] { "Enemy", "DiagonalEnemy", "EnemyTeleport" });
+
+        // 6. Перезапускаем спавнеры врагов
+        if (scriptspanwer != null) scriptspanwer.enabled = true;
+        foreach (var spawner in scriptspawneryellowballon) 
+        { 
+            if (spawner != null) spawner.enabled = true; 
+        }
+
+        // 7. Скрываем экран Game Over и возвращаем игровой HUD
+        if (gameManager != null)
+        {
+            gameManager.GameContinue(); 
+        }
+    }
+
     public void ButtonCoin2x() { buttoncoin2x.SetActive(true); }
     public void Coin() { Invoke(nameof(ReloadLevel), 0f); }
     public void Timescale() { Time.timeScale = 0f; }
@@ -320,7 +365,6 @@ public class Player : MonoBehaviour
             buttoncontinue1score.SetActive(false);
             buttonleft.SetActive(true);
             buttonright.SetActive(true);
-            script.enabled = true;
             Time.timeScale = 1f;
             buttonskip.SetActive(false);
         }
@@ -405,7 +449,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void ActivateCurrentSkinEnemies()
+    private void ActivateEnemies()
     {
         if (SpawnEnemy != null) SpawnEnemy.SetActive(true);
         if (SpawnGreenScore != null) SpawnGreenScore.SetActive(true);
@@ -421,27 +465,14 @@ public class Player : MonoBehaviour
         if (spawnerStones != null) spawnerStones.SetActive(true);
     }
 
-    private void InitializeSkinAndHealth()
-    {
-        if (scriptskin.index == 14) health = 2;
-        if (scriptskin.index == 8) speed = 8f;
-    }
-
     private void InitializeBackgrounds()
     {
         if (paralaxFon != null) paralaxFon.SetActive(true);
         if (allSpawns != null) allSpawns.SetActive(true);
     }
 
-    private void HandleMagnitSkinLogic()
-    {
-        if (scriptskin.index == 11) { point.enabled = true; collider2d.enabled = true; magnitobject.SetActive(true); abilkamagnit.SetActive(true); }
-    }
-
     private void ShowTutorialDialogs()
     {
-        script.enabled = true;
-        script1.enabled = true;
         textguide.SetActive(true);
         table.SetActive(true);
         buttoncontinue1score.SetActive(true);
@@ -463,7 +494,6 @@ public class Player : MonoBehaviour
     private void DisableTutorialUI() { texttap.SetActive(false); table.SetActive(false); leftfinger.SetActive(false); rightfinger.SetActive(false); }
     private void DisableFingersUI() { leftfinger.SetActive(false); rightfinger.SetActive(false); }
 
-    void TimeSleep() { mainfon.GetComponent<SpriteRenderer>().sortingOrder = 6; }
     void ShipTrigger() { if (ship1 != null) ship1.GetComponent<BoxCollider2D>().enabled = true; if (ship2 != null) ship2.GetComponent<BoxCollider2D>().enabled = true; if (ship1child != null) ship1child.SetActive(true); if (ship2child != null) ship2child.SetActive(true); }
     void ResetDamage() { health = 1; IsDamage = true; areol.SetActive(false); }
     void MagnitOff() { point.enabled = false; collider2d.enabled = false; magnitobject.SetActive(false); }
