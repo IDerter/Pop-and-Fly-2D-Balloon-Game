@@ -31,7 +31,7 @@ public class Gear : MonoBehaviour
             Player playerScript = other.GetComponent<Player>();
             if (playerScript != null)
             {
-                playerScript.health -= 1;
+                playerScript.TakeDamage();
             }
             
             isdamage = false;

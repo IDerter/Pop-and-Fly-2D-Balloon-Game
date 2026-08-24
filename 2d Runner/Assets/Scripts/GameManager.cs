@@ -1,136 +1,163 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro; // Подключаем библиотеку для красивого текста
+using YG; // Используем новую версию YG2
 
 public class GameManager : MonoBehaviour
 {
-    [Header("UI Elements")]
-    public GameObject gameOverCanvas;
-    public GameObject canvas;
-
-    [Header("Game Objects & Scripts")]
-    public Player script;
-
-    public SpriteRenderer player;
-    public SpriteRenderer saw;
-    public Spawner scriptspanwer;
-    public SpawnerYellowBallon[] scriptspawneryellowballon;
-    public Rigidbody2D rb2d;
+    [Header("Scripts")]
+    public Player player;
+    public GameOverUIManager gameOverUI; 
+    public MenuAndTutorialUi tutorialUI; 
     
-    [Header("Parallax & Backgrounds")]
-    public GameOverUIManager gameOverUI;
+    [Header("Basic Spawners (Start Immediately)")]
+    public Spawner mainSpawner;
+    public Spawner lollipopSpawner;
+    
+    [Header("Progression Spawners (Unlock by Score)")]
+    public Spawner spawnerShit;
+    public Spawner spawnerMagnet;
+    public Spawner spawnBeeEnemy;
+    public Spawner spawnGhostTeleportEnemy;
+    public Spawner spawnerStones;
+    public Spawner spawnerExplosion;
+    
+    [Header("World")]
+    public GameObject backgroundParallax; 
 
     private bool isGameOver = false;
+    
+    // БУФЕРНАЯ ПЕРЕМЕННАЯ: Отслеживает, сколько монет мы уже сохранили в текущем забеге
+    private int _coinsSavedThisRun = 0; 
+
+    private void OnEnable()
+    {
+        player.OnFirstClick += HandleGameStart;
+        player.OnPlayerDied += HandleGameOver;
+        player.OnScoreChanged += CheckScoreMilestones;
+    }
+
+    private void OnDisable()
+    {
+        player.OnFirstClick -= HandleGameStart;
+        player.OnPlayerDied -= HandleGameOver;
+        player.OnScoreChanged -= CheckScoreMilestones;
+    }
 
     private void Start()
     {
-        canvas.SetActive(true);
-        gameOverCanvas.SetActive(false); // Убеждаемся, что экран проигрыша скрыт при старте
+        DisableAllSpawners();
     }
 
-    public void GameContinue()
+    private void HandleGameStart()
     {
-        isGameOver = false;
-
-        // 1. Вызываем плавное скрытие вместо резкого gameOverCanvas.SetActive(false);
-        if (gameOverUI != null) gameOverUI.HidePanel();
+        tutorialUI.HideStartMenu();
         
-        if (canvas != null) canvas.SetActive(true);
-
-        // 2. Включаем видимость персонажа и пилы
-        if (saw != null) saw.GetComponent<SpriteRenderer>().enabled = true;
-        if (player != null) player.GetComponent<SpriteRenderer>().enabled = true;
+        if (mainSpawner) mainSpawner.enabled = true;
+        if (lollipopSpawner) lollipopSpawner.enabled = true;
+        
+        if (backgroundParallax) backgroundParallax.SetActive(true);
     }
 
-    public void GameOver()
+    private void CheckScoreMilestones(int score)
+    {
+        if (score >= 4)
+        {
+            if (spawnerShit) spawnerShit.enabled = true;
+            if (spawnerMagnet) spawnerMagnet.enabled = true;
+        }
+        
+        // ПРАВИЛЬНАЯ РАБОТА С YG2
+        if (score == 10 && !YG2.saves.isTutorialCompleted)
+        {
+            //tutorialUI.ShowTutorialEnd(); 
+            
+            YG2.saves.isTutorialCompleted = true;
+            YG2.SaveProgress();
+        }
+        
+        if (score >= 10 && spawnBeeEnemy) spawnBeeEnemy.enabled = true;
+        if (score >= 3 && spawnGhostTeleportEnemy) spawnGhostTeleportEnemy.enabled = true; // было 30 исправить
+        if (score >= 60 && spawnerStones) spawnerStones.enabled = true;
+        if (score >= 120 && spawnerExplosion) spawnerExplosion.enabled = true;
+    }
+
+    private void HandleGameOver()
     {
         if (isGameOver) return;
-
         isGameOver = true;
 
-        // 1. Отключаем игровые объекты
-        canvas.SetActive(false);
-        saw.GetComponent<SpriteRenderer>().enabled = false;
-        player.GetComponent<SpriteRenderer>().enabled = false;
-        
-        Destroy(GameObject.FindGameObjectWithTag("Enemy"), 0f);
-        Destroy(GameObject.FindGameObjectWithTag("DiagonalEnemy"), 0f);
-        Destroy(GameObject.FindGameObjectWithTag("EnemyTeleport"), 0f);
-        Debug.Log("Game Over triggered");
+        DisableAllSpawners();
+        ClearEnemies();
 
-        // 2. Логика сохранения лучшего счета (ОДИН раз при проигрыше)
-        int bestScore = PlayerPrefs.GetInt("Score0", 0);
-        if (script.score > bestScore)
+        // 1. ЛОГИКА СОХРАНЕНИЯ МОНЕТ С УЧЕТОМ ВОЗРОЖДЕНИЙ
+        int newCoins = player.score - _coinsSavedThisRun; 
+        
+        if (newCoins > 0)
         {
-            bestScore = script.score;
-            PlayerPrefs.SetInt("Score0", bestScore);
-            PlayerPrefs.Save();
-            Debug.Log("Новый рекорд сохранен!");
+            YG2.saves.coin += newCoins; // Добавляем в облако только новые монеты
+            _coinsSavedThisRun = player.score; // Запоминаем, что эти монеты уже учтены
         }
 
-        // 3. Запускаем красивую анимацию, передавая текущий счет и рекорд
-        gameOverUI.AnimateGameOver(script.score, bestScore);
+        // 2. Логика сохранения рекорда
+        if (player.score > YG2.saves.bestScore)
+        {
+            YG2.saves.bestScore = player.score;
+        }
+
+        // 3. Отправляем всё (и рекорд, и монеты) в облако Яндекса одним запросом
+        YG2.SaveProgress(); 
+
+        Invoke(nameof(ShowGameOverScreen), 1f);
     }
 
-    public void Break()
+    private void ShowGameOverScreen()
     {
-        gameOverCanvas.SetActive(true);
-        Debug.Log("Break");
+        gameOverUI.AnimateGameOver(player.score, YG2.saves.bestScore);
     }
 
-    public void GameStart()
+    // Этот метод нужно вызывать из вашего скрипта рекламы YG2
+    public void RevivePlayerAfterAd()
     {
         isGameOver = false;
+        CancelInvoke(nameof(ShowGameOverScreen));
 
-        Debug.Log("GameStart");
-        canvas.SetActive(true);
-        gameOverCanvas.SetActive(false);
-        saw.GetComponent<SpriteRenderer>().enabled = true;
-        player.GetComponent<SpriteRenderer>().enabled = true;
-        script.IsDamage = false;
-        Invoke("IsDamage", 5f);
-        Invoke("GameStartTrue", 0.5f);
+        ClearEnemies();
+        
+        if (mainSpawner) mainSpawner.enabled = true;
+        if (lollipopSpawner) lollipopSpawner.enabled = true;
+        CheckScoreMilestones(player.score); 
+        
+        gameOverUI.HidePanel(); 
+        player.Revive();
     }
 
-    public void GameStartTrue()
+    private void DisableAllSpawners()
     {
-        Debug.Log("GameStartTrue");
-        canvas.SetActive(true);
-        gameOverCanvas.SetActive(false);
-        saw.GetComponent<SpriteRenderer>().enabled = true;
-        player.GetComponent<SpriteRenderer>().enabled = true;
-        scriptspanwer.enabled = true;
+        if (mainSpawner) mainSpawner.enabled = false;
+        if (lollipopSpawner) lollipopSpawner.enabled = false;
         
-        for (int i = 0; i < scriptspawneryellowballon.Length; i++)
+        if (spawnerShit) spawnerShit.enabled = false;
+        if (spawnerMagnet) spawnerMagnet.enabled = false;
+        if (spawnBeeEnemy) spawnBeeEnemy.enabled = false;
+        if (spawnGhostTeleportEnemy) spawnGhostTeleportEnemy.enabled = false;
+        if (spawnerStones) spawnerStones.enabled = false;
+        if (spawnerExplosion) spawnerExplosion.enabled = false;
+    }
+
+    private void ClearEnemies()
+    {
+        string[] tagsToClear = { "Enemy", "DiagonalEnemy", "IronEnemy", "EnemyTeleport", "Invulnerable", "Magnit", "Score", "Ship" };
+        
+        foreach (string tag in tagsToClear)
         {
-            scriptspawneryellowballon[i].enabled = true;
+            GameObject[] objects = GameObject.FindGameObjectsWithTag(tag);
+            foreach (var obj in objects)
+            {
+                ObjectPoolManager.Instance.ReturnToPool(obj);
+            }
         }
-        
-        rb2d.constraints = RigidbodyConstraints2D.None;
-        rb2d.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
-    public void Replay()
-    {
-        // Используем современный метод загрузки сцены вместо устаревшего Application.LoadLevel
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Перезагружает текущую сцену
-    }
-
-    public void LoadMenu()
-    {
-        // Метод для кнопки "Домой"
-        SceneManager.LoadScene("MainMenu"); // Замени "MainMenu" на точное имя твоей сцены меню
-    }
-
-    public void IsDamage()
-    {
-        script.IsDamage = true;
-    }
-
-    public void OpenStatistic()
-    {
-        // Логика открытия статистики
-    }
+    public void RestartGame() { SceneManager.LoadScene(SceneManager.GetActiveScene().name); }
+    public void LoadMenu() { SceneManager.LoadScene("MainMenu"); }
 }

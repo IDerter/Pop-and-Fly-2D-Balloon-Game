@@ -20,7 +20,7 @@ public class Invulnerable : MonoBehaviour
             
             // Если ты уже перевел спавн этого объекта на Object Pool, 
             // замени Destroy на ObjectPoolManager.Instance.ReturnToPool(gameObject);
-            Destroy(gameObject); 
+            ObjectPoolManager.Instance.ReturnToPool(gameObject);
         }
     }
 }

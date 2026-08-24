@@ -10,6 +10,13 @@ public class GameOverUIManager : MonoBehaviour
     public TextMeshProUGUI currentScoreText; // Текст "1200"
     public TextMeshProUGUI bestScoreText;    // Текст рекорда "12"
 
+    private void Awake()
+    {
+        // Гарантируем, что панель выключена при старте сцены, 
+        // даже если вы забыли выключить галочку в инспекторе!
+        gameObject.SetActive(false); 
+    }
+
     // Срабатывает автоматически при gameObject.SetActive(true)
     private void OnEnable()
     {

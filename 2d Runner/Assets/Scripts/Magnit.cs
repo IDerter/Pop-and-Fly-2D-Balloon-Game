@@ -22,7 +22,7 @@ public class Magnit : MonoBehaviour
             if (effect != null) Instantiate(effect, transform.position, Quaternion.identity);
             
             // Замени на ObjectPoolManager.Instance.ReturnToPool(gameObject); если используешь пул
-            Destroy(gameObject);
+            ObjectPoolManager.Instance.ReturnToPool(gameObject);
         }
     }
 }

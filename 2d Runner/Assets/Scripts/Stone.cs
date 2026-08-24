@@ -1,54 +1,84 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Stone : MonoBehaviour
 {
+    [Header("Effects")]
     public GameObject effect;
-    public int damage = 1;
     public GameObject sound;
-    public Player script;
-    public SetSkinFons scriptnew;
+    
+    [Header("Settings")]
+    public int damage = 1;
     public bool isdamage = true;
+    
+    private Player script;
+    private SetSkinFons scriptnew;
     private const string achiv7 = "CgkIu-eNx_IEEAIQCA";
-    // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
-        script = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        scriptnew = GameObject.FindGameObjectWithTag("Image").GetComponent<SetSkinFons>();
+        // Ищем объекты только один раз при старте
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        if (playerObj != null) script = playerObj.GetComponent<Player>();
+
+        GameObject imageObj = GameObject.FindGameObjectWithTag("Image");
+        if (imageObj != null) scriptnew = imageObj.GetComponent<SetSkinFons>();
     }
 
-    // Update is called once per frame
-    void Update()
+    // ВАЖНО: Этот метод вызывается каждый раз, когда пул достает камень.
+    // Здесь мы сбрасываем все настройки до стандартных!
+    private void OnEnable()
     {
-        
+        isdamage = true;
     }
+
     private void GetTheAchiv(string id)
     {
         Social.ReportProgress(id, 100.0f, (bool success) =>
         {
-            if (success) print("Получено достижение" + id);
+            if (success) print("Получено достижение " + id);
         });
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "DiagonalEnemy" || collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "EnemyTeleport"|| collision.gameObject.tag == "Player" || collision.gameObject.tag == "IronEnemy")
+        // Используем CompareTag — это работает намного быстрее, чем collision.gameObject.tag == "..."
+        if (collision.gameObject.CompareTag("DiagonalEnemy") || 
+            collision.gameObject.CompareTag("Enemy") || 
+            collision.gameObject.CompareTag("EnemyTeleport") || 
+            collision.gameObject.CompareTag("Player") || 
+            collision.gameObject.CompareTag("IronEnemy"))
         {
             Debug.Log("Пшл нфг урд");
-            Instantiate(effect, transform.position, Quaternion.identity);
-            Instantiate(sound, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            SpawnEffects();
+            
+            // Заменили Destroy на возврат в пул
+            ObjectPoolManager.Instance.ReturnToPool(gameObject);
         }
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.tag == "Player"&&script.IsDamage == true&&isdamage == true)
+        if (other.CompareTag("Player") && isdamage)
         {
-            Instantiate(effect, transform.position, Quaternion.identity);
-            Instantiate(sound, transform.position, Quaternion.identity);
-            script.health = script.health -1;
-            Destroy(gameObject);
-            isdamage = false;
+            SpawnEffects();
+            
+            // Наносим урон
+            if (script != null)
+            {
+                script.TakeDamage();
+            }
+            
+            isdamage = false; // Блокируем повторный урон в этом же кадре
+            
+            // Заменили Destroy на возврат в пул
+            ObjectPoolManager.Instance.ReturnToPool(gameObject);
         }
+    }
+
+    // Вынес создание эффектов в отдельный метод, чтобы не дублировать код
+    private void SpawnEffects()
+    {
+        if (effect != null) Instantiate(effect, transform.position, Quaternion.identity);
+        if (sound != null) Instantiate(sound, transform.position, Quaternion.identity);
     }
 }

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 58753684201643770}
   - component: {fileID: 50730677142186768}
   - component: {fileID: 8648726818572457500}
+  - component: {fileID: 6183897348648893593}
   m_Layer: 0
   m_Name: 'BeeDiagonal '
   m_TagString: DiagonalEnemy
@@ -140,10 +141,7 @@ MonoBehaviour:
   gear: {fileID: 4878581820539010}
   effect: {fileID: 1615718917081576, guid: 8a47a024b3c7dab42893d77effc3080a, type: 3}
   sound: {fileID: 1195248989485196, guid: 7648c373f21bc8947ab98f3573670ebe, type: 3}
-  damage: 1
-  script: {fileID: 0}
   direction: {x: 0.018, y: -0.015}
-  scriptskin: {fileID: 0}
   isdamage: 1
 --- !u!58 &58753684201643770
 CircleCollider2D:
@@ -228,3 +226,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6183897348648893593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852038470321838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ce3c7bf3b1c1f488dccf16be521a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 12
+  fadeDuration: 1
+  isPooledObject: 1

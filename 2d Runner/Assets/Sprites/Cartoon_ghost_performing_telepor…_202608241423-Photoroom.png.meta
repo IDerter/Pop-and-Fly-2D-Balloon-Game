@@ -1,0 +1,508 @@
+fileFormatVersion: 2
+guid: 7ea62332a260a6f42808176525b5279f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_0"
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 786
+        width: 208
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d32de83678658446981b22eb08d2a1d
+      internalID: 1733368107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_1"
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 785
+        width: 208
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 492eae19691cc984f8af184d474bce22
+      internalID: -1730441259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_2"
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 787
+        width: 208
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ef31b9f0bf533249bb9dc76833cf1f7
+      internalID: 4872853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_3"
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 787
+        width: 208
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f286ebb2eb6c0e4b9694fb6764b7db6
+      internalID: -1598008340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_4"
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 531
+        width: 208
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49f1f9c93991fa54dadd630187ef8ba4
+      internalID: 1079512118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_7"
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 533
+        width: 208
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39cc3fffab1d9b14b8b63db87a5f8efd
+      internalID: 567540189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_9"
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 533
+        width: 208
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a35d37373194c248835473dfae0633a
+      internalID: 1193081079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_11"
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 284
+        width: 208
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d44bbdc4297b3f4bb144947260c2148
+      internalID: 1275694522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_12"
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 283
+        width: 208
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c7a66ec2d245e24b9ac1503fafd918d
+      internalID: -1133924461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_13"
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 282
+        width: 208
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3fb1c9bfd4feab4fbbbfdb9e4366754
+      internalID: -1793728612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_14"
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 282
+        width: 208
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71c6d82b5676f9243934d8e6f2303b1d
+      internalID: 342418446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_15"
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 20
+        width: 208
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99bf3d387c3f9f840b15a765db72a15a
+      internalID: 175639967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_16"
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 21
+        width: 208
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757d3034b93b17e448fbf767c4b2e9af
+      internalID: 1310098408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_17"
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 22
+        width: 208
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f12001f21740284084f961c0cfff78f
+      internalID: 1180009740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_18"
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 23
+        width: 200
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 861ac192b1e34d04e87db343079ef6a2
+      internalID: 2011331093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_5"
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 532
+        width: 208
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39c72e4e2cb45b54bb773c0c9f689f83
+      internalID: 385660411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_0": 1733368107
+      "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_1": -1730441259
+      "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_10": -1827610695
+      "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_11": 1275694522
+      "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_12": -1133924461
+      "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_13": -1793728612
+      "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_14": 342418446
+      "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_15": 175639967
+      "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_16": 1310098408
+      "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_17": 1180009740
+      "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_18": 2011331093
+      "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_2": 4872853
+      "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_3": -1598008340
+      "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_4": 1079512118
+      "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_5": 385660411
+      "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_6": -811622133
+      "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_7": 567540189
+      "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_8": -1335307584
+      "Cartoon_ghost_performing_telepor\u2026_202608241423-Photoroom_9": 1193081079
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

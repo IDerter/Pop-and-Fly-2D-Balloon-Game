@@ -106,8 +106,6 @@ MonoBehaviour:
   gear: {fileID: 4858886539051426}
   effect: {fileID: 1648211914844166, guid: 53b8c2406cc833548bb30c3387cfee4b, type: 3}
   sound: {fileID: 1195248989485196, guid: 7648c373f21bc8947ab98f3573670ebe, type: 3}
-  sound1: {fileID: 1578284670373976, guid: 9fc297aa856ccda4d8a342c5c171e248, type: 3}
-  scriptskin: {fileID: 0}
   isdamage: 1
 --- !u!114 &114008356261123258
 MonoBehaviour:
@@ -121,7 +119,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ce3c7bf3b1c1f488dccf16be521a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 6.2
+  lifeTime: 6.7
+  fadeDuration: 1
+  isPooledObject: 1
 --- !u!95 &95892469591096410
 Animator:
   serializedVersion: 5

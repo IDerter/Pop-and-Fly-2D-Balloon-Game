@@ -30,7 +30,7 @@ public class YellowEnemy : MonoBehaviour
             Player playerScript = other.GetComponent<Player>();
             if (playerScript != null)
             {
-                playerScript.health -= damage;
+                playerScript.TakeDamage();
             }
             
             isdamage = false;

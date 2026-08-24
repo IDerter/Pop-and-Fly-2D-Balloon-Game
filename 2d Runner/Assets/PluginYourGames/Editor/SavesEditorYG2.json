@@ -13,11 +13,19 @@
         false,
         false
     ],
-    "idSave": 35,
-    "upgradeNames": [],
-    "upgradeLevels": [],
-    "coin": 0,
-    "bestScore": 0,
+    "idSave": 51,
+    "upgradeNames": [
+        "NoAdsDonateUpgrade",
+        "ShieldUpgrade",
+        "MagnitUpgrade"
+    ],
+    "upgradeLevels": [
+        0,
+        2,
+        1
+    ],
+    "coin": 145,
+    "bestScore": 44,
     "completedTutorialSteps": [],
     "musicVolume": 0.9982857704162598,
     "soundsVolume": 0.977573037147522,
@@ -25,5 +33,5 @@
     "boughtStars": 0,
     "lastDailyRewardDate": "",
     "dailyRewardDayIndex": 0,
-    "isTutorialCompleted": false
+    "isTutorialCompleted": true
 }

@@ -1,513 +1,232 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using TMPro;
-using UnityEngine.SocialPlatforms;
-using DG.Tweening; 
-using YG;
+using DG.Tweening;
 
-public class Player : MonoBehaviour 
+public class Player : MonoBehaviour
 {
     [Header("Components & Animation")]
     public Animator characterAnimator;
-    public Transform player;
-    public SpriteRenderer player1;
-    public SpriteRenderer saw;
-    public Rigidbody2D rb2d;
+    public SpriteRenderer playerSprite;
+    public SpriteRenderer sawSprite;
     public Rigidbody2D rb;
-    public CapsuleCollider2D collider2d;
+    public CircleCollider2D circleCollider;
 
     [Header("Stats & Physics")]
-    public int health = 1;
-    public float speed;
-    public float Yincrement;
-    public float maxHeight;
-    public float minHeight;
-    public bool IsDamage = true;
-    public bool ismoney = false;
-
-    [Header("Score & State")]
+    public float speed = 15f;
     public int score = 0;
-    public int coin;
-    public int firstclick = 0;
-    public static int a = 0;
-    public static int bestscore = 0;
-    public int firstgame = 1;
-    public int newgame = 1;
-    public int firstgameеtest = 1, firstgameеtest1 = 1, firstgameеtest2 = 1;
-    public static int test = 0, firsttest = 0;
-    
-    public static int countLocStone = 0;
-    public static int countenemyshield1 = 0, countenemyshield2 = 0, countenemyshield3 = 0, countenemyshield4 = 0;
+    public bool isInvulnerable = false;
 
-    [Header("Managers & Scripts")]
-    public GameManager gameManager;
-    public Spawner scriptspanwer;
-    public Paralax backgroundParallax;
-    public SpawnerYellowBallon[] scriptspawneryellowballon;
+    // События
+    public event Action<int> OnScoreChanged; // Для GameHUD
+    public event Action OnPlayerDied;        // Для GameManager
+    public event Action OnFirstClick;        // Для GameManager
 
-    [Header("UI Elements")]
-    public GameObject table;
-    public GameObject panel1, panel2;
-    public GameObject texttap, textguide, textironenemy, textmagnitandshit, textendlearnlvl, textqustionlearnlvl;
-    public GameObject buttonplay, buttonskip, buttonleft, buttonright, buttonreborn, buttoncoin2x;
-    public GameObject buttoncontinue, buttoncontinue10score, buttoncontinue1score;
-    public GameObject leftfinger, rightfinger;
-    public GameObject iconShield, iconMagnit;
+    [Header("Upgrades & Assets")]
+    public AmNuamRunner.UpgradeAsset shieldUpgradeAsset;
+    public AmNuamRunner.UpgradeAsset magnetUpgradeAsset;
+    public float baseAbilityDuration = 5f; // Базовое время (5 сек)
 
-    [Header("Spawners & Objects")]
-    public GameObject effect, lefteffect, righteffect;
-    public GameObject magnit, magnitobject, shitobject, abilkamagnit, MagnitPoint, areol;
-    public PointEffector2D point;
-    
-    public GameObject SpawnBeeEnemy; 
-    public GameObject SpawnEnemy; 
-    public GameObject SpawnGreenScore; 
-    public GameObject SpawnerYellowTeleportEnemy; 
-    
-    public GameObject spawnershit, spawnerexplosion, spawnermagnit, SpawnerYellowBallon;
-    public GameObject ship1, ship2, ship1child, ship2child, allship;
-    
-    public GameObject spawnerStones;
-    public GameObject paralaxFon;
-    public GameObject allSpawns;
+    [Header("Ability UI")]
+    public AbilityCooldown shieldUI; // Замените старый GameObject areol на это
+    public AbilityCooldown magnetUI; // Замените старый GameObject magnitObject на это
 
-    public bool IsShip = true;
-    public int counttext = 0;
-    public bool textlearn = true;
-
-    // Событие изменения счета (без Update!)
-    public event Action<int> OnScoreChanged;
-
+    [Header("In-Game Visuals (На персонаже)")]
+    // Сюда перетащите ареол и объект MagnitAnim (со скриншота)
+    public GameObject areol; 
+    public GameObject magnitObject; 
+    public PointEffector2D pointEffector;
 
     private Vector3 defaultScale;
+    private bool isDead = false;
+    private bool isStarted = false;
 
-    void Awake()
+    private void Awake()
     {
-        a = PlayerPrefs.GetInt("checktext");
-        bestscore = PlayerPrefs.GetInt("Score0", 0);
         rb = GetComponent<Rigidbody2D>();
-        rb2d = GetComponent<Rigidbody2D>();
-
-        if (player1 != null) defaultScale = player1.transform.localScale;
+        circleCollider = GetComponent<CircleCollider2D>();
+        if (playerSprite != null) defaultScale = playerSprite.transform.localScale;
     }
 
-    void Start()
+    private void Start()
     {
-        if (characterAnimator != null) characterAnimator.enabled = false; 
-
-        InitializeBackgrounds();
-
-        if ((test >= 1 && firsttest == 1) || firstgame == 0)
-        {
-            newgame = PlayerPrefs.GetInt("firstgame", 1);
-            PlayerPrefs.SetInt("firstgame", firstgame);
-        }
-
-        coin = PlayerPrefs.GetInt("coin", 0);
-        IsDamage = true;
-        Time.timeScale = 1f;
-        test++;
-
-        if (newgame == 0 || a != 0) DisableTutorialUI();
-    }
-
-    private void OnEnable()
-    {
-        RewardedAds.RewardOn += HandleRewardReceived;
-    }
-
-    private void OnDisable()
-    {
-        RewardedAds.RewardOn -= HandleRewardReceived;
-    }
-
-    // Обработчик награды
-    private void HandleRewardReceived(string rewardType)
-    {
-        if (rewardType == TypeReward.Reborn.ToString())
-        {
-            Reborn();
-        }
-    }
-
-    private void Update()
-    {
-        if (health <= 0)
-        {
-            HandleDeath();
-            return;
-        }
-
-        CheckScoreMilestones();
+        if (characterAnimator != null) characterAnimator.enabled = false;
     }
 
     private void FixedUpdate()
     {
-        rb2d.velocity = new Vector2(rb2d.velocity.x, 0);
+        if (!isDead && isStarted) rb.velocity = new Vector2(rb.velocity.x, 0);
     }
 
-    // ==========================================
-    // ПУБЛИЧНЫЙ МЕТОД ДЛЯ НАЧИСЛЕНИЯ ОЧКОВ СОБЫТИЕМ
-    // ==========================================
-    public void AddScore(int amount)
+    private void Update()
     {
-        score += amount;
-        OnScoreChanged?.Invoke(score); // Оповещаем UI без использования Update
-    }
+        if (isDead) return;
 
-    // ==========================================
-    // ЛОГИКА ДВИЖЕНИЯ И ВВОДА
-    // ==========================================
+        // Управление для ПК (Стрелочки или A/D)
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            ButtonDown(); // Вызываем тот же метод, что и левая кнопка на экране
+        }
+        else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            ButtonUp(); // Вызываем тот же метод, что и правая кнопка на экране
+        }
+    }
 
     public void ButtonUp() { MovePlayer(1, -15f); }
     public void ButtonDown() { MovePlayer(-1, 15f); }
 
     private void MovePlayer(int direction, float tiltAngle)
     {
-        if (firstclick == 0) HandleFirstClickStart();
+        if (isDead) return;
 
-        if (firstclick == 1)
+        if (!isStarted)
         {
-            Sound.PlayerSound.Play();
-            DisableFingersUI();
-            ActivateEnemies();
+            isStarted = true;
+            if (characterAnimator != null) characterAnimator.enabled = true;
+            OnFirstClick?.Invoke(); 
+            Debug.Log("OnFirstClick");
         }
 
-        rb2d.velocity = new Vector2(speed * direction, rb2d.velocity.y);
+        rb.velocity = new Vector2(speed * direction, rb.velocity.y);
 
-        if (player1 != null)
+        if (playerSprite != null)
         {
-            DOTween.Kill("RotateTween"); 
-            player1.transform.DORotate(new Vector3(0, 0, tiltAngle), 0.35f)
-                .SetEase(Ease.OutBack)
-                .SetId("RotateTween"); 
+            DOTween.Kill("RotateTween");
+            playerSprite.transform.DORotate(new Vector3(0, 0, tiltAngle), 0.35f)
+                .SetEase(Ease.OutBack).SetId("RotateTween");
         }
     }
 
-    private void HandleFirstClickStart()
+    // Вызывайте этот метод при подборе очков (монеток/капель)
+    public void AddScore(int amount)
     {
-        firstclick = 1;
-        if (characterAnimator != null) characterAnimator.enabled = true; 
-
-        ActivateBackgroundScripts();
-        ActivateEnemies();
-
-        texttap.SetActive(false);
-        table.SetActive(false);
-        panel1.SetActive(false);
-        panel2.SetActive(false);
-
-        if (newgame == 1 && a == 0 && firstgameеtest1 == 1) ShowTutorialDialogs();
+        score += amount;
+        OnScoreChanged?.Invoke(score); // GameHUD сам обновит текст!
     }
-
-    // ==========================================
-    // ЛОГИКА СТОЛКНОВЕНИЙ
-    // ==========================================
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Invulnerable"))
-        {
-            Sound.PopUp.Play();
-            PlayEatJuice();
-            IsDamage = false;
-            health = 100;
-            Destroy(col.gameObject);
-            areol.SetActive(true);
-            iconShield.SetActive(true);
-            Invoke(nameof(ResetDamage), 5f);
-        }
-        else if (col.gameObject.CompareTag("Magnit"))
-        {
-            Sound.PopUp.Play();
-            PlayEatJuice();
-            point.enabled = true;
-            collider2d.enabled = true;
-            Destroy(col.gameObject);
-            magnitobject.SetActive(true);
-            iconMagnit.SetActive(true);
-            Invoke(nameof(MagnitOff), 5f);
-        }
-        else if (col.gameObject.CompareTag("Ship"))
-        {
-            Sound.EnemyDie.Play();
-            if (IsDamage) health = 0;
-        }
+        if (isDead) return;
+
+        if (col.CompareTag("Invulnerable")) ActivateShield(col.gameObject);
+        else if (col.CompareTag("Magnit")) ActivateMagnet(col.gameObject);
+        else if (col.CompareTag("Ship")) TakeDamage();
     }
 
-    private void HandleDeath()
+    private void ActivateShield(GameObject pickup)
     {
+        PlayEatJuice();
+        isInvulnerable = true;
+        ObjectPoolManager.Instance.ReturnToPool(pickup);
+
+        // 1. Считаем итоговое время: База + (Уровень прокачки * Шаг)
+        int level = AmNuamRunner.Upgrades.GetUpgradeLevel(shieldUpgradeAsset);
+        float totalDuration = baseAbilityDuration + (level * shieldUpgradeAsset.step);
+
+        // 2. Запускаем кружок таймера в интерфейсе (UI сам включится и выключится)
+        if (shieldUI != null) shieldUI.StartCooldown(totalDuration);
+        
+        // 3. Включаем визуал на самом персонаже (Ареол)
+        if (areol != null) areol.SetActive(true);
+
+        // 4. Планируем отключение
+        CancelInvoke(nameof(DeactivateShield));
+        Invoke(nameof(DeactivateShield), totalDuration);
+    }
+
+    private void ActivateMagnet(GameObject pickup)
+    {
+        PlayEatJuice();
+        if (pointEffector != null) pointEffector.enabled = true;
+        ObjectPoolManager.Instance.ReturnToPool(pickup);
+
+        // 1. Считаем итоговое время для магнита
+        int level = AmNuamRunner.Upgrades.GetUpgradeLevel(magnetUpgradeAsset);
+        float totalDuration = baseAbilityDuration + (level * magnetUpgradeAsset.step);
+
+        // 2. Запускаем кружок таймера в интерфейсе
+        if (magnetUI != null) magnetUI.StartCooldown(totalDuration);
+        
+        // 3. Включаем визуал на самом персонаже (объект MagnitAnim со скриншота)
+        // Аниматор запустится автоматически при включении объекта!
+        if (magnitObject != null) magnitObject.SetActive(true);
+
+        // 4. Планируем отключение
+        CancelInvoke(nameof(DeactivateMagnet));
+        Invoke(nameof(DeactivateMagnet), totalDuration);
+    }
+
+    public void TakeDamage()
+    {
+        if (isInvulnerable) return;
+        Die();
+    }
+
+    private void Die()
+    {
+        isDead = true;
+        isInvulnerable = false;
         rb.constraints = RigidbodyConstraints2D.FreezePositionX;
 
-        magnitobject.SetActive(false);
-        shitobject.SetActive(false);
-        IsDamage = false;
+        // ФИКС: Отключаем коллайдер, чтобы мертвый игрок не мог ничего подбирать
+        if (circleCollider != null) circleCollider.enabled = false;
 
-        if (saw != null) saw.GetComponent<SpriteRenderer>().enabled = false;
+        if (sawSprite != null) sawSprite.enabled = false;
         if (characterAnimator != null) characterAnimator.SetTrigger("Die");
 
-        DisableSpawners();
-        DestroyGameObjectsWithTags(new[] { "Enemy", "Score", "DiagonalEnemy", "EnemyTeleport" });
+        DeactivateShield();
+        DeactivateMagnet();
 
-        PlayerPrefs.SetInt("coin", coin);
-        PlayerPrefs.SetInt("checktext", a);
-        UpdateBestScore();
-        HandleFirstGameLogic();
-        PlayerPrefs.Save();
-
-        Invoke(nameof(ReloadLevel), 0.5f);
+        OnPlayerDied?.Invoke(); 
     }
 
-    // ==========================================
-    // UI И МЕНЮ МЕТОДЫ
-    // ==========================================
-
-    public void achivOpen() { Social.ShowAchievementsUI(); }
-    public void leaderboardOpen() { Social.ShowLeaderboardUI(); }
-
-    // Обновленный метод возрождения
-    public void Reborn() 
+    public void Revive()
     {
-        // 1. Отменяем отложенные вызовы смерти/перезагрузки, если они висят в очереди
-        CancelInvoke(nameof(ReloadLevel));
+        isDead = false;
+        isInvulnerable = true;
+        
+        // ФИКС: Включаем коллайдер обратно при возрождении
+        if (circleCollider != null) circleCollider.enabled = true;
 
-        // 2. Восстанавливаем здоровье и включаем временный щит (бессмертие на 3 сек)
-        health = 1;
-        IsDamage = false;
-        if (areol != null) areol.SetActive(true);
-        if (iconShield != null) iconShield.SetActive(true);
-        Invoke(nameof(ResetDamage), 3f);
+        if (areol) areol.SetActive(true);
 
-        // 3. Размораживаем физику и возвращаем возможность двигаться
+        Invoke(nameof(DeactivateShield), 3f);
+
         rb.constraints = RigidbodyConstraints2D.None;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
-        // 4. Включаем видимость спрайтов и сбрасываем анимацию смерти
-        if (player1 != null) player1.enabled = true;
-        if (saw != null) saw.GetComponent<SpriteRenderer>().enabled = true;
-        
-        if (characterAnimator != null) 
+        if (playerSprite != null) playerSprite.enabled = true;
+        if (sawSprite != null) sawSprite.enabled = true;
+
+        if (characterAnimator != null)
         {
-            characterAnimator.Rebind(); 
+            characterAnimator.Rebind();
             characterAnimator.enabled = true;
         }
-
-        // 5. Зачищаем ближайших врагов вокруг, чтобы сразу же снова не погибнуть
-        DestroyGameObjectsWithTags(new[] { "Enemy", "DiagonalEnemy", "EnemyTeleport" });
-
-        // 6. Перезапускаем спавнеры врагов
-        if (scriptspanwer != null) scriptspanwer.enabled = true;
-        foreach (var spawner in scriptspawneryellowballon) 
-        { 
-            if (spawner != null) spawner.enabled = true; 
-        }
-
-        // 7. Скрываем экран Game Over и возвращаем игровой HUD
-        if (gameManager != null)
-        {
-            gameManager.GameContinue(); 
-        }
     }
 
-    public void ButtonCoin2x() { buttoncoin2x.SetActive(true); }
-    public void Coin() { Invoke(nameof(ReloadLevel), 0f); }
-    public void Timescale() { Time.timeScale = 0f; }
-    public void BreakAdvertising() { gameManager.Break(); }
-    public void EndLearn() { table.SetActive(false); SceneManager.LoadScene(SceneManager.GetActiveScene().name); }
-
-    public void SkipTutorial()
+    private void DeactivateShield()
     {
-        firstgame = 0;
-        firsttest = 1;
-        PlayerPrefs.SetInt("firstgame", firstgame);
-        textguide.SetActive(false);
-        table.SetActive(false);
-        buttoncontinue1score.SetActive(false);
-        Time.timeScale = 1f;
-        buttonskip.SetActive(false);
+        isInvulnerable = false;
+        if (areol) areol.SetActive(false);
     }
 
-    public void ButtonContinue()
+    private void DeactivateMagnet()
     {
-        textmagnitandshit.SetActive(false);
-        table.SetActive(false);
-        buttoncontinue.SetActive(false);
-        buttonleft.SetActive(true);
-        buttonright.SetActive(true);
-        Time.timeScale = 1f;
+        if (pointEffector) pointEffector.enabled = false;
+        if (magnitObject) magnitObject.SetActive(false);
     }
-
-    public void ButtonContinue10Score()
-    {
-        textendlearnlvl.SetActive(false);
-        buttoncontinue10score.SetActive(false);
-        table.SetActive(false);
-        buttonleft.SetActive(true);
-        buttonright.SetActive(true);
-        Time.timeScale = 1f;
-    }
-
-    public void ButtonContinue1Score()
-    {
-        counttext += 1;
-        if (counttext == 0) textguide.SetActive(true);
-        if (counttext == 1) { textguide.SetActive(false); textironenemy.SetActive(true); }
-        if (counttext == 2) { textironenemy.SetActive(false); textmagnitandshit.SetActive(true); }
-        if (counttext == 3) { textironenemy.SetActive(false); textmagnitandshit.SetActive(false); textendlearnlvl.SetActive(true); }
-        if (counttext == 4)
-        {
-            textendlearnlvl.SetActive(false);
-            table.SetActive(false);
-            buttoncontinue1score.SetActive(false);
-            buttonleft.SetActive(true);
-            buttonright.SetActive(true);
-            Time.timeScale = 1f;
-            buttonskip.SetActive(false);
-        }
-    }
-
-    void TextOff()
-    {
-        textmagnitandshit.SetActive(false);
-        textendlearnlvl.SetActive(true);
-        if (textlearn)
-        {
-            Invoke(nameof(TextLearnLvlOff), 5f);
-            textlearn = false;
-        }
-        Time.timeScale = 0f;
-    }
-
-    void TextLearnLvlOff()
-    {
-        textendlearnlvl.SetActive(false);
-        table.SetActive(false);
-        Time.timeScale = 1f;
-    }
-
-    // ==========================================
-    // ВСПОМОГАТЕЛЬНЫЕ МЕТОДЫ (Инкапсуляция)
-    // ==========================================
-
-    private void CheckScoreMilestones()
-    {
-        if (score >= 4)
-        {
-            if (spawnershit != null) spawnershit.SetActive(true);
-            if (spawnermagnit != null) spawnermagnit.SetActive(true);
-            if (textendlearnlvl.activeSelf && newgame == 1) Invoke(nameof(TextLearnLvlOff), 5f);
-        }
-
-        if (score >= 10 && newgame == 1 && a == 0)
-        {
-            firstgame = 0;
-            firsttest = 1;
-            PlayerPrefs.SetInt("firstgame", firstgame);
-            newgame = PlayerPrefs.GetInt("firstgame", firstgame);
-            a = 1;
-            buttonleft.SetActive(false);
-            buttonright.SetActive(false);
-            textqustionlearnlvl.SetActive(true);
-            table.SetActive(true);
-            buttonplay.SetActive(true);
-            Invoke(nameof(Timescale), 0.2f);
-        }
-
-        if (score >= 10 && SpawnBeeEnemy != null) SpawnBeeEnemy.SetActive(true);
-        if (score >= 30 && SpawnerYellowTeleportEnemy != null) SpawnerYellowTeleportEnemy.SetActive(true);
-        if (score >= 60) ActivateStoneSpawners();
-        if (score >= 100) 
-        {
-            if (ship1 != null) ship1.SetActive(true);
-            if (ship2 != null) ship2.SetActive(true);
-            Invoke(nameof(ShipTrigger), 2f);
-        }
-        if (score >= 120 && spawnerexplosion != null) spawnerexplosion.SetActive(true);
-    }
-
-    private void UpdateBestScore()
-    {
-        int savedBest = PlayerPrefs.GetInt("Score0", 0);
-        if (score > savedBest)
-        {
-            PlayerPrefs.SetInt("Score0", score);
-            bestscore = score;
-        }
-    }
-
-    private void HandleFirstGameLogic()
-    {
-        if (score >= 10)
-        {
-            firstgame = 0;
-            firsttest = 1;
-            PlayerPrefs.SetInt("firstgame", firstgame);
-        }
-    }
-
-    private void ActivateEnemies()
-    {
-        if (SpawnEnemy != null) SpawnEnemy.SetActive(true);
-        if (SpawnGreenScore != null) SpawnGreenScore.SetActive(true);
-    }
-
-    private void ActivateBackgroundScripts()
-    {
-        if (backgroundParallax != null) backgroundParallax.enabled = true;
-    }
-
-    private void ActivateStoneSpawners()
-    {
-        if (spawnerStones != null) spawnerStones.SetActive(true);
-    }
-
-    private void InitializeBackgrounds()
-    {
-        if (paralaxFon != null) paralaxFon.SetActive(true);
-        if (allSpawns != null) allSpawns.SetActive(true);
-    }
-
-    private void ShowTutorialDialogs()
-    {
-        textguide.SetActive(true);
-        table.SetActive(true);
-        buttoncontinue1score.SetActive(true);
-        Time.timeScale = 0f;
-        buttonskip.SetActive(true);
-    }
-
-    private void DestroyGameObjectsWithTags(string[] tags)
-    {
-        foreach (string t in tags) { Destroy(GameObject.FindGameObjectWithTag(t), 0.2f); }
-    }
-
-    private void DisableSpawners()
-    {
-        if (scriptspanwer != null) scriptspanwer.enabled = false;
-        foreach (var spawner in scriptspawneryellowballon) { if (spawner != null) spawner.enabled = false; }
-    }
-
-    private void DisableTutorialUI() { texttap.SetActive(false); table.SetActive(false); leftfinger.SetActive(false); rightfinger.SetActive(false); }
-    private void DisableFingersUI() { leftfinger.SetActive(false); rightfinger.SetActive(false); }
-
-    void ShipTrigger() { if (ship1 != null) ship1.GetComponent<BoxCollider2D>().enabled = true; if (ship2 != null) ship2.GetComponent<BoxCollider2D>().enabled = true; if (ship1child != null) ship1child.SetActive(true); if (ship2child != null) ship2child.SetActive(true); }
-    void ResetDamage() { health = 1; IsDamage = true; areol.SetActive(false); }
-    void MagnitOff() { point.enabled = false; collider2d.enabled = false; magnitobject.SetActive(false); }
-    void ReloadLevel() { gameManager.GameOver(); }
 
     public void PlayEatJuice()
     {
         if (characterAnimator != null) characterAnimator.SetTrigger("Eat");
-
-        if (player1 != null)
+        if (playerSprite != null)
         {
-            DOTween.Kill("ScaleTween"); 
-            player1.transform.localScale = defaultScale; 
-            player1.transform.DOPunchScale(new Vector3(0.2f, -0.2f, 0f), 0.3f, 1, 0.5f).SetId("ScaleTween");
+            DOTween.Kill("ScaleTween");
+            playerSprite.transform.localScale = defaultScale;
+            
+            // ИСПРАВЛЕНИЕ: Уменьшили значения с 0.2 до 0.05 (эффект будет легким и пружинистым)
+            playerSprite.transform.DOPunchScale(new Vector3(0.05f, -0.05f, 0f), 0.3f, 1, 0.5f).SetId("ScaleTween");
         }
     }
 }

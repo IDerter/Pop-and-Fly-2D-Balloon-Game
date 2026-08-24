@@ -1,68 +1,83 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SocialPlatforms;
+﻿using UnityEngine;
+
 public class IronEnemy : MonoBehaviour
 {
-    public SetSkin scriptskin;
+    [Header("Settings")]
+    public float speed;
+    public Vector2 direction = Vector2.right; // В Инспекторе поставьте (-1, 0) для левого врага
+    
+    [Header("Effects & References")]
     public GameObject effect;
     public GameObject sound;
-    public GameObject ironenemy;
-    public float speed;
-    public int damage = 1;
-    private const string achiv8 = "CgkIu-eNx_IEEAIQCQ";
-    public static int countenemies = 0;
-    // Start is called before the first frame update
-    void Start()
+    
+    private SetSkin scriptSkin;
+    public static int countEnemies = 0;
+
+    private void Start()
     {
-        scriptskin = GameObject.FindGameObjectWithTag("Player").GetComponent<SetSkin>();
-        countenemies = PlayerPrefs.GetInt("CountIronEnemy");
+        // 1. Ищем игрока ТОЛЬКО один раз при появлении объекта, а не каждый кадр!
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        if (playerObj != null)
+        {
+            scriptSkin = playerObj.GetComponent<SetSkin>();
+        }
+        
+        countEnemies = PlayerPrefs.GetInt("CountIronEnemy", 0);
     }
-   
-    // Update is called once per frame
-    void Update()
+
+    private void FixedUpdate()
     {
-        scriptskin = GameObject.FindGameObjectWithTag("Player").GetComponent<SetSkin>();
+        // Умножаем направление на скорость. 
+        // Теперь один скрипт может двигать врага куда угодно!
+        transform.Translate(direction * speed);
     }
-    void FixedUpdate()
-    {
-        transform.Translate(Vector2.right * speed);
-    }
+
     public void OnMouseDown()
     {
-        //Destroy(gameObject);
-        ironenemy.SetActive(false);
-        Debug.Log("Destroy");
-        Instantiate(sound, transform.position, Quaternion.identity);
-        Instantiate(effect, transform.position, Quaternion.identity);
-        countenemies += 1;
-        PlayerPrefs.SetInt("CountIronEnemy", countenemies);
-        if (PlayerPrefs.GetInt("CountIronEnemy") >= 10)
+        SpawnEffects();
+        
+        countEnemies++;
+        PlayerPrefs.SetInt("CountIronEnemy", countEnemies);
+        
+        if (countEnemies >= 10)
         {
-            Debug.Log("YbrbnfLox");
+            Debug.Log("YbrbnfLox"); // Ваша пасхалка сохранена :)
         }
+
+        // 2. Используем Пул Объектов вместо Destroy
+        ObjectPoolManager.Instance.ReturnToPool(gameObject);
     }
-    void Achiv()
-    {
-        Debug.Log("получил ачивку!");
-    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player")&&scriptskin.index!=13)
+        if (other.CompareTag("Player"))
         {
-            Instantiate(effect, transform.position, Quaternion.identity);
-            Instantiate(sound, transform.position, Quaternion.identity);
-            other.GetComponent<Player>().health -= damage;
-            Destroy(gameObject);
-            Debug.Log("не13скин");
+            SpawnEffects();
+            
+            // 3. Логика скина: если индекс НЕ 13, то наносим урон
+            if (scriptSkin != null && scriptSkin.index != 13)
+            {
+                Player playerScript = other.GetComponent<Player>();
+                if (playerScript != null)
+                {
+                    playerScript.TakeDamage();
+                }
+                Debug.Log("не13скин - урон нанесен");
+            }
+            else
+            {
+                Debug.Log("13скин - защита сработала");
+            }
+            
+            // Враг в любом случае исчезает при касании
+            ObjectPoolManager.Instance.ReturnToPool(gameObject);
         }
-        else
-        if(other.CompareTag("Player") && scriptskin.index == 13)
-        {
-            Instantiate(effect, transform.position, Quaternion.identity);
-            Instantiate(sound, transform.position, Quaternion.identity);
-            Destroy(gameObject);
-            Debug.Log("13скин");
-        }
-}
+    }
+
+    // Вспомогательный метод, чтобы не дублировать код создания эффектов
+    private void SpawnEffects()
+    {
+        if (effect != null) Instantiate(effect, transform.position, Quaternion.identity);
+        if (sound != null) Instantiate(sound, transform.position, Quaternion.identity);
+    }
 }
