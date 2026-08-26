@@ -32,6 +32,15 @@ MonoBehaviour:
       +{1} sec."
     m_Metadata:
       m_Items: []
+  - m_Id: 1028460169838592
+    m_Localized: Doubles all collected candies and increases your shield duration
+      by 3 extra seconds.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1035934583144448
+    m_Localized: Standart skin
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

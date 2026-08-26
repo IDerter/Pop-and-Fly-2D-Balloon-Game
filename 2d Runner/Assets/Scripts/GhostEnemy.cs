@@ -9,10 +9,16 @@ public class GhostEnemy : MonoBehaviour
     public Vector2 direction;
     public bool isdamage = true;
 
+    // ДОБАВИЛИ ФЛАГ
+    public bool isTeleporting = false; 
+
     private void FixedUpdate()
     {
-        // Призрак просто летит прямо, а всю работу по телепортации делают зоны!
-        transform.Translate(direction * speed * Time.fixedDeltaTime);
+        // Двигаемся ТОЛЬКО если сейчас не телепортируемся
+        if (!isTeleporting)
+        {
+            transform.Translate(direction * speed * Time.fixedDeltaTime);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -23,10 +29,7 @@ public class GhostEnemy : MonoBehaviour
             if (sound != null) Instantiate(sound, transform.position, Quaternion.identity);
             
             Player playerScript = other.GetComponent<Player>();
-            if (playerScript != null)
-            {
-                playerScript.TakeDamage();
-            }
+            if (playerScript != null) playerScript.TakeDamage();
             
             isdamage = false;
             ObjectPoolManager.Instance.ReturnToPool(gameObject);

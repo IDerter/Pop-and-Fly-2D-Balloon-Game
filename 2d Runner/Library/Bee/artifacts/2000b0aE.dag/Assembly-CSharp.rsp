@@ -553,6 +553,7 @@
 "Assets/Scripts/LocalizationText.cs"
 "Assets/Scripts/Magnit.cs"
 "Assets/Scripts/MainMenuSceneChange.cs"
+"Assets/Scripts/MainMenuSkinUpdater.cs"
 "Assets/Scripts/ManagerLocalization.cs"
 "Assets/Scripts/Menu.cs"
 "Assets/Scripts/MenuAndTutorialUi.cs"

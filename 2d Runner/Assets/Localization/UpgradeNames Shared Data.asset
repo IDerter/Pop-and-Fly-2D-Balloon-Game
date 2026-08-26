@@ -27,6 +27,14 @@ MonoBehaviour:
     m_Key: Magnit
     m_Metadata:
       m_Items: []
+  - m_Id: 1028924575760384
+    m_Key: BooSkin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1036146802343936
+    m_Key: OmNomSkin
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

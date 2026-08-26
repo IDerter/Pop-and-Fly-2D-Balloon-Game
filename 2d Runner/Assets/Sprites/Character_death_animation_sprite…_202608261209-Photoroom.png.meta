@@ -1,0 +1,463 @@
+fileFormatVersion: 2
+guid: 1dd6265aae7645f44902e2f8b5ab9c75
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Character_death_animation_sprite\u2026_202608261209-Photoroom_0"
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 436
+        width: 200
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c267ee39b757844dab2c209cf09ea4d
+      internalID: 747896151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Character_death_animation_sprite\u2026_202608261209-Photoroom_1"
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 436
+        width: 203
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99fdc10a18cd59945bf9d8e618710dbc
+      internalID: 1179422540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Character_death_animation_sprite\u2026_202608261209-Photoroom_2"
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 436
+        width: 202
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7103ee788ce87d2448330371a8f65e41
+      internalID: -775627219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Character_death_animation_sprite\u2026_202608261209-Photoroom_3"
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 436
+        width: 195
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11758a66ba3d8d84e922c7fe7a1c2eda
+      internalID: 122929607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Character_death_animation_sprite\u2026_202608261209-Photoroom_4"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 292
+        width: 193
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4baacd764c814542ae6d642910ec04b
+      internalID: -154109740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Character_death_animation_sprite\u2026_202608261209-Photoroom_5"
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 292
+        width: 191
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84b9250da56f5784288208ad86b0a623
+      internalID: 1505098304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Character_death_animation_sprite\u2026_202608261209-Photoroom_6"
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 291
+        width: 188
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee63a18acf612b04eb948bd8dc82cb98
+      internalID: -1320782751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Character_death_animation_sprite\u2026_202608261209-Photoroom_7"
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 291
+        width: 186
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cb8351743d29bd49949f1edeb520e78
+      internalID: -1969487182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Character_death_animation_sprite\u2026_202608261209-Photoroom_8"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 148
+        width: 194
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c41e7b087aec484d9a33e8f7d22bb5f
+      internalID: -576167281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Character_death_animation_sprite\u2026_202608261209-Photoroom_9"
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 151
+        width: 201
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 318734bc2a239e944a7684f90f7a9507
+      internalID: 963277313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Character_death_animation_sprite\u2026_202608261209-Photoroom_10"
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 152
+        width: 202
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8ae2238b997b7246891365dfb48dad2
+      internalID: -1110907898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Character_death_animation_sprite\u2026_202608261209-Photoroom_11"
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 152
+        width: 203
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b24c1872436879a4395b3329fff18575
+      internalID: 1415385763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Character_death_animation_sprite\u2026_202608261209-Photoroom_12"
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 4
+        width: 202
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9012739a1dab5444bb886acc31219264
+      internalID: -2143269584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Character_death_animation_sprite\u2026_202608261209-Photoroom_13"
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 7
+        width: 111
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 300e581c8e7bf014d8726387a0b5d189
+      internalID: -1555175236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      "Character_death_animation_sprite\u2026_202608261209-Photoroom_0": 747896151
+      "Character_death_animation_sprite\u2026_202608261209-Photoroom_1": 1179422540
+      "Character_death_animation_sprite\u2026_202608261209-Photoroom_10": -1110907898
+      "Character_death_animation_sprite\u2026_202608261209-Photoroom_11": 1415385763
+      "Character_death_animation_sprite\u2026_202608261209-Photoroom_12": -2143269584
+      "Character_death_animation_sprite\u2026_202608261209-Photoroom_13": -1555175236
+      "Character_death_animation_sprite\u2026_202608261209-Photoroom_14": 1976696764
+      "Character_death_animation_sprite\u2026_202608261209-Photoroom_15": 628375557
+      "Character_death_animation_sprite\u2026_202608261209-Photoroom_2": -775627219
+      "Character_death_animation_sprite\u2026_202608261209-Photoroom_3": 122929607
+      "Character_death_animation_sprite\u2026_202608261209-Photoroom_4": -154109740
+      "Character_death_animation_sprite\u2026_202608261209-Photoroom_5": 1505098304
+      "Character_death_animation_sprite\u2026_202608261209-Photoroom_6": -1320782751
+      "Character_death_animation_sprite\u2026_202608261209-Photoroom_7": -1969487182
+      "Character_death_animation_sprite\u2026_202608261209-Photoroom_8": -576167281
+      "Character_death_animation_sprite\u2026_202608261209-Photoroom_9": 963277313
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

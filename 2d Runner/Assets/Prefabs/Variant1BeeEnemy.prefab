@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gearyellow: {fileID: 1852038470321838, guid: df8c4d119c9ee9b4982169bd8fc5f427, type: 3}
+  flyDirection: {x: -1, y: -1}
 --- !u!1 &1091226267256182
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gearyellow: {fileID: 1852038470321838, guid: df8c4d119c9ee9b4982169bd8fc5f427, type: 3}
+  flyDirection: {x: 1, y: -1}
 --- !u!1 &1526663034508066
 GameObject:
   m_ObjectHideFlags: 0

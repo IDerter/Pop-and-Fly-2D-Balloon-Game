@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 047be3fb0ca4a4c4b9369aed3a66e6d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 1
   gear: {fileID: 4878581820539010}
   effect: {fileID: 1615718917081576, guid: 8a47a024b3c7dab42893d77effc3080a, type: 3}
   sound: {fileID: 1195248989485196, guid: 7648c373f21bc8947ab98f3573670ebe, type: 3}
@@ -238,6 +238,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ce3c7bf3b1c1f488dccf16be521a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 12
+  lifeTime: 16
   fadeDuration: 1
   isPooledObject: 1

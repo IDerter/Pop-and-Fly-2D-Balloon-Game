@@ -13,18 +13,22 @@
         false,
         false
     ],
-    "idSave": 51,
+    "idSave": 78,
     "upgradeNames": [
         "NoAdsDonateUpgrade",
+        "OmNomSkin",
+        "BooSkin",
         "ShieldUpgrade",
         "MagnitUpgrade"
     ],
     "upgradeLevels": [
         0,
+        0,
+        1,
         2,
         1
     ],
-    "coin": 145,
+    "coin": 241,
     "bestScore": 44,
     "completedTutorialSteps": [],
     "musicVolume": 0.9982857704162598,
@@ -33,5 +37,6 @@
     "boughtStars": 0,
     "lastDailyRewardDate": "",
     "dailyRewardDayIndex": 0,
-    "isTutorialCompleted": true
+    "isTutorialCompleted": true,
+    "currentSkin": "Boo"
 }

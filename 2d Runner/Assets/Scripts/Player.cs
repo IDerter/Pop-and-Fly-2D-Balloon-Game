@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using DG.Tweening;
+using YG; // Не забываем Яндекс
 
 public class Player : MonoBehaviour
 {
@@ -11,27 +12,35 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb;
     public CircleCollider2D circleCollider;
 
+    [Header("Skins (Контроллеры)")]
+    public RuntimeAnimatorController omNomController;
+    public RuntimeAnimatorController booController;
+    // public RuntimeAnimatorController lickController; // Для Лямзи в будущем
+
+    [Header("Skins (Стартовые спрайты)")]
+    public Sprite omNomIdleSprite;
+    public Sprite booIdleSprite;
+
     [Header("Stats & Physics")]
     public float speed = 15f;
     public int score = 0;
     public bool isInvulnerable = false;
 
     // События
-    public event Action<int> OnScoreChanged; // Для GameHUD
-    public event Action OnPlayerDied;        // Для GameManager
-    public event Action OnFirstClick;        // Для GameManager
+    public event Action<int> OnScoreChanged; 
+    public event Action OnPlayerDied;        
+    public event Action OnFirstClick;        
 
     [Header("Upgrades & Assets")]
     public AmNuamRunner.UpgradeAsset shieldUpgradeAsset;
     public AmNuamRunner.UpgradeAsset magnetUpgradeAsset;
-    public float baseAbilityDuration = 5f; // Базовое время (5 сек)
+    public float baseAbilityDuration = 5f; 
 
     [Header("Ability UI")]
-    public AbilityCooldown shieldUI; // Замените старый GameObject areol на это
-    public AbilityCooldown magnetUI; // Замените старый GameObject magnitObject на это
+    public AbilityCooldown shieldUI; 
+    public AbilityCooldown magnetUI; 
 
     [Header("In-Game Visuals (На персонаже)")]
-    // Сюда перетащите ареол и объект MagnitAnim (со скриншота)
     public GameObject areol; 
     public GameObject magnitObject; 
     public PointEffector2D pointEffector;
@@ -39,17 +48,59 @@ public class Player : MonoBehaviour
     private Vector3 defaultScale;
     private bool isDead = false;
     private bool isStarted = false;
+    
+    // Переменная для кэширования текущего скина
+    private string currentSkin; 
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         circleCollider = GetComponent<CircleCollider2D>();
         if (playerSprite != null) defaultScale = playerSprite.transform.localScale;
+
+        ApplySkin(); // Применяем скин сразу при загрузке
     }
 
     private void Start()
     {
         if (characterAnimator != null) characterAnimator.enabled = false;
+    }
+
+    // --- ЛОГИКА СКИНОВ ---
+    private void ApplySkin()
+    {
+        currentSkin = string.IsNullOrEmpty(YG2.saves.currentSkin) ? "OmNom" : YG2.saves.currentSkin;
+
+        if (currentSkin == "Boo")
+        {
+            characterAnimator.runtimeAnimatorController = booController;
+            
+            if (playerSprite != null)
+            {
+                // Сразу ставим нужную картинку до включения аниматора
+                playerSprite.sprite = booIdleSprite; 
+                
+                playerSprite.transform.localScale = new Vector3(3.5f, 3.5f, 1f);
+                defaultScale = playerSprite.transform.localScale; 
+            }
+        }
+        else if (currentSkin == "Lick")
+        {
+            // characterAnimator.runtimeAnimatorController = lickController;
+        }
+        else 
+        {
+            characterAnimator.runtimeAnimatorController = omNomController;
+            
+            if (playerSprite != null)
+            {
+                // Сразу ставим нужную картинку до включения аниматора
+                playerSprite.sprite = omNomIdleSprite;
+
+                playerSprite.transform.localScale = new Vector3(2.93f, 2.93f, 1f);
+                defaultScale = playerSprite.transform.localScale; 
+            }
+        }
     }
 
     private void FixedUpdate()
@@ -61,14 +112,13 @@ public class Player : MonoBehaviour
     {
         if (isDead) return;
 
-        // Управление для ПК (Стрелочки или A/D)
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            ButtonDown(); // Вызываем тот же метод, что и левая кнопка на экране
+            ButtonDown(); 
         }
         else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
-            ButtonUp(); // Вызываем тот же метод, что и правая кнопка на экране
+            ButtonUp(); 
         }
     }
 
@@ -84,7 +134,12 @@ public class Player : MonoBehaviour
             isStarted = true;
             if (characterAnimator != null) characterAnimator.enabled = true;
             OnFirstClick?.Invoke(); 
-            Debug.Log("OnFirstClick");
+
+            // --- ПАССИВКА БУКИ ПРИ СТАРТЕ ---
+            if (currentSkin == "Boo")
+            {
+                ActivateShield(null); // Даем щит без подбора объекта
+            }
         }
 
         rb.velocity = new Vector2(speed * direction, rb.velocity.y);
@@ -97,11 +152,15 @@ public class Player : MonoBehaviour
         }
     }
 
-    // Вызывайте этот метод при подборе очков (монеток/капель)
     public void AddScore(int amount)
     {
+        if (currentSkin == "Boo")
+        {
+            amount *= 2; 
+        }
+
         score += amount;
-        OnScoreChanged?.Invoke(score); // GameHUD сам обновит текст!
+        OnScoreChanged?.Invoke(score); 
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -113,23 +172,28 @@ public class Player : MonoBehaviour
         else if (col.CompareTag("Ship")) TakeDamage();
     }
 
+    // ИЗМЕНЕНИЕ: Сделали pickup необязательным параметром (null), чтобы можно было вызывать пассивку
     private void ActivateShield(GameObject pickup)
     {
-        PlayEatJuice();
         isInvulnerable = true;
-        ObjectPoolManager.Instance.ReturnToPool(pickup);
 
-        // 1. Считаем итоговое время: База + (Уровень прокачки * Шаг)
+        if (pickup != null)
+        {
+            PlayEatJuice();
+            ObjectPoolManager.Instance.ReturnToPool(pickup);
+        }
+
         int level = AmNuamRunner.Upgrades.GetUpgradeLevel(shieldUpgradeAsset);
         float totalDuration = baseAbilityDuration + (level * shieldUpgradeAsset.step);
 
-        // 2. Запускаем кружок таймера в интерфейсе (UI сам включится и выключится)
+        if (currentSkin == "Boo")
+        {
+            totalDuration += 3f; // Даем Буке бонусные 3 секунды щита
+        }
+
         if (shieldUI != null) shieldUI.StartCooldown(totalDuration);
-        
-        // 3. Включаем визуал на самом персонаже (Ареол)
         if (areol != null) areol.SetActive(true);
 
-        // 4. Планируем отключение
         CancelInvoke(nameof(DeactivateShield));
         Invoke(nameof(DeactivateShield), totalDuration);
     }
@@ -140,18 +204,12 @@ public class Player : MonoBehaviour
         if (pointEffector != null) pointEffector.enabled = true;
         ObjectPoolManager.Instance.ReturnToPool(pickup);
 
-        // 1. Считаем итоговое время для магнита
         int level = AmNuamRunner.Upgrades.GetUpgradeLevel(magnetUpgradeAsset);
         float totalDuration = baseAbilityDuration + (level * magnetUpgradeAsset.step);
 
-        // 2. Запускаем кружок таймера в интерфейсе
         if (magnetUI != null) magnetUI.StartCooldown(totalDuration);
-        
-        // 3. Включаем визуал на самом персонаже (объект MagnitAnim со скриншота)
-        // Аниматор запустится автоматически при включении объекта!
         if (magnitObject != null) magnitObject.SetActive(true);
 
-        // 4. Планируем отключение
         CancelInvoke(nameof(DeactivateMagnet));
         Invoke(nameof(DeactivateMagnet), totalDuration);
     }
@@ -168,10 +226,9 @@ public class Player : MonoBehaviour
         isInvulnerable = false;
         rb.constraints = RigidbodyConstraints2D.FreezePositionX;
 
-        // ФИКС: Отключаем коллайдер, чтобы мертвый игрок не мог ничего подбирать
         if (circleCollider != null) circleCollider.enabled = false;
-
         if (sawSprite != null) sawSprite.enabled = false;
+        
         if (characterAnimator != null) characterAnimator.SetTrigger("Die");
 
         DeactivateShield();
@@ -185,9 +242,7 @@ public class Player : MonoBehaviour
         isDead = false;
         isInvulnerable = true;
         
-        // ФИКС: Включаем коллайдер обратно при возрождении
         if (circleCollider != null) circleCollider.enabled = true;
-
         if (areol) areol.SetActive(true);
 
         Invoke(nameof(DeactivateShield), 3f);
@@ -224,8 +279,6 @@ public class Player : MonoBehaviour
         {
             DOTween.Kill("ScaleTween");
             playerSprite.transform.localScale = defaultScale;
-            
-            // ИСПРАВЛЕНИЕ: Уменьшили значения с 0.2 до 0.05 (эффект будет легким и пружинистым)
             playerSprite.transform.DOPunchScale(new Vector3(0.05f, -0.05f, 0f), 0.3f, 1, 0.5f).SetId("ScaleTween");
         }
     }

@@ -2,30 +2,36 @@
 
 public class DiagonalEnemy : MonoBehaviour 
 {
-    public float speed; 
+    public float speed = 1f; // Можно умножать direction на speed в FixedUpdate
     public Transform gear; 
     public GameObject effect;
     public GameObject sound;
-    public Vector2 direction;
+    
+    // Направление теперь задается из PointGreen
+    public Vector2 direction; 
     public bool isdamage = true;
     
+    // ВАЖНО: Сбрасываем состояние при доставании из пула
+    private void OnEnable()
+    {
+        isdamage = true;
+    }
+
     private void FixedUpdate()
     {
-        transform.Translate(direction);
+        // Умножаем на скорость и Time.fixedDeltaTime для плавности
+        transform.Translate(direction * speed * Time.fixedDeltaTime);
     }
     
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && isdamage)
         {
-            if (effect != null) Instantiate(effect, transform.position, Quaternion.identity);
-            if (sound != null) Instantiate(sound, transform.position, Quaternion.identity);
+            SpawnEffects();
             
             Player playerScript = other.GetComponent<Player>();
             if (playerScript != null)
             {
-                // ВМЕСТО: playerScript.health -= damage;
-                // ПИШЕМ:
                 playerScript.TakeDamage(); 
             }
             
@@ -34,10 +40,15 @@ public class DiagonalEnemy : MonoBehaviour
         }
         else if (other.CompareTag("Destroyer") || other.CompareTag("IronEnemy") || other.CompareTag("EnemyTeleport"))
         {
-            if (effect != null) Instantiate(effect, transform.position, Quaternion.identity);
-            if (sound != null) Instantiate(sound, transform.position, Quaternion.identity);
-            
+            SpawnEffects();
             ObjectPoolManager.Instance.ReturnToPool(gameObject);
         }
+    }
+
+    // Вынес эффекты, чтобы не дублировать код
+    private void SpawnEffects()
+    {
+        if (effect != null) Instantiate(effect, transform.position, Quaternion.identity);
+        if (sound != null) Instantiate(sound, transform.position, Quaternion.identity);
     }
 }

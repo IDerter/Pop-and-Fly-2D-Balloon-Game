@@ -3,33 +3,46 @@ using System.Collections;
 
 public class Teleport : MonoBehaviour 
 {
-    public GameObject tl; // Точка, куда переместится враг
+    public GameObject tl;
 
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("EnemyTeleport"))
         {
-            // Запускаем корутину анимации и телепортации
-            StartCoroutine(TeleportWithAnimation(col.transform));
+            // Получаем скрипт врага
+            GhostEnemy ghost = col.GetComponent<GhostEnemy>();
+            
+            // Если враг найден и он ЕЩЕ НЕ телепортируется
+            if (ghost != null && !ghost.isTeleporting)
+            {
+                StartCoroutine(TeleportWithAnimation(ghost));
+            }
         }
     }
 
-    private IEnumerator TeleportWithAnimation(Transform enemyTransform)
+    private IEnumerator TeleportWithAnimation(GhostEnemy ghost)
     {
-        // 1. Проверяем, есть ли у врага компонент Animator
-        Animator animator = enemyTransform.GetComponent<Animator>();
+        // 1. Блокируем движение и двойные срабатывания
+        ghost.isTeleporting = true; 
+
+        Animator animator = ghost.GetComponent<Animator>();
         if (animator != null)
         {
+            // Очищаем случайные старые триггеры перед запуском
+            animator.ResetTrigger("Teleport"); 
             animator.SetTrigger("Teleport");
         }
 
-        // 2. Ждем ровно 0.5 секунды, пока проигрывается анимация исчезновения/входа в портал
+        // 2. Ждем 0.5 секунды
         yield return new WaitForSeconds(0.5f);
 
-        // 3. Проверяем, существует ли целевая точка, и перемещаем врага
+        // 3. Телепортируем
         if (tl != null)
         {
-            enemyTransform.position = tl.transform.position;
+            ghost.transform.position = tl.transform.position;
         }
+
+        // 4. Отпускаем врага, он летит дальше
+        ghost.isTeleporting = false; 
     }
 }

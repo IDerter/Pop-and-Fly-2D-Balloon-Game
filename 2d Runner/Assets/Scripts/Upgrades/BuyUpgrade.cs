@@ -3,11 +3,14 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Localization.Components;
 using DG.Tweening; 
+using YG; // Обязательно подключаем Яндекс
 
 namespace AmNuamRunner
 {
     public class BuyUpgrade : MonoBehaviour
     {
+        public static event System.Action OnSkinChanged;
+
         [SerializeField] private UpgradeAsset _asset;
         public UpgradeAsset GetUpgradeAsset {get {return _asset; }}
 
@@ -17,14 +20,10 @@ namespace AmNuamRunner
         [SerializeField] private LocalizeStringEvent _descriptionLocalizer;
 
         [Header("Блокировка (Замок)")]
-        [Tooltip("Ассет, который должен быть прокачан (выдан по сюжету), чтобы открыть этот лот. Если пусто - открыто сразу.")]
         [SerializeField] private UpgradeAsset _requiredUpgrade;
-        [Tooltip("Полупрозрачная черная панель с иконкой замка")]
         [SerializeField] private GameObject _lockOverlay;
-        [Tooltip("Уровень, после которого открывается улучшение (для отображения в тексте)")]
-        [SerializeField] private int _unlockLevel = 2; // <-- Настраиваем уровень прямо в инспекторе карточки
-        [Tooltip("Отдельный локализатор текста ошибки, который висит поверх замка")]
-        [SerializeField] private LocalizeStringEvent _lockedMessageLocalizer; // <-- Отдельный текст локализации
+        [SerializeField] private int _unlockLevel = 2; 
+        [SerializeField] private LocalizeStringEvent _lockedMessageLocalizer; 
 
         [Header("Прогресс")]
         [SerializeField] private Image[] _pips;
@@ -42,12 +41,25 @@ namespace AmNuamRunner
         private const string KEY_BUY = "Buy";   
         private const string KEY_MAX = "shop_max";   
         private const string KEY_BOUGHT = "shop_bought"; 
-        private const string KEY_LOCKED = "shop_locked"; // <-- Ключ для локализации ошибки
+        private const string KEY_LOCKED = "shop_locked"; 
+        
+        // --- НОВЫЕ КЛЮЧИ ДЛЯ СКИНОВ ---
+        private const string KEY_SELECT = "shop_select";   // "Выбрать"
+        private const string KEY_SELECTED = "shop_selected"; // "Выбрано"
 
         public Button GetButton => _buttonBuy;
         private int _costNumber;
         
         private Tween _lockMessageTween; 
+
+        // Метод, который определяет, является ли этот товар скином, и возвращает его ID
+        private string GetSkinId(string assetName)
+        {
+            if (assetName == "OmNomSkin") return "OmNom";
+            if (assetName == "BooSkin") return "Boo";
+            if (assetName == "LickSkin") return "Lick";
+            return null; // Если это не скин, возвращаем null
+        }
 
         public void Initialize()
         {
@@ -57,6 +69,10 @@ namespace AmNuamRunner
             if (_nameLocalizer != null) _nameLocalizer.StringReference = _asset.localizedName;
 
             int savedLevel = Upgrades.GetUpgradeLevel(_asset);
+            string skinId = GetSkinId(_asset.name);
+            
+            // ХИТРОСТЬ: Ам Ням всегда куплен!
+            if (skinId == "OmNom") savedLevel = 1;
 
             if (_descriptionLocalizer != null)
             {
@@ -80,19 +96,10 @@ namespace AmNuamRunner
                 }
             }
 
-            // --- ЛОГИКА БЛОКИРОВКИ ---
             bool isUnlocked = _requiredUpgrade == null || Upgrades.GetUpgradeLevel(_requiredUpgrade) > 0;
 
-            if (_lockOverlay != null)
-            {
-                _lockOverlay.SetActive(!isUnlocked);
-            }
-            
-            // Скрываем отдельный текст ошибки при старте
-            if (_lockedMessageLocalizer != null)
-            {
-                _lockedMessageLocalizer.gameObject.SetActive(false);
-            }
+            if (_lockOverlay != null) _lockOverlay.SetActive(!isUnlocked);
+            if (_lockedMessageLocalizer != null) _lockedMessageLocalizer.gameObject.SetActive(false);
 
             if (!isUnlocked)
             {
@@ -102,13 +109,36 @@ namespace AmNuamRunner
             }
             else if (savedLevel >= _asset.MaxLevel)
             {
-                _buttonBuy.interactable = false;
+                // Товар полностью куплен! 
+                // Проверяем: это обычное улучшение или скин?
+                if (!string.IsNullOrEmpty(skinId))
+                {
+                    // ЭТО СКИН
+                    string currentSkin = string.IsNullOrEmpty(YG2.saves.currentSkin) ? "OmNom" : YG2.saves.currentSkin;
+                    
+                    if (currentSkin == skinId)
+                    {
+                        // Скин сейчас надет
+                        _buttonBuy.interactable = false;
+                        if (_buttonTextLocalizer != null) _buttonTextLocalizer.StringReference.SetReference(TABLE_NAME, KEY_SELECTED);
+                    }
+                    else
+                    {
+                        // Скин куплен, но не надет (Можно выбрать)
+                        _buttonBuy.interactable = true;
+                        if (_buttonTextLocalizer != null) _buttonTextLocalizer.StringReference.SetReference(TABLE_NAME, KEY_SELECT);
+                    }
+                }
+                else
+                {
+                    // ЭТО ОБЫЧНОЕ УЛУЧШЕНИЕ (Максимальный уровень)
+                    _buttonBuy.interactable = false;
+                    string keyToUse = _asset.IsInApp ? KEY_BOUGHT : KEY_MAX;
+                    if (_buttonTextLocalizer != null) _buttonTextLocalizer.StringReference.SetReference(TABLE_NAME, keyToUse);
+                }
+
                 _costNumber = int.MaxValue;
                 if (_textCost != null) _textCost.text = "";
-
-                string keyToUse = _asset.IsInApp ? KEY_BOUGHT : KEY_MAX;
-                if (_buttonTextLocalizer != null)
-                    _buttonTextLocalizer.StringReference.SetReference(TABLE_NAME, keyToUse);
 
                 foreach (var obj in _objectsToHideOnMax)
                 {
@@ -117,8 +147,13 @@ namespace AmNuamRunner
             }
             else
             {
-                if (_buttonTextLocalizer != null)
-                    _buttonTextLocalizer.StringReference.SetReference(TABLE_NAME, _asset.IsInApp ? KEY_BUY : KEY_IMPROVE);
+                // ТОВАР ЕЩЕ НЕ КУПЛЕН (ИЛИ МОЖНО ПРОКАЧАТЬ ДАЛЬШЕ)
+                string keyToUse;
+                if (_asset.IsInApp) keyToUse = KEY_BUY;
+                else if (savedLevel == 0) keyToUse = KEY_BUY; 
+                else keyToUse = KEY_IMPROVE;
+
+                if (_buttonTextLocalizer != null) _buttonTextLocalizer.StringReference.SetReference(TABLE_NAME, keyToUse);
 
                 foreach (var obj in _objectsToHideOnMax)
                 {
@@ -137,29 +172,20 @@ namespace AmNuamRunner
             }
         }
 
-        // --- МЕТОД ДЛЯ КЛИКА ПО ЗАМКУ ---
         public void OnLockedOverlayClicked()
         {
             if (_lockedMessageLocalizer != null)
             {
-                // Включаем объект текста ошибки
                 _lockedMessageLocalizer.gameObject.SetActive(true);
-
-                // Настраиваем ключ локализации ошибки и подставляем уровень из инспектора карточки
                 _lockedMessageLocalizer.StringReference.SetReference(TABLE_NAME, KEY_LOCKED);
                 _lockedMessageLocalizer.StringReference.Arguments = new object[] { _unlockLevel };
                 _lockedMessageLocalizer.RefreshString();
                 
-                // Перезапускаем таймер, если игрок кликает несколько раз
                 _lockMessageTween?.Kill(); 
-
-                // Ждем 2 секунды и убираем текст ошибки
                 _lockMessageTween = DOVirtual.DelayedCall(2f, () => 
                 {
                     if (this != null && _lockedMessageLocalizer != null)
-                    {
                         _lockedMessageLocalizer.gameObject.SetActive(false);
-                    }
                 }).SetUpdate(true);
             }
         }
@@ -169,7 +195,28 @@ namespace AmNuamRunner
             if (_asset == null) return;
 
             bool isUnlocked = _requiredUpgrade == null || Upgrades.GetUpgradeLevel(_requiredUpgrade) > 0;
-            if (!isUnlocked || Upgrades.GetUpgradeLevel(_asset) >= _asset.MaxLevel)
+            
+            // Получаем текущий уровень и ID скина
+            int savedLevel = Upgrades.GetUpgradeLevel(_asset);
+            string skinId = GetSkinId(_asset.name);
+            if (skinId == "OmNom") savedLevel = 1;
+
+            if (!isUnlocked)
+            {
+                _buttonBuy.interactable = false;
+                return;
+            }
+
+            // Если это скин, и он уже куплен, но не надет - кнопка всегда активна (для выбора)
+            if (!string.IsNullOrEmpty(skinId) && savedLevel >= _asset.MaxLevel)
+            {
+                string currentSkin = string.IsNullOrEmpty(YG2.saves.currentSkin) ? "OmNom" : YG2.saves.currentSkin;
+                _buttonBuy.interactable = (currentSkin != skinId);
+                return;
+            }
+
+            // Обычная логика покупки
+            if (savedLevel >= _asset.MaxLevel)
             {
                 _buttonBuy.interactable = false;
                 return;
@@ -180,12 +227,42 @@ namespace AmNuamRunner
 
         public void Buy()
         {
+            string skinId = GetSkinId(_asset.name);
+            int currentLevel = Upgrades.GetUpgradeLevel(_asset);
+            if (skinId == "OmNom") currentLevel = 1;
+
+            // СЦЕНАРИЙ 1: Игрок нажимает "Выбрать" на уже купленном скине
+            if (currentLevel >= _asset.MaxLevel && !string.IsNullOrEmpty(skinId))
+            {
+                YG2.saves.currentSkin = skinId;
+                YG2.SaveProgress();
+                
+                // 2. ВЫЗЫВАЕМ СОБЫТИЕ ВМЕСТО ХАКА С NULL
+                OnSkinChanged?.Invoke(); 
+                return;
+            }
+
+            // СЦЕНАРИЙ 2: Игрок покупает товар
+            if (currentLevel >= _asset.MaxLevel) return;
+
             Upgrades.BuyUpgrade(_asset);
-            Initialize();
+
+            // Если купили новый скин, сразу экипируем его
+            if (!string.IsNullOrEmpty(skinId))
+            {
+                YG2.saves.currentSkin = skinId;
+                YG2.SaveProgress();
+                
+                // 3. ВЫЗЫВАЕМ СОБЫТИЕ ВМЕСТО ХАКА С NULL
+                OnSkinChanged?.Invoke(); 
+            }
+            else
+            {
+                Initialize();
+            }
 
             int savedLevel = Upgrades.GetUpgradeLevel(_asset);
             AnalyticsManager.Instance.SaveShopBuy(_asset.name, savedLevel);
-
             Sound.BuySound.Play();
         }
         

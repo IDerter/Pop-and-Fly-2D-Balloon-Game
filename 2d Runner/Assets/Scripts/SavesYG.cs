@@ -24,5 +24,7 @@ namespace YG
         public string lastDailyRewardDate = ""; // Дата последнего получения
         public int dailyRewardDayIndex = 0;    // Текущий день (0-6)
         public bool isTutorialCompleted = false;
+
+        public string currentSkin = "OmNom";
     }
 }

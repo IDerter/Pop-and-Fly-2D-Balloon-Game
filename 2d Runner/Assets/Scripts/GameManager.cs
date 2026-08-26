@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour
         player.OnFirstClick += HandleGameStart;
         player.OnPlayerDied += HandleGameOver;
         player.OnScoreChanged += CheckScoreMilestones;
+
+        RewardedAds.RewardOn += HandleRewardReceived;
     }
 
     private void OnDisable()
@@ -41,6 +43,8 @@ public class GameManager : MonoBehaviour
         player.OnFirstClick -= HandleGameStart;
         player.OnPlayerDied -= HandleGameOver;
         player.OnScoreChanged -= CheckScoreMilestones;
+
+        RewardedAds.RewardOn -= HandleRewardReceived;
     }
 
     private void Start()
@@ -56,6 +60,14 @@ public class GameManager : MonoBehaviour
         if (lollipopSpawner) lollipopSpawner.enabled = true;
         
         if (backgroundParallax) backgroundParallax.SetActive(true);
+    }
+
+    private void HandleRewardReceived(string rewardType)
+    {
+        if (rewardType == "Reborn") // Или TypeReward.Reborn.ToString()
+        {
+            RevivePlayerAfterAd();
+        }
     }
 
     private void CheckScoreMilestones(int score)
@@ -76,9 +88,9 @@ public class GameManager : MonoBehaviour
         }
         
         if (score >= 10 && spawnBeeEnemy) spawnBeeEnemy.enabled = true;
-        if (score >= 3 && spawnGhostTeleportEnemy) spawnGhostTeleportEnemy.enabled = true; // было 30 исправить
+        if (score >= 30 && spawnGhostTeleportEnemy) spawnGhostTeleportEnemy.enabled = true; // было 30 исправить
         if (score >= 60 && spawnerStones) spawnerStones.enabled = true;
-        if (score >= 120 && spawnerExplosion) spawnerExplosion.enabled = true;
+       // if (score >= 1 && spawnerExplosion) spawnerExplosion.enabled = true;
     }
 
     private void HandleGameOver()

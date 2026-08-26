@@ -24,6 +24,7 @@ namespace AmNuamRunner
         private void OnEnable()
         {
             Upgrades.OnUpgradeChanged += RefreshAllSlots;
+            BuyUpgrade.OnSkinChanged += RefreshAllSlots;
             // При включении магазина всегда подтягиваем актуальный баланс из облака
             if (YG2.isSDKEnabled) 
             {
@@ -34,6 +35,7 @@ namespace AmNuamRunner
         private void OnDisable()
         {
             Upgrades.OnUpgradeChanged -= RefreshAllSlots;
+            BuyUpgrade.OnSkinChanged -= RefreshAllSlots;
         }
 
         private void RefreshAllSlots()

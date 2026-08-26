@@ -30,6 +30,14 @@ MonoBehaviour:
     m_Localized: "\rMagnit upgrade"
     m_Metadata:
       m_Items: []
+  - m_Id: 1028924575760384
+    m_Localized: Skin Boo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1036146802343936
+    m_Localized: Skin Om Nom
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

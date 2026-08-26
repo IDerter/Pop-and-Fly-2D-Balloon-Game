@@ -29,6 +29,14 @@ MonoBehaviour:
 '
     m_Metadata:
       m_Items: []
+  - m_Id: 1028460169838592
+    m_Key: BooSkin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1035934583144448
+    m_Key: OmNomSkin
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
