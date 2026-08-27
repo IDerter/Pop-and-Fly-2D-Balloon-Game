@@ -1,0 +1,505 @@
+fileFormatVersion: 2
+guid: c04d7a0900e0e7e4281fa740a0694a9e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 776
+        width: 241
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6929159b2268bf4882c46a06943177a
+      internalID: 942373775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_1
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 776
+        width: 241
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f021f6e0f15df40902ca0739377f3d
+      internalID: 269112642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_2
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 776
+        width: 241
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 081e3a8834e10744ca02c7c5325f02a8
+      internalID: -1183723284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_3
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 776
+        width: 241
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb8cebcc650d3bb429421ea86f1e979e
+      internalID: 1261704621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_4
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 532
+        width: 241
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17758e7e26114a49a7e5f3f6f6fd849
+      internalID: 447009580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_5
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 532
+        width: 241
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0f1079b92848d34ca1c716fc5cc9509
+      internalID: -1355570821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_6
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 532
+        width: 241
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb9369dcfa7fdb34daa2f979dbaefc3b
+      internalID: 1425144671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_7
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 532
+        width: 241
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0fba11be18e68f47a706e4986b168b6
+      internalID: -1645616345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_8
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 277
+        width: 241
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed0402ba674f87d4f986193c52beadc0
+      internalID: 1087611782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_9
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 277
+        width: 241
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac0f7c32cdf37c8458a6849300624a7f
+      internalID: -845539801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_10
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 277
+        width: 241
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea10492645f0a2946ae58b5cbde3662d
+      internalID: 1959407575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_11
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 277
+        width: 241
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ebd1efc5e7f0fd468397e6dea9b8a30
+      internalID: 1510754744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_12
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 28
+        width: 241
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ef731c1147e2634baca5487d8f45217
+      internalID: 718957259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_13
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 28
+        width: 241
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f0ec97234e7ed74db9492baebe53f38
+      internalID: -1346633706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_14
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 28
+        width: 241
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77051ce560ed8dc4d80efbcf032d2d7b
+      internalID: -1690845724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_15
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 28
+        width: 241
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34ca8a682796a6247baef9684c81ef46
+      internalID: -188878678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_0: 942373775
+      Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_1: 269112642
+      Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_10: 1959407575
+      Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_11: 1510754744
+      Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_12: 718957259
+      Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_13: -1346633706
+      Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_14: -1690845724
+      Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_15: -188878678
+      Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_2: -1183723284
+      Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_3: 1261704621
+      Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_4: 447009580
+      Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_5: -1355570821
+      Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_6: 1425144671
+      Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_7: -1645616345
+      Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_8: 1087611782
+      Baby_dragon_flying_sprite_sheet_202608271118-Photoroom_9: -845539801
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

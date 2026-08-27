@@ -1,14 +1,24 @@
 using UnityEngine;
 using YG;
+using DG.Tweening; // Если захочешь добавить анимацию покачивания
 
 public class MenuAndTutorialUi : MonoBehaviour
 {
-    [Header("Start Screen")]
+    [Header("Start Screen Panels")]
     public GameObject panel1;
     public GameObject panel2;
+    
+    [Header("Tutorial: Rules (Схемы)")]
+    public GameObject mechanicsHints; // <-- СЮДА перетащи панель с картинками правил (собирай/уклоняйся)
+    
+    [Header("Tutorial: Mobile Controls")]
     public GameObject leftFinger;
     public GameObject rightFinger;
     
+    [Header("Tutorial: PC Controls")]
+    public GameObject pcKeysLeft;
+    public GameObject pcKeysRight;
+
     [Header("In-Game Controls")]
     public GameObject buttonLeft;
     public GameObject buttonRight;
@@ -25,7 +35,6 @@ public class MenuAndTutorialUi : MonoBehaviour
 
     private void Start()
     {
-        // Если SDK уже загружен, настраиваем меню сразу
         if (YG2.isSDKEnabled)
         {
             SetupTutorialState();
@@ -34,17 +43,52 @@ public class MenuAndTutorialUi : MonoBehaviour
 
     private void SetupTutorialState()
     {
-        // ПРАВИЛЬНАЯ РАБОТА С YG2
         bool isFirstGame = !YG2.saves.isTutorialCompleted;
 
         panel1.SetActive(true);
         panel2.SetActive(true);
 
-        // Если это не первая игра - отключаем гайды
-        if (!isFirstGame)
+        if (isFirstGame)
         {
-            leftFinger.SetActive(false);
-            rightFinger.SetActive(false);
+            // Показываем картинки с правилами игры
+            if (mechanicsHints) mechanicsHints.SetActive(true);
+
+            // Анимация дыхания (покачивания) для подсказок (опционально, если есть DOTween)
+            if (mechanicsHints) 
+            {
+                mechanicsHints.transform.DOKill(); // убиваем старую анимацию на всякий случай
+                mechanicsHints.transform.DOScale(1.05f, 0.8f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutSine);
+            }
+
+            // Управление
+            if (YG2.envir.isDesktop)
+            {
+                // ПК
+                if (pcKeysLeft) pcKeysLeft.SetActive(true);
+                if (pcKeysRight) pcKeysRight.SetActive(true);
+                
+                if (leftFinger) leftFinger.SetActive(false);
+                if (rightFinger) rightFinger.SetActive(false);
+            }
+            else
+            {
+                // Мобайл
+                if (leftFinger) leftFinger.SetActive(true);
+                if (rightFinger) rightFinger.SetActive(true);
+                
+                if (pcKeysLeft) pcKeysLeft.SetActive(false);
+                if (pcKeysRight) pcKeysRight.SetActive(false);
+            }
+        }
+        else
+        {
+            // Обучение пройдено: прячем всё
+            if (mechanicsHints) mechanicsHints.SetActive(false);
+            
+            if (leftFinger) leftFinger.SetActive(false);
+            if (rightFinger) rightFinger.SetActive(false);
+            if (pcKeysLeft) pcKeysLeft.SetActive(false);
+            if (pcKeysRight) pcKeysRight.SetActive(false);
         }
     }
 
@@ -52,7 +96,28 @@ public class MenuAndTutorialUi : MonoBehaviour
     {
         panel1.SetActive(false);
         panel2.SetActive(false);
-        leftFinger.SetActive(false);
-        rightFinger.SetActive(false);
+        
+        // Убиваем анимацию и прячем картинки правил
+        if (mechanicsHints) 
+        {
+            mechanicsHints.transform.DOKill();
+            mechanicsHints.SetActive(false);
+        }
+        
+        if (leftFinger) leftFinger.SetActive(false);
+        if (rightFinger) rightFinger.SetActive(false);
+        if (pcKeysLeft) pcKeysLeft.SetActive(false);
+        if (pcKeysRight) pcKeysRight.SetActive(false);
+    }
+
+    [ContextMenu("Сбросить обучение (Тест)")]
+    public void ResetTutorialTest()
+    {
+        YG2.saves.isTutorialCompleted = false;
+        YG2.saves.coin = 0; 
+        YG2.SaveProgress();
+        
+        SetupTutorialState(); 
+        Debug.Log("<color=yellow>[Тест] Обучение и монеты сброшены!</color>");
     }
 }

@@ -99,6 +99,30 @@ namespace AmNuamRunner
             return 0;
         }
         
-        // Метод GetTotalCostUpgrade удален за ненадобностью
+        [ContextMenu("Очистить сохранения апгрейдов (Тест)")]
+        public void ResetAllUpgradesTest()
+        {
+            // 1. Сбрасываем уровни локально в скрипте
+            foreach (var upgrade in _upgrades)
+            {
+                upgrade.level = 0;
+            }
+
+            // 2. Очищаем массивы в облачном сохранении Яндекса
+            YG2.saves.upgradeNames = new string[0];
+            YG2.saves.upgradeLevels = new int[0];
+
+            // Если для тестов нужно заодно сбрасывать монеты и скин — раскомментируй эти строки:
+            // YG2.saves.coin = 0;
+            // YG2.saves.currentSkin = "OmNom"; // Или базовый скин "RedDragon"
+
+            // 3. Отправляем пустые данные в облако
+            YG2.SaveProgress();
+
+            // 4. Обновляем UI магазина (если он сейчас открыт)
+            OnUpgradeChanged?.Invoke();
+
+            Debug.Log("<color=yellow>[Тест] Все улучшения успешно сброшены!</color>");
+        }
     }
 }

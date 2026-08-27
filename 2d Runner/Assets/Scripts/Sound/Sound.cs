@@ -4,6 +4,7 @@ using UnityEngine;
 
 public enum Sound
 {
+    EquipSound = 0,
     PopUp = 1,
     EnemyDie = 2,
     EnemyWin = 3,
@@ -15,13 +16,7 @@ public enum Sound
     BuySound = 9,
     Click = 10,
     Build = 11,
-    Stars = 12,
-    Turret = 14,
-    Fire = 15,
-    CrossbowArrow = 16,
-    Mortar = 17,
-    Upgrade = 18,
-    Lightning = 19,
-    Whoosh = 20
+    Fanfar = 12,
+    Whoosh = 13
 }
 

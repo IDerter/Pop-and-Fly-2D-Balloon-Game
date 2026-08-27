@@ -44,8 +44,8 @@ PlayerSettings:
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
-  defaultScreenWidthWeb: 960
-  defaultScreenHeightWeb: 600
+  defaultScreenWidthWeb: 1920
+  defaultScreenHeightWeb: 1080
   m_StereoRenderingPath: 0
   m_ActiveColorSpace: 0
   unsupportedMSAAFallback: 0
@@ -141,7 +141,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 0.1
+  bundleVersion: 0.0.0.1
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -184,7 +184,7 @@ PlayerSettings:
   CreateWallpaper: 0
   APKExpansionFiles: 0
   keepLoadedShadersAlive: 0
-  StripUnusedMeshComponents: 1
+  StripUnusedMeshComponents: 0
   strictShaderVariantMatching: 0
   VertexChannelCompressionMask: 4054
   iPhoneSdkVersion: 988
@@ -486,7 +486,10 @@ PlayerSettings:
       m_Height: 1024
       m_Kind: 4
       m_SubKind: App Store
-  m_BuildTargetBatching: []
+  m_BuildTargetBatching:
+  - m_BuildTarget: WebGL
+    m_StaticBatching: 1
+    m_DynamicBatching: 1
   m_BuildTargetShaderSettings: []
   m_BuildTargetGraphicsJobs:
   - m_BuildTarget: WindowsStandaloneSupport
@@ -550,8 +553,12 @@ PlayerSettings:
     Android: 1
     iPhone: 1
     tvOS: 1
-  m_BuildTargetGroupLightmapEncodingQuality: []
-  m_BuildTargetGroupHDRCubemapEncodingQuality: []
+  m_BuildTargetGroupLightmapEncodingQuality:
+  - m_BuildTarget: WebGL
+    m_EncodingQuality: 0
+  m_BuildTargetGroupHDRCubemapEncodingQuality:
+  - m_BuildTarget: WebGL
+    m_EncodingQuality: 0
   m_BuildTargetGroupLightmapSettings: []
   m_BuildTargetGroupLoadStoreDebugModeSettings: []
   m_BuildTargetNormalMapEncoding: []
@@ -815,29 +822,30 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Android: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;RU_YG2;InterstitialAdv_yg;Authorization_yg;Storage_yg;PlayerStats_yg;RedefinePlayerPrefs_yg;Localization_yg;Payments_yg;Review_yg;StickyAdv_yg;RewardedAdv_yg;Leaderboards_yg
+    Android: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;RU_YG2;InterstitialAdv_yg;Authorization_yg;Storage_yg;PlayerStats_yg;RedefinePlayerPrefs_yg;Localization_yg;Payments_yg;Review_yg;StickyAdv_yg;RewardedAdv_yg;Leaderboards_yg;EnvirData_yg
     EmbeddedLinux: DOTWEEN
     GameCoreScarlett: DOTWEEN
     GameCoreXboxOne: DOTWEEN
-    LinuxHeadlessSimulation: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;RU_YG2;InterstitialAdv_yg;Authorization_yg;Storage_yg;PlayerStats_yg;RedefinePlayerPrefs_yg;Localization_yg;Payments_yg;Review_yg;StickyAdv_yg;RewardedAdv_yg;Leaderboards_yg
-    Nintendo Switch: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;RU_YG2;InterstitialAdv_yg;Authorization_yg;Storage_yg;PlayerStats_yg;RedefinePlayerPrefs_yg;Localization_yg;Payments_yg;Review_yg;StickyAdv_yg;RewardedAdv_yg;Leaderboards_yg
-    PS4: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;RU_YG2;InterstitialAdv_yg;Authorization_yg;Storage_yg;PlayerStats_yg;RedefinePlayerPrefs_yg;Localization_yg;Payments_yg;Review_yg;StickyAdv_yg;RewardedAdv_yg;Leaderboards_yg
-    PS5: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;RU_YG2;InterstitialAdv_yg;Authorization_yg;Storage_yg;PlayerStats_yg;RedefinePlayerPrefs_yg;Localization_yg;Payments_yg;Review_yg;StickyAdv_yg;RewardedAdv_yg;Leaderboards_yg
+    LinuxHeadlessSimulation: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;RU_YG2;InterstitialAdv_yg;Authorization_yg;Storage_yg;PlayerStats_yg;RedefinePlayerPrefs_yg;Localization_yg;Payments_yg;Review_yg;StickyAdv_yg;RewardedAdv_yg;Leaderboards_yg;EnvirData_yg
+    Nintendo Switch: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;RU_YG2;InterstitialAdv_yg;Authorization_yg;Storage_yg;PlayerStats_yg;RedefinePlayerPrefs_yg;Localization_yg;Payments_yg;Review_yg;StickyAdv_yg;RewardedAdv_yg;Leaderboards_yg;EnvirData_yg
+    PS4: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;RU_YG2;InterstitialAdv_yg;Authorization_yg;Storage_yg;PlayerStats_yg;RedefinePlayerPrefs_yg;Localization_yg;Payments_yg;Review_yg;StickyAdv_yg;RewardedAdv_yg;Leaderboards_yg;EnvirData_yg
+    PS5: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;RU_YG2;InterstitialAdv_yg;Authorization_yg;Storage_yg;PlayerStats_yg;RedefinePlayerPrefs_yg;Localization_yg;Payments_yg;Review_yg;StickyAdv_yg;RewardedAdv_yg;Leaderboards_yg;EnvirData_yg
     QNX: DOTWEEN
     Stadia: DOTWEEN
-    Standalone: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;RU_YG2;InterstitialAdv_yg;Authorization_yg;Storage_yg;PlayerStats_yg;RedefinePlayerPrefs_yg;Localization_yg;Payments_yg;Review_yg;StickyAdv_yg;RewardedAdv_yg;Leaderboards_yg
+    Standalone: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;RU_YG2;InterstitialAdv_yg;Authorization_yg;Storage_yg;PlayerStats_yg;RedefinePlayerPrefs_yg;Localization_yg;Payments_yg;Review_yg;StickyAdv_yg;RewardedAdv_yg;Leaderboards_yg;EnvirData_yg
     VisionOS: DOTWEEN
-    WebGL: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;RU_YG2;InterstitialAdv_yg;Authorization_yg;Storage_yg;PlayerStats_yg;RedefinePlayerPrefs_yg;Localization_yg;Payments_yg;Review_yg;StickyAdv_yg;RewardedAdv_yg;Leaderboards_yg
-    Windows Store Apps: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;RU_YG2;InterstitialAdv_yg;Authorization_yg;Storage_yg;PlayerStats_yg;RedefinePlayerPrefs_yg;Localization_yg;Payments_yg;Review_yg;StickyAdv_yg;RewardedAdv_yg;Leaderboards_yg
-    XboxOne: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;RU_YG2;InterstitialAdv_yg;Authorization_yg;Storage_yg;PlayerStats_yg;RedefinePlayerPrefs_yg;Localization_yg;Payments_yg;Review_yg;StickyAdv_yg;RewardedAdv_yg;Leaderboards_yg
-    iPhone: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;RU_YG2;InterstitialAdv_yg;Authorization_yg;Storage_yg;PlayerStats_yg;RedefinePlayerPrefs_yg;Localization_yg;Payments_yg;Review_yg;StickyAdv_yg;RewardedAdv_yg;Leaderboards_yg
-    tvOS: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;RU_YG2;InterstitialAdv_yg;Authorization_yg;Storage_yg;PlayerStats_yg;RedefinePlayerPrefs_yg;Localization_yg;Payments_yg;Review_yg;StickyAdv_yg;RewardedAdv_yg;Leaderboards_yg
+    WebGL: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;RU_YG2;InterstitialAdv_yg;Authorization_yg;Storage_yg;PlayerStats_yg;RedefinePlayerPrefs_yg;Localization_yg;Payments_yg;Review_yg;StickyAdv_yg;RewardedAdv_yg;Leaderboards_yg;EnvirData_yg
+    Windows Store Apps: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;RU_YG2;InterstitialAdv_yg;Authorization_yg;Storage_yg;PlayerStats_yg;RedefinePlayerPrefs_yg;Localization_yg;Payments_yg;Review_yg;StickyAdv_yg;RewardedAdv_yg;Leaderboards_yg;EnvirData_yg
+    XboxOne: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;RU_YG2;InterstitialAdv_yg;Authorization_yg;Storage_yg;PlayerStats_yg;RedefinePlayerPrefs_yg;Localization_yg;Payments_yg;Review_yg;StickyAdv_yg;RewardedAdv_yg;Leaderboards_yg;EnvirData_yg
+    iPhone: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;RU_YG2;InterstitialAdv_yg;Authorization_yg;Storage_yg;PlayerStats_yg;RedefinePlayerPrefs_yg;Localization_yg;Payments_yg;Review_yg;StickyAdv_yg;RewardedAdv_yg;Leaderboards_yg;EnvirData_yg
+    tvOS: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;RU_YG2;InterstitialAdv_yg;Authorization_yg;Storage_yg;PlayerStats_yg;RedefinePlayerPrefs_yg;Localization_yg;Payments_yg;Review_yg;StickyAdv_yg;RewardedAdv_yg;Leaderboards_yg;EnvirData_yg
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
     Android: 1
   il2cppCompilerConfiguration: {}
-  il2cppCodeGeneration: {}
+  il2cppCodeGeneration:
+    WebGL: 1
   managedStrippingLevel:
     Android: 1
     EmbeddedLinux: 1
@@ -944,7 +952,7 @@ PlayerSettings:
   embeddedLinuxEnableGamepadInput: 1
   hmiLogStartupTiming: 0
   hmiCpuConfiguration: 
-  apiCompatibilityLevel: 3
+  apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
   cloudProjectId: 52526ea8-88b8-4200-a44d-a52c095b399e
@@ -953,7 +961,7 @@ PlayerSettings:
   projectName: 2d Runner
   organizationId: turchaninov1
   cloudEnabled: 0
-  legacyClampBlendShapeWeights: 1
+  legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
   platformRequiresReadableAssets: 0
   virtualTexturingSupportEnabled: 0

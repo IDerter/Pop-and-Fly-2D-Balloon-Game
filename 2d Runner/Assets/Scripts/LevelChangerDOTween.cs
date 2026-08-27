@@ -1,43 +1,68 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using DG.Tweening; // Подключаем DOTween
+using DG.Tweening; 
 
 public class LevelChangerDotween : MonoBehaviour
 {
     [Header("Настройки перехода")]
-    [SerializeField] private Image fadeImage; // Ссылка на черную картинку, перекрывающую экран
-    [SerializeField] private float fadeDuration = 1f; // Длительность затемнения в секундах
+    [SerializeField] private Image fadeImage; 
+    [SerializeField] private float fadeDuration = 1f; 
+
+    private int _targetLevelIndex; 
 
     private void Start()
     {
-        // Опционально: автоматическое плавное появление сцены (Fade In) при старте
+        // Плавное появление (Fade In) при старте новой сцены остается как было
         if (fadeImage != null)
         {
             fadeImage.gameObject.SetActive(true);
-            fadeImage.raycastTarget = true; // Блокируем клики, пока сцена появляется
+            fadeImage.raycastTarget = true; 
             
-            // Устанавливаем альфу на 1 (полностью непрозрачный), затем плавно уводим в 0
             fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, 1f);
-            fadeImage.DOFade(0f, fadeDuration).OnComplete(() => 
+            
+            fadeImage.DOFade(0f, fadeDuration).SetUpdate(true).OnComplete(() => 
             {
-                fadeImage.raycastTarget = false; // Разрешаем кликать по UI после появления сцены
+                fadeImage.raycastTarget = false; 
             });
         }
     }
 
-    // Метод для вызова при нажатии на кнопку перехода
-    public void FadeToLevel(int levelIndex)
+    // ВЫЗЫВАТЬ ЭТОТ МЕТОД ПО КЛИКУ НА КНОПКУ ПЕРЕХОДА
+    public void FadeToLevelWithAd(int levelIndex)
     {
-        if (fadeImage == null) return;
+        _targetLevelIndex = levelIndex; 
+        
+        // 1. СРАЗУ показываем рекламу (Требование Яндекса < 0.33 сек)
+        InterstitialAds.OnInterstitialAdClosed += OnAdClosedForTransition;
+        AdsManager.Instance._interstitialAds.ShowInterstitialAd();
+    }
 
-        fadeImage.gameObject.SetActive(true);
-        fadeImage.raycastTarget = true; // Сразу блокируем UI, чтобы игрок не нажал ничего лишнего
-            
-        // Плавно меняем прозрачность картинки до 1, и только потом грузим сцену
-        fadeImage.DOFade(1f, fadeDuration).OnComplete(() =>
+    private void OnAdClosedForTransition()
+    {
+        InterstitialAds.OnInterstitialAdClosed -= OnAdClosedForTransition;
+
+        // 2. Реклама закончилась (или была пропущена из-за кулдауна). 
+        // Теперь делаем плавное затемнение и меняем сцену!
+        if (fadeImage != null)
         {
-            SceneManager.LoadScene(levelIndex);
-        });
+            fadeImage.gameObject.SetActive(true);
+            fadeImage.raycastTarget = true; 
+            
+            fadeImage.DOFade(1f, fadeDuration).SetUpdate(true).OnComplete(() =>
+            {
+                SceneManager.LoadScene(_targetLevelIndex);
+            });
+        }
+        else
+        {
+            // На всякий случай, если забыли привязать картинку
+            SceneManager.LoadScene(_targetLevelIndex);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        InterstitialAds.OnInterstitialAdClosed -= OnAdClosedForTransition;
     }
 }

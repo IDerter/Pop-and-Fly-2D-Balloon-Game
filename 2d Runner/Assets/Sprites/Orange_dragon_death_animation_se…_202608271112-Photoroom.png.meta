@@ -1,0 +1,483 @@
+fileFormatVersion: 2
+guid: 62aa0df3070de72439c75801e73592d4
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Orange_dragon_death_animation_se\u2026_202608271112-Photoroom_0"
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 778
+        width: 236
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6173403f0f6f513488d0b150a07b7f8a
+      internalID: 630331660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Orange_dragon_death_animation_se\u2026_202608271112-Photoroom_1"
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 778
+        width: 220
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7585ba088164ae4f8cb6270a08a81b4
+      internalID: -230003889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Orange_dragon_death_animation_se\u2026_202608271112-Photoroom_2"
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 778
+        width: 223
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffc83fc5f3ec2214db59a79fe7170653
+      internalID: -589686765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Orange_dragon_death_animation_se\u2026_202608271112-Photoroom_3"
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 778
+        width: 223
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cfc852a402a1cd4b85433ebb8036a53
+      internalID: 238121205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Orange_dragon_death_animation_se\u2026_202608271112-Photoroom_4"
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 534
+        width: 221
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1c43de76dcb7c54b920967077d4a865
+      internalID: -1706846239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Orange_dragon_death_animation_se\u2026_202608271112-Photoroom_5"
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 538
+        width: 214
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b68d4291546a37547b524251e018fb36
+      internalID: 1696294559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Orange_dragon_death_animation_se\u2026_202608271112-Photoroom_6"
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 539
+        width: 197
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8be0b85fd7e02c7419bc867799b11997
+      internalID: 1265615529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Orange_dragon_death_animation_se\u2026_202608271112-Photoroom_7"
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 531
+        width: 214
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f63d7e5c0de9bda458c024996913b46a
+      internalID: -1445361220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Orange_dragon_death_animation_se\u2026_202608271112-Photoroom_8"
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 285
+        width: 221
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7153e104e2f315c4880b843915265474
+      internalID: -1417084188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Orange_dragon_death_animation_se\u2026_202608271112-Photoroom_9"
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 284
+        width: 228
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d76e357a615e614892034788845a052
+      internalID: -803181057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Orange_dragon_death_animation_se\u2026_202608271112-Photoroom_10"
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 284
+        width: 235
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b48417bd58622b14394f27a96bf8b332
+      internalID: -1560504149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Orange_dragon_death_animation_se\u2026_202608271112-Photoroom_11"
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 0
+        width: 246
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5389ff7fe4bb541499814ce4500918a9
+      internalID: -1246348953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Orange_dragon_death_animation_se\u2026_202608271112-Photoroom_12"
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 32
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3be232a3c6f6c94cbbd0fc69434f36f
+      internalID: -2020129404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Orange_dragon_death_animation_se\u2026_202608271112-Photoroom_13"
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 34
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26bd71828b8e9c64ea8ba89c2b948f11
+      internalID: 1240741846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Orange_dragon_death_animation_se\u2026_202608271112-Photoroom_14"
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 35
+        width: 174
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cac116b0a8d7eed48ba190011e42a12c
+      internalID: -170850897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      "Orange_dragon_death_animation_se\u2026_202608271112-Photoroom_0": 630331660
+      "Orange_dragon_death_animation_se\u2026_202608271112-Photoroom_1": -230003889
+      "Orange_dragon_death_animation_se\u2026_202608271112-Photoroom_10": -1560504149
+      "Orange_dragon_death_animation_se\u2026_202608271112-Photoroom_11": -1246348953
+      "Orange_dragon_death_animation_se\u2026_202608271112-Photoroom_12": -2020129404
+      "Orange_dragon_death_animation_se\u2026_202608271112-Photoroom_13": 1240741846
+      "Orange_dragon_death_animation_se\u2026_202608271112-Photoroom_14": -170850897
+      "Orange_dragon_death_animation_se\u2026_202608271112-Photoroom_2": -589686765
+      "Orange_dragon_death_animation_se\u2026_202608271112-Photoroom_3": 238121205
+      "Orange_dragon_death_animation_se\u2026_202608271112-Photoroom_4": -1706846239
+      "Orange_dragon_death_animation_se\u2026_202608271112-Photoroom_5": 1696294559
+      "Orange_dragon_death_animation_se\u2026_202608271112-Photoroom_6": 1265615529
+      "Orange_dragon_death_animation_se\u2026_202608271112-Photoroom_7": -1445361220
+      "Orange_dragon_death_animation_se\u2026_202608271112-Photoroom_8": -1417084188
+      "Orange_dragon_death_animation_se\u2026_202608271112-Photoroom_9": -803181057
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -55,6 +55,11 @@ public class GameManager : MonoBehaviour
     private void HandleGameStart()
     {
         tutorialUI.HideStartMenu();
+
+        if (!YG2.saves.isTutorialCompleted)
+        {
+            AnalyticsManager.Instance.SaveLearningStep("tutorial_start");
+        }
         
         if (mainSpawner) mainSpawner.enabled = true;
         if (lollipopSpawner) lollipopSpawner.enabled = true;
@@ -76,15 +81,6 @@ public class GameManager : MonoBehaviour
         {
             if (spawnerShit) spawnerShit.enabled = true;
             if (spawnerMagnet) spawnerMagnet.enabled = true;
-        }
-        
-        // ПРАВИЛЬНАЯ РАБОТА С YG2
-        if (score == 10 && !YG2.saves.isTutorialCompleted)
-        {
-            //tutorialUI.ShowTutorialEnd(); 
-            
-            YG2.saves.isTutorialCompleted = true;
-            YG2.SaveProgress();
         }
         
         if (score >= 10 && spawnBeeEnemy) spawnBeeEnemy.enabled = true;
@@ -170,6 +166,45 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void RestartGame() { SceneManager.LoadScene(SceneManager.GetActiveScene().name); }
-    public void LoadMenu() { SceneManager.LoadScene("MainMenu"); }
+    public void RestartGame() 
+    { 
+        // 1. Отписываемся на всякий случай, чтобы предотвратить двойное срабатывание при спаме кнопки
+        InterstitialAds.OnInterstitialAdClosed -= OnAdClosedForRestart;
+        
+        // 2. Подписываемся на событие закрытия рекламы
+        InterstitialAds.OnInterstitialAdClosed += OnAdClosedForRestart;
+        
+        // 3. Вызываем показ рекламы через менеджер
+        AdsManager.Instance._interstitialAds.ShowInterstitialAd();
+
+        AnalyticsManager.Instance.RestartLeveStats(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private void OnAdClosedForRestart()
+    {
+        InterstitialAds.OnInterstitialAdClosed -= OnAdClosedForRestart; // Отписываемся
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);     // Перезагружаем уровень
+    }
+
+    public void LoadMenu() 
+    { 
+        // Делаем то же самое для кнопки выхода в меню
+        InterstitialAds.OnInterstitialAdClosed -= OnAdClosedForMenu;
+        InterstitialAds.OnInterstitialAdClosed += OnAdClosedForMenu;
+        
+        AdsManager.Instance._interstitialAds.ShowInterstitialAd();
+    }
+
+    private void OnAdClosedForMenu()
+    {
+        InterstitialAds.OnInterstitialAdClosed -= OnAdClosedForMenu;
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    private void OnDestroy()
+    {
+        // Обязательная защита от утечек памяти, если объект GameManager уничтожится раньше времени
+        InterstitialAds.OnInterstitialAdClosed -= OnAdClosedForRestart;
+        InterstitialAds.OnInterstitialAdClosed -= OnAdClosedForMenu;
+    }
 }

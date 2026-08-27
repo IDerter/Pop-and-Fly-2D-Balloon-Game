@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 58347577469345544}
   - component: {fileID: 58157145256657688}
   - component: {fileID: 50580928089064286}
-  - component: {fileID: 114099340361952556}
   - component: {fileID: 2134939128698978523}
   - component: {fileID: 9210829733932547303}
   - component: {fileID: 2787998268758752231}
@@ -188,25 +187,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &114099340361952556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1793018304744476}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a1986bcf615ff640a945c1b5f6de2f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  gear: {fileID: 4923267949194672}
-  effect: {fileID: 1745074618317960, guid: 602a0fe0dd607b7449355b314c3f9eab, type: 3}
-  sound: {fileID: 1195248989485196, guid: 7648c373f21bc8947ab98f3573670ebe, type: 3}
-  damage: 1
-  direction: {x: 0, y: -0.01}
-  isdamage: 1
 --- !u!95 &2134939128698978523
 Animator:
   serializedVersion: 5
@@ -241,11 +221,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  effect: {fileID: 0}
-  sound: {fileID: 0}
+  effect: {fileID: 1745074618317960, guid: be4fdee2f54a47b4f9965806ca395fb6, type: 3}
+  sound: {fileID: 1195248989485196, guid: 7648c373f21bc8947ab98f3573670ebe, type: 3}
   damage: 1
   direction: {x: 0, y: -0.04}
   isdamage: 1
+  isTeleporting: 0
 --- !u!114 &2787998268758752231
 MonoBehaviour:
   m_ObjectHideFlags: 0

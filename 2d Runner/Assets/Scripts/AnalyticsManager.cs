@@ -18,24 +18,6 @@ public class AnalyticsManager : SingletonBase<AnalyticsManager>
         Debug.Log(_isInitialized);
     }
 
-    public void NextLevelStats(int currentLevel)
-    {
-#if !UNITY_EDITOR
-        Debug.Log(_isInitialized + " nextLevel");
-        if (!_isInitialized)
-		{
-            return;
-		}
-
-        CustomEvent myEvent = new CustomEvent("next_level")
-        {
-            {"level_index", currentLevel }
-        };
-        AnalyticsService.Instance.RecordEvent(myEvent);
-        AnalyticsService.Instance.Flush();
-#endif
-        Debug.Log("next_level");
-    }
 
     public void RestartLeveStats(int scene_index)
     {
@@ -52,20 +34,20 @@ public class AnalyticsManager : SingletonBase<AnalyticsManager>
         Debug.Log("restart_level");
     }
 
-    public void SaveLevelStarsStats(int scene_index, int stars_count)
+    public void SaveLevelLolipopsStats(int scene_index, int lolipops_count)
     {
 #if !UNITY_EDITOR
-        CustomEvent myEvent = new CustomEvent("stars_level")
+        CustomEvent myEvent = new CustomEvent("lolipops_level")
         {
             {"scene_index", scene_index },
-            {"stars_count", stars_count }
+            {"lolipops_count", lolipops_count }
         };
 
         AnalyticsService.Instance.RecordEvent(myEvent);
         AnalyticsService.Instance.Flush();
 #endif
 
-        Debug.Log($"stars_level ������� = {scene_index} � ���-�� ����� = {stars_count}");
+        Debug.Log($"lolipops_level = {scene_index} Lolipops= {lolipops_count}");
     }
 
     public void SaveRewardedAds(string type)

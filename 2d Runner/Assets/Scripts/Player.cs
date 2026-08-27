@@ -13,13 +13,13 @@ public class Player : MonoBehaviour
     public CircleCollider2D circleCollider;
 
     [Header("Skins (Контроллеры)")]
-    public RuntimeAnimatorController omNomController;
-    public RuntimeAnimatorController booController;
+    public RuntimeAnimatorController redDragonController;
+    public RuntimeAnimatorController blueDragonController;
     // public RuntimeAnimatorController lickController; // Для Лямзи в будущем
 
     [Header("Skins (Стартовые спрайты)")]
-    public Sprite omNomIdleSprite;
-    public Sprite booIdleSprite;
+    public Sprite redDragonIdleSprite;
+    public Sprite blueDragonIdleSprite;
 
     [Header("Stats & Physics")]
     public float speed = 15f;
@@ -69,18 +69,18 @@ public class Player : MonoBehaviour
     // --- ЛОГИКА СКИНОВ ---
     private void ApplySkin()
     {
-        currentSkin = string.IsNullOrEmpty(YG2.saves.currentSkin) ? "OmNom" : YG2.saves.currentSkin;
+        currentSkin = string.IsNullOrEmpty(YG2.saves.currentSkin) ? "RedDragon" : YG2.saves.currentSkin;
 
-        if (currentSkin == "Boo")
+        if (currentSkin == "BlueDragon")
         {
-            characterAnimator.runtimeAnimatorController = booController;
+            characterAnimator.runtimeAnimatorController = blueDragonController;
             
             if (playerSprite != null)
             {
                 // Сразу ставим нужную картинку до включения аниматора
-                playerSprite.sprite = booIdleSprite; 
+                playerSprite.sprite = blueDragonIdleSprite; 
                 
-                playerSprite.transform.localScale = new Vector3(3.5f, 3.5f, 1f);
+                playerSprite.transform.localScale = new Vector3(2.93f, 2.93f, 1f);
                 defaultScale = playerSprite.transform.localScale; 
             }
         }
@@ -90,12 +90,12 @@ public class Player : MonoBehaviour
         }
         else 
         {
-            characterAnimator.runtimeAnimatorController = omNomController;
+            characterAnimator.runtimeAnimatorController = redDragonController;
             
             if (playerSprite != null)
             {
                 // Сразу ставим нужную картинку до включения аниматора
-                playerSprite.sprite = omNomIdleSprite;
+                playerSprite.sprite = redDragonIdleSprite;
 
                 playerSprite.transform.localScale = new Vector3(2.93f, 2.93f, 1f);
                 defaultScale = playerSprite.transform.localScale; 
@@ -135,12 +135,18 @@ public class Player : MonoBehaviour
             if (characterAnimator != null) characterAnimator.enabled = true;
             OnFirstClick?.Invoke(); 
 
+            if (!YG2.saves.isTutorialCompleted)
+            {
+                AnalyticsManager.Instance.SaveLearningStep("first_move");
+            }
+
             // --- ПАССИВКА БУКИ ПРИ СТАРТЕ ---
-            if (currentSkin == "Boo")
+            if (currentSkin == "BlueDragon")
             {
                 ActivateShield(null); // Даем щит без подбора объекта
             }
         }
+        Sound.PlayerSound.Play();
 
         rb.velocity = new Vector2(speed * direction, rb.velocity.y);
 
@@ -154,7 +160,7 @@ public class Player : MonoBehaviour
 
     public void AddScore(int amount)
     {
-        if (currentSkin == "Boo")
+        if (currentSkin == "BlueDragon")
         {
             amount *= 2; 
         }
@@ -186,7 +192,7 @@ public class Player : MonoBehaviour
         int level = AmNuamRunner.Upgrades.GetUpgradeLevel(shieldUpgradeAsset);
         float totalDuration = baseAbilityDuration + (level * shieldUpgradeAsset.step);
 
-        if (currentSkin == "Boo")
+        if (currentSkin == "BlueDragon")
         {
             totalDuration += 3f; // Даем Буке бонусные 3 секунды щита
         }

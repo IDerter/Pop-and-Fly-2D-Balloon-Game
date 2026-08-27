@@ -11,6 +11,9 @@ using System.Collections.Generic;
         [Header("Resources")]
         [SerializeField] private SoundScriptable _soundData;
 
+        [Header("Pool Settings")]
+        [SerializeField] private int _maxSfxSources = 15;
+
         // ��� ��� SFX
         private List<AudioSource> _sfxPool = new List<AudioSource>();
         private AudioSource _musicSource;
@@ -59,16 +62,29 @@ using System.Collections.Generic;
 
         private AudioSource GetFreeSFXSource()
         {
-            // ���� ��������� �������� � ����
+            // 1. Ищем свободный источник
             foreach (var s in _sfxPool)
             {
                 if (!s.isPlaying) return s;
             }
 
-            // ���� �� �����, ������� �����
-            AudioSource newSource = gameObject.AddComponent<AudioSource>();
-            newSource.outputAudioMixerGroup = _sfxGroup;
-            _sfxPool.Add(newSource);
-            return newSource;
+            // 2. Если свободных нет, но лимит еще НЕ исчерпан — создаем новый
+            if (_sfxPool.Count < _maxSfxSources)
+            {
+                AudioSource newSource = gameObject.AddComponent<AudioSource>();
+                newSource.outputAudioMixerGroup = _sfxGroup;
+                _sfxPool.Add(newSource);
+                return newSource;
+            }
+
+            // 3. Если пул переполнен — "крадем" самый старый играющий источник.
+            // Обычно самый первый элемент в списке играет дольше всех.
+            AudioSource oldestSource = _sfxPool[0];
+            
+            // Перемещаем его в конец списка, чтобы в следующий раз перезаписать другой
+            _sfxPool.RemoveAt(0);
+            _sfxPool.Add(oldestSource);
+            
+            return oldestSource; 
         }
     }

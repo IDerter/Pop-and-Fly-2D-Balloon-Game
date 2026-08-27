@@ -41,6 +41,10 @@ MonoBehaviour:
     m_Localized: Standart skin
     m_Metadata:
       m_Items: []
+  - m_Id: 1396871870197760
+    m_Localized: Adds 500 lolipops
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

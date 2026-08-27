@@ -29,7 +29,7 @@ MonoBehaviour:
     enable: 1
     saveScoreAnonymousPlayers: 1
     listLBSim:
-    - technoName: test
+    - technoName: BestPlayers
       entries: '1. Max: 10
 
         2. Masha: 15
@@ -195,6 +195,15 @@ MonoBehaviour:
       priceCurrencyCode: YAN
       currencyImageURL: 
       consumed: 1
+    - id: Candies500
+      title: Candies500
+      description: Candies500
+      imageURI: demo image
+      price: 59 YAN
+      priceValue: 59
+      priceCurrencyCode: YAN
+      currencyImageURL: 
+      consumed: 1
   RewardedAdv:
     skipInterAdvAfterReward: 0
     labelAdvSimLabel: 0
@@ -218,17 +227,17 @@ MonoBehaviour:
     initDelaySimulation: 0
     buildNumber: 0
   Simulation:
-    device: 0
+    device: 1
     language: ru
     enableInterAdv: 1
-    advIntervalSimulation: 60
+    advIntervalSimulation: 5
     durationAdv: 0.5
     loadAdv: 0
     testFailAds: 0
     pauseOnFocusGame: 0
   Templates:
     logoImageFormat: 0
-    backgroundImgFormat: 0
+    backgroundImgFormat: 3
     gradientBackgroundByLoadGame:
       radial: 0
       angleInclination: 140

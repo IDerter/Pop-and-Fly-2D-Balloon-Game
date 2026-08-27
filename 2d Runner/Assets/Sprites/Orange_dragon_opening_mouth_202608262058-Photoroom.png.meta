@@ -1,0 +1,506 @@
+fileFormatVersion: 2
+guid: 789b3da9ebcf74343884af0fbdffa43d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Orange_dragon_opening_mouth_202608262058-Photoroom_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 777
+        width: 239
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97b3186b7dd9b434e90e82fd9f3957eb
+      internalID: -2098183491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_dragon_opening_mouth_202608262058-Photoroom_1
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 777
+        width: 239
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 687e45ea0673fa2488c8ba28c81b9096
+      internalID: 2064646730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_dragon_opening_mouth_202608262058-Photoroom_2
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 777
+        width: 239
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e81963d58a2efd64c80fb7d34967bf81
+      internalID: 1172839574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_dragon_opening_mouth_202608262058-Photoroom_3
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 777
+        width: 239
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da68c701961687a4896e3b419899ef7f
+      internalID: 1165208913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_dragon_opening_mouth_202608262058-Photoroom_4
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 533
+        width: 239
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c92dc76179729514ead50afff90eccb1
+      internalID: 1024861634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_dragon_opening_mouth_202608262058-Photoroom_5
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 533
+        width: 239
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74e2d9f394e47b241904a9a6f735b89e
+      internalID: -387957376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_dragon_opening_mouth_202608262058-Photoroom_6
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 533
+        width: 239
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c9ba3e7bd639074884d4c5a91e9ad4d
+      internalID: -1475994122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_dragon_opening_mouth_202608262058-Photoroom_7
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 533
+        width: 239
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69876d967fc4cfd4aa72f261e6d97d33
+      internalID: -1447734115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_dragon_opening_mouth_202608262058-Photoroom_8
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 278
+        width: 239
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f1a8263c2717fb48a7a54a63244335e
+      internalID: -789926374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_dragon_opening_mouth_202608262058-Photoroom_9
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 278
+        width: 239
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3df2272305585cc4e89c9255747d73fe
+      internalID: -1487341962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_dragon_opening_mouth_202608262058-Photoroom_10
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 278
+        width: 239
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3abc496ffb9b6604fbfd301f0b65e282
+      internalID: 1049720651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_dragon_opening_mouth_202608262058-Photoroom_11
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 278
+        width: 239
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f26018d4bc1c7c64fb95d158085065d0
+      internalID: -322580917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_dragon_opening_mouth_202608262058-Photoroom_12
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 34
+        width: 239
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 029c02477046fe741bbc2380f6debeed
+      internalID: 1966911661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_dragon_opening_mouth_202608262058-Photoroom_13
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 34
+        width: 239
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c05c0b125fc11cb4f96f2246e7e3c423
+      internalID: 840718268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_dragon_opening_mouth_202608262058-Photoroom_14
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 34
+        width: 239
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba5d125daf9ce3c4ca91678968a642b4
+      internalID: 829385439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_dragon_opening_mouth_202608262058-Photoroom_15
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 34
+        width: 239
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e5df52d159e48e46a39a0b1c196cdf4
+      internalID: -152679397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Orange_dragon_opening_mouth_202608262058-Photoroom_0: -2098183491
+      Orange_dragon_opening_mouth_202608262058-Photoroom_1: 2064646730
+      Orange_dragon_opening_mouth_202608262058-Photoroom_10: 1049720651
+      Orange_dragon_opening_mouth_202608262058-Photoroom_11: -322580917
+      Orange_dragon_opening_mouth_202608262058-Photoroom_12: 1966911661
+      Orange_dragon_opening_mouth_202608262058-Photoroom_13: 840718268
+      Orange_dragon_opening_mouth_202608262058-Photoroom_14: 829385439
+      Orange_dragon_opening_mouth_202608262058-Photoroom_15: -152679397
+      Orange_dragon_opening_mouth_202608262058-Photoroom_16: -328573052
+      Orange_dragon_opening_mouth_202608262058-Photoroom_2: 1172839574
+      Orange_dragon_opening_mouth_202608262058-Photoroom_3: 1165208913
+      Orange_dragon_opening_mouth_202608262058-Photoroom_4: 1024861634
+      Orange_dragon_opening_mouth_202608262058-Photoroom_5: -387957376
+      Orange_dragon_opening_mouth_202608262058-Photoroom_6: -1475994122
+      Orange_dragon_opening_mouth_202608262058-Photoroom_7: -1447734115
+      Orange_dragon_opening_mouth_202608262058-Photoroom_8: -789926374
+      Orange_dragon_opening_mouth_202608262058-Photoroom_9: -1487341962
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -25,6 +25,6 @@ namespace YG
         public int dailyRewardDayIndex = 0;    // Текущий день (0-6)
         public bool isTutorialCompleted = false;
 
-        public string currentSkin = "OmNom";
+        public string currentSkin = "RedDragon";
     }
 }

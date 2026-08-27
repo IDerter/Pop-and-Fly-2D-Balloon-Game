@@ -116,6 +116,7 @@
 -define:StickyAdv_yg
 -define:RewardedAdv_yg
 -define:Leaderboards_yg
+-define:EnvirData_yg
 -define:ENABLE_TYPE_HASHING
 -define:NONRECURSIVE_DEPENDENCY_DATA
 -define:BUILD_OPTIONS_RECURSE_DEPENDENCIES_2022_3

@@ -116,6 +116,7 @@
 -define:StickyAdv_yg
 -define:RewardedAdv_yg
 -define:Leaderboards_yg
+-define:EnvirData_yg
 -define:ROSLYN_ANALYZER_FIX
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER

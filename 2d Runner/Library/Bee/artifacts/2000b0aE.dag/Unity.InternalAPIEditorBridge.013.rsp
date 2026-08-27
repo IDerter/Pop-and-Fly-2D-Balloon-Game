@@ -116,6 +116,7 @@
 -define:StickyAdv_yg
 -define:RewardedAdv_yg
 -define:Leaderboards_yg
+-define:EnvirData_yg
 -define:ENABLE_PROPERTY_VARIANTS
 -define:ENABLE_SEARCH
 -define:MODULE_UITK

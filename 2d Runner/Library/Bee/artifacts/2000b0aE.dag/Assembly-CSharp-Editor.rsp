@@ -116,6 +116,7 @@
 -define:StickyAdv_yg
 -define:RewardedAdv_yg
 -define:Leaderboards_yg
+-define:EnvirData_yg
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -define:UNITY_EDITOR_ONLY_COMPILATION
@@ -400,6 +401,7 @@
 -analyzer:"C:/Users/Danila/UnityEditors/2022.3.62f2/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Users/Danila/UnityEditors/2022.3.62f2/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/PluginYourGames/Modules/Authorization/Scripts/Editor/Auth_build.cs"
+"Assets/PluginYourGames/Modules/EnvirData/Scripts/Editor/EnvirData_build.cs"
 "Assets/PluginYourGames/Modules/InterstitialAdv/Scripts/AdNotification/Editor/AdNotificationYGEditor.cs"
 "Assets/PluginYourGames/Modules/InterstitialAdv/Scripts/Editor/InterAdv_build.cs"
 "Assets/PluginYourGames/Modules/InterstitialAdv/Scripts/Editor/WarningPostponeCall.cs"

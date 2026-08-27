@@ -1,0 +1,505 @@
+fileFormatVersion: 2
+guid: 2fc43516f34adca49b5e7c060d9c9116
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 774
+        width: 241
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff062f51d8ecfe4db51f15e8525ded1
+      internalID: -957665733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_1
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 774
+        width: 241
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e61e65515fc5f3b40a3fe770b6b78890
+      internalID: 1313202192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_2
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 774
+        width: 241
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e13605d87fd7df49a58e44f15da20f8
+      internalID: -1258409274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_3
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 774
+        width: 241
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8242ed16967813c4db5d48d3a619064b
+      internalID: -290939398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_4
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 531
+        width: 241
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29aecdcad7a771b4cae18643fe3859ab
+      internalID: 1649866292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_5
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 531
+        width: 241
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e23545055e12994d9b6633679d58ecb
+      internalID: 1877299697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_6
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 531
+        width: 241
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee3390b03dd69b429c7d0fd590d1edf
+      internalID: 1277323280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_7
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 531
+        width: 241
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a443c6402abcd7e4480cf1fdff7b6f44
+      internalID: 296088555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_8
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 276
+        width: 241
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34a28a32dbcfef6489495e67b8478ebc
+      internalID: -1825955063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_9
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 276
+        width: 241
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e5156c9c1e82c547882beaa31dbbc67
+      internalID: -515006239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_10
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 276
+        width: 241
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92e4f1ab07314d740a6b53760ea93b41
+      internalID: 734501357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_11
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 276
+        width: 241
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f8728b5d98ef5041912aaa24958a939
+      internalID: 1028697520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_12
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 28
+        width: 241
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2cc3ebcdeb226c49ab383e4967f4814
+      internalID: -1752881075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_13
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 28
+        width: 241
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91a2d84ed428cf449b69391484ad3735
+      internalID: 1022021077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_14
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 28
+        width: 241
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8427381bc087f744866c7dd7a5f2ba9
+      internalID: -1504628841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_15
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 28
+        width: 241
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08f773a718241f544a84248a9b1e14f8
+      internalID: 1648182828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_0: -957665733
+      Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_1: 1313202192
+      Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_10: 734501357
+      Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_11: 1028697520
+      Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_12: -1752881075
+      Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_13: 1022021077
+      Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_14: -1504628841
+      Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_15: 1648182828
+      Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_2: -1258409274
+      Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_3: -290939398
+      Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_4: 1649866292
+      Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_5: 1877299697
+      Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_6: 1277323280
+      Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_7: 296088555
+      Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_8: -1825955063
+      Blue_dragon_opening_mouth_sprite_202608271126-Photoroom_9: -515006239
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

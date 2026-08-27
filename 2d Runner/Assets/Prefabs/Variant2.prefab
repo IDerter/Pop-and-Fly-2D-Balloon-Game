@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gear: {fileID: 1584012680683886, guid: c87318d007051494bb5193f79f53179d, type: 3}
+  margin: 1.2
 --- !u!1 &1729763390833854
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gear: {fileID: 1584012680683886, guid: c87318d007051494bb5193f79f53179d, type: 3}
+  margin: 1.4
 --- !u!1 &1755349566179772
 GameObject:
   m_ObjectHideFlags: 0

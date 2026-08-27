@@ -31,11 +31,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1028924575760384
-    m_Localized: Skin Boo
+    m_Localized: Skin Blue Dragon
     m_Metadata:
       m_Items: []
   - m_Id: 1036146802343936
-    m_Localized: Skin Om Nom
+    m_Localized: Skin Red Dragon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1394947154423808
+    m_Localized: Buy lolipops
     m_Metadata:
       m_Items: []
   references:

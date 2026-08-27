@@ -1,0 +1,505 @@
+fileFormatVersion: 2
+guid: 12216651d2c46744095f7d0bb05e0871
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Blue_dragon_death_animation_sprite_202608271131-Photoroom_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 776
+        width: 245
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d7a728541e604343b3ab32a5b07d3bc
+      internalID: -396971787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_dragon_death_animation_sprite_202608271131-Photoroom_1
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 776
+        width: 217
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cadac9586aafde8428525bf2817f36f7
+      internalID: 658148744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_dragon_death_animation_sprite_202608271131-Photoroom_2
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 775
+        width: 224
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7d299a18908e6744a5965cce4fa9c7f
+      internalID: 2043373056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_dragon_death_animation_sprite_202608271131-Photoroom_3
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 776
+        width: 241
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfabb0d28bbe00445911b736a41d4552
+      internalID: 701803068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_dragon_death_animation_sprite_202608271131-Photoroom_4
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 531
+        width: 190
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1549ff1abaa37f047a0e9a4d0f18fb27
+      internalID: -709217995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_dragon_death_animation_sprite_202608271131-Photoroom_5
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 531
+        width: 196
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92b35764f729f754b9f43f911a10d75e
+      internalID: -1724903164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_dragon_death_animation_sprite_202608271131-Photoroom_6
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 557
+        width: 202
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93bb3b6a7913622479489de8ae1462ec
+      internalID: 897958483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_dragon_death_animation_sprite_202608271131-Photoroom_7
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 534
+        width: 237
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d3160e79f23d84469bf02d401fdad0d
+      internalID: 1736567759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_dragon_death_animation_sprite_202608271131-Photoroom_8
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 295
+        width: 217
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ab43430a0c3b414587536d83ad34ed1
+      internalID: 1747983742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_dragon_death_animation_sprite_202608271131-Photoroom_9
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 281
+        width: 191
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e9309092ee9134a85f1b50f21028d0
+      internalID: 1616992417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_dragon_death_animation_sprite_202608271131-Photoroom_10
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 276
+        width: 235
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c438bd962bdbd441874b783c8f7a664
+      internalID: 1469449524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_dragon_death_animation_sprite_202608271131-Photoroom_11
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 277
+        width: 239
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e47796ed4e165e4b8f156604e56a350
+      internalID: -369581998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_dragon_death_animation_sprite_202608271131-Photoroom_12
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 23
+        width: 239
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9374872f651abff41bc697da83176289
+      internalID: 1267032918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_dragon_death_animation_sprite_202608271131-Photoroom_13
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 23
+        width: 238
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3c9ad37725dd7343b7d4ffa6b8540ac
+      internalID: -1895078512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_dragon_death_animation_sprite_202608271131-Photoroom_14
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 23
+        width: 237
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4bab8b537bc571469b9fa1915714b16
+      internalID: -969554267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_dragon_death_animation_sprite_202608271131-Photoroom_15
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 23
+        width: 238
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c36d775db95f0c4a999ce0d725ff9cc
+      internalID: 1055907776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Blue_dragon_death_animation_sprite_202608271131-Photoroom_0: -396971787
+      Blue_dragon_death_animation_sprite_202608271131-Photoroom_1: 658148744
+      Blue_dragon_death_animation_sprite_202608271131-Photoroom_10: 1469449524
+      Blue_dragon_death_animation_sprite_202608271131-Photoroom_11: -369581998
+      Blue_dragon_death_animation_sprite_202608271131-Photoroom_12: 1267032918
+      Blue_dragon_death_animation_sprite_202608271131-Photoroom_13: -1895078512
+      Blue_dragon_death_animation_sprite_202608271131-Photoroom_14: -969554267
+      Blue_dragon_death_animation_sprite_202608271131-Photoroom_15: 1055907776
+      Blue_dragon_death_animation_sprite_202608271131-Photoroom_2: 2043373056
+      Blue_dragon_death_animation_sprite_202608271131-Photoroom_3: 701803068
+      Blue_dragon_death_animation_sprite_202608271131-Photoroom_4: -709217995
+      Blue_dragon_death_animation_sprite_202608271131-Photoroom_5: -1724903164
+      Blue_dragon_death_animation_sprite_202608271131-Photoroom_6: 897958483
+      Blue_dragon_death_animation_sprite_202608271131-Photoroom_7: 1736567759
+      Blue_dragon_death_animation_sprite_202608271131-Photoroom_8: 1747983742
+      Blue_dragon_death_animation_sprite_202608271131-Photoroom_9: 1616992417
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

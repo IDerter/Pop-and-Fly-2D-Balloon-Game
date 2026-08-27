@@ -1,0 +1,3 @@
+﻿Build path: G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Builds/Build2
+Build number: 1
+PluginYG version: 2.0092

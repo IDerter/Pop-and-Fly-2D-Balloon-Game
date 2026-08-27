@@ -13,30 +13,32 @@
         false,
         false
     ],
-    "idSave": 78,
+    "idSave": 155,
     "upgradeNames": [
         "NoAdsDonateUpgrade",
-        "OmNomSkin",
-        "BooSkin",
+        "LolipopDonate",
+        "RedDragonSkin",
+        "BlueDragonSkin",
         "ShieldUpgrade",
         "MagnitUpgrade"
     ],
     "upgradeLevels": [
         0,
         0,
+        0,
         1,
-        2,
-        1
+        3,
+        3
     ],
-    "coin": 241,
-    "bestScore": 44,
+    "coin": 89,
+    "bestScore": 80,
     "completedTutorialSteps": [],
-    "musicVolume": 0.9982857704162598,
-    "soundsVolume": 0.977573037147522,
+    "musicVolume": 0.4499051868915558,
+    "soundsVolume": 0.8999999761581421,
     "isSFXEnabled": true,
     "boughtStars": 0,
     "lastDailyRewardDate": "",
     "dailyRewardDayIndex": 0,
     "isTutorialCompleted": true,
-    "currentSkin": "Boo"
+    "currentSkin": "RedDragon"
 }

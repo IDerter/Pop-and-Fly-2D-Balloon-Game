@@ -31,9 +31,10 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  costByLevel: 0a0000001e0000003c000000
+  costByLevel: 1e0000001e0000003c000000
   step: 2
   IsInApp: 0
+  IsConsumable: 0
   references:
     version: 2
     RefIds: []

@@ -14,6 +14,7 @@ namespace AmNuamRunner
 
         public int MaxLevel => costByLevel.Length;
         public bool IsInApp;
+        public bool IsConsumable;
     }
 }
 

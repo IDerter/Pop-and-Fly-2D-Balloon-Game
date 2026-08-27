@@ -32,6 +32,7 @@ public class Teleport : MonoBehaviour
             animator.ResetTrigger("Teleport"); 
             animator.SetTrigger("Teleport");
         }
+        Sound.Whoosh.Play();
 
         // 2. Ждем 0.5 секунды
         yield return new WaitForSeconds(0.5f);

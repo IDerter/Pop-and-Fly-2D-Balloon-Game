@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Sound
   m_EditorClassIdentifier: 
   _sounds:
-  - Clip: {fileID: 0}
-    Volume: 1
+  - Clip: {fileID: 8300000, guid: 3c847fb068a1cb0499871e2f15099327, type: 3}
+    Volume: 0.631
   - Clip: {fileID: 8300000, guid: 4d1f1bed29f143342bdbdc34f5867dc0, type: 3}
     Volume: 1
   - Clip: {fileID: 8300000, guid: 76d9059c97700e849b7bebdf4fd9ee76, type: 3}
     Volume: 0.585
   - Clip: {fileID: 0}
     Volume: 1
-  - Clip: {fileID: 8300000, guid: 87cc1944786e6644a996d04894aae4ea, type: 3}
-    Volume: 0.551
+  - Clip: {fileID: 8300000, guid: c5f623ab05be2e44fa137d0ca4e95024, type: 3}
+    Volume: 0.484
   - Clip: {fileID: 0}
     Volume: 1
   - Clip: {fileID: 8300000, guid: 627ce79f5fd0f6546a1b0cbab1415376, type: 3}
@@ -37,17 +37,7 @@ MonoBehaviour:
     Volume: 0.41
   - Clip: {fileID: 0}
     Volume: 1
-  - Clip: {fileID: 0}
-    Volume: 1
-  - Clip: {fileID: 0}
-    Volume: 1
-  - Clip: {fileID: 0}
-    Volume: 1
-  - Clip: {fileID: 0}
-    Volume: 1
-  - Clip: {fileID: 0}
-    Volume: 1
-  - Clip: {fileID: 0}
-    Volume: 1
-  - Clip: {fileID: 0}
-    Volume: 1
+  - Clip: {fileID: 8300000, guid: 61fe6a6f9e485e34286fc0f0b7abc1fc, type: 3}
+    Volume: 0.408
+  - Clip: {fileID: 8300000, guid: 6342bdb952db49848b7f8c1c7ff95e0e, type: 3}
+    Volume: 0.491

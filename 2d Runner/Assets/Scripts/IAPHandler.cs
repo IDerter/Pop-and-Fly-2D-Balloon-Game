@@ -5,21 +5,18 @@ namespace AmNuamRunner
 {
     public class IAPHandler : SingletonBase<IAPHandler>
     {
-        [Header("Донатные товары")]
-        [SerializeField] private UpgradeAsset _upgradeX2CoinsAndHearts;
-        [SerializeField] private UpgradeAsset _stars15;
+        [Header("Донатные товары (Разовые)")]
         [SerializeField] private UpgradeAsset _noAds;
+        // Многоразовому инапу на леденцы здесь даже не нужна ссылка, 
+        // так как он просто дает валюту, а не прокачивает уровень.
 
         private new void Awake()
         {
-            base.Awake(); // Сохраняем логику синглтона
+            base.Awake();
         }
 
         private void Start()
         {
-            // --- НОВАЯ ЛОГИКА ---
-            // Проверяем при старте игры: если игрок УЖЕ покупал NoAds ранее,
-            // мы сразу отключаем стики-баннеры, чтобы они даже не появлялись.
             if (_noAds != null && Upgrades.GetUpgradeLevel(_noAds) > 0)
             {
                 YG2.StickyAdActivity(false);
@@ -39,27 +36,25 @@ namespace AmNuamRunner
 
         private void OnPurchaseSuccess(string id)
         {
-            if (id == "Stars15")
+            // --- МНОГОРАЗОВЫЕ ТОВАРЫ ---
+            if (id == "Candies500") // Убедись, что ID совпадает с консолью Яндекса
             {
-                // Начисляем звезды (внутри уже есть вызов OnScoreUpdated для UI)
-                //MapCompletion.AddBoughtStars(15); 
-                
-                // Прокачиваем ассет "15 звезд" (чтобы сохранить факт покупки)
-                Upgrades.BuyUpgrade(_stars15); 
-            }
-            else if (id == "X2CoinsAndHearts")
-            {
-                // Просто вызываем метод покупки в менеджере
-                // Внутри него сработает аналитика и обновится UI магазина!
-                Upgrades.BuyUpgrade(_upgradeX2CoinsAndHearts); 
+                YG2.saves.coin += 500; // Начисляем 500 леденцов (монет)
+                YG2.SaveProgress();
+
+                // Обновляем UI магазина сразу после покупки, если он открыт
+                var shop = FindObjectOfType<UpgradeShop>();
+                if (shop != null) shop.UpdateMoney();
             }
             else if (id == "NoAds")
             {
-                // Просто вызываем метод покупки в менеджере
-                // Внутри него сработает аналитика и обновится UI магазина!
                 Upgrades.BuyUpgrade(_noAds); 
                 YG2.StickyAdActivity(false);
+
+                //AnalyticsManager.Instance.SaveShopBuy(_asset.name, savedLevel);
             }
+
+            Sound.BuySound.Play();
             
             Debug.Log($"[IAP] Успешно куплен товар: {id}");
         }

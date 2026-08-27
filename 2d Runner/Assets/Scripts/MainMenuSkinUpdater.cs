@@ -9,11 +9,11 @@ namespace AmNuamRunner
         [Header("Components")]
         public Image playerImage; 
         
-        public Sprite omNomSprite; // Сюда перетащите картинку Ам Няма
-        public Vector3 omNomScale = Vector3.one; // Базовый масштаб (1, 1, 1)
+        public Sprite redDragonSprite; // Сюда перетащите картинку Ам Няма
+        public Vector3 redDragonScale = Vector3.one; // Базовый масштаб (1, 1, 1)
 
-        public Sprite booSprite; // Сюда перетащите картинку Буки
-        public Vector3 booScale = new Vector3(1.2f, 1.2f, 1f); 
+        public Sprite blueDragonSprite; // Сюда перетащите картинку Буки
+        public Vector3 blueDragonScale = new Vector3(1.2f, 1.2f, 1f); 
 
         private void Start()
         {
@@ -38,18 +38,18 @@ namespace AmNuamRunner
             // Проверяем, загрузились ли сохранения
             if (!YG2.isSDKEnabled) return; 
 
-            string currentSkin = string.IsNullOrEmpty(YG2.saves.currentSkin) ? "OmNom" : YG2.saves.currentSkin;
+            string currentSkin = string.IsNullOrEmpty(YG2.saves.currentSkin) ? "RedDragon" : YG2.saves.currentSkin;
 
-            if (currentSkin == "Boo")
+            if (currentSkin == "BlueDragon")
             {
-                if (playerImage != null) playerImage.sprite = booSprite;
-                transform.localScale = booScale; // Увеличиваем масштаб для Буки
+                if (playerImage != null) playerImage.sprite = blueDragonSprite;
+                transform.localScale = blueDragonScale; // Увеличиваем масштаб для Буки
             }
             else
             {
-                // По умолчанию (Ам Ням)
-                if (playerImage != null) playerImage.sprite = omNomSprite;
-                transform.localScale = omNomScale; // Возвращаем стандартный масштаб
+                // По умолчанию (Красный дракон)
+                if (playerImage != null) playerImage.sprite = redDragonSprite;
+                transform.localScale = redDragonScale; // Возвращаем стандартный масштаб
             }
         }
     }

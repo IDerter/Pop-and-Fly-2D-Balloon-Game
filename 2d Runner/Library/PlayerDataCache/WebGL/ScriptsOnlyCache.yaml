@@ -1,0 +1,2235 @@
+ScriptsOnlyBuild:
+  usedScripts:
+    Assembly-CSharp:
+    - YG.InfoYG
+    - YG.Insides.PlatformSettings
+    Assembly-CSharp.dll:
+    - AbilityCooldown
+    - AdsManager
+    - AmNuamRunner.BuyUpgrade
+    - AmNuamRunner.IAPHandler
+    - AmNuamRunner.Language
+    - AmNuamRunner.LanguageChanger
+    - AmNuamRunner.LocaleSelector
+    - AmNuamRunner.MainMenuSceneChange
+    - AmNuamRunner.MainMenuSkinUpdater
+    - AmNuamRunner.UpgradeAsset
+    - AmNuamRunner.UpgradeShop
+    - AmNuamRunner.Upgrades
+    - AmNuamRunner.VolumeValue
+    - AmNyamRunner.CameraAspectCrop
+    - AnalyticsManager
+    - AudioManager
+    - ButtonsRewarded
+    - Destroyer
+    - DiagonalEnemy
+    - FloatingDOTween
+    - GameHUD
+    - GameManager
+    - GameOverUIManager
+    - Gear
+    - GearGreen
+    - GhostEnemy
+    - InterstitialAds
+    - Invulnerable
+    - IronEnemy
+    - KeyPressAnimation
+    - LevelChangerDotween
+    - LocalizationText
+    - LocalizedText
+    - Magnit
+    - Menu
+    - MenuAndTutorialUi
+    - MoveSlider
+    - MySaw
+    - ObjectPoolManager
+    - PanelWindow
+    - Paralax
+    - Player
+    - Point
+    - PointGreen
+    - RandomScale
+    - RewardedAds
+    - SafeAreaHelper
+    - ShopManager
+    - ShopManagerFons
+    - SoundScriptable
+    - Spawner
+    - SpiderWeb
+    - Stone
+    - Teleport
+    - UIButtonAnimator
+    - YG.ConsumePurchasesYG
+    - YG.ImageLoadYG
+    - YG.InfoYG
+    - YG.Insides.PlatformSettings
+    - YG.LBPlayerDataYG
+    - YG.LeaderboardYG
+    - YG.PurchaseYG
+    DOTween.dll:
+    - DG.Tweening.Core.DOTweenSettings
+    Unity.2D.Tilemap.Editor.dll:
+    - UnityEditor.Tilemaps.GridBrush
+    - UnityEditor.Tilemaps.GridBrushEditor
+    - UnityEditor.Tilemaps.GridPaintingState
+    - UnityEditor.Tilemaps.GridPaletteBrushes
+    - UnityEditor.Tilemaps.GridPalettes
+    - UnityEditor.Tilemaps.SceneViewGridManager
+    - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
+    - UnityEditor.Tilemaps.TileDragAndDropManager
+    - UnityEditor.Tilemaps.TilemapEditorToolPreferences
+    - UnityEditor.Tilemaps.TilemapPrefabStageHelper
+    Unity.Addressables.Editor.dll:
+    - UnityEditor.AddressableAssets.AddressableAssetSettingsDefaultObject
+    - UnityEditor.AddressableAssets.Build.DataBuilders.BuildScriptFastMode
+    - UnityEditor.AddressableAssets.Build.DataBuilders.BuildScriptPackedMode
+    - UnityEditor.AddressableAssets.Build.DataBuilders.BuildScriptPackedPlayMode
+    - UnityEditor.AddressableAssets.Build.DataBuilders.BuildScriptVirtualMode
+    - UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+    - UnityEditor.AddressableAssets.Settings.AddressableAssetGroupTemplate
+    - UnityEditor.AddressableAssets.Settings.AddressableAssetSettings
+    - UnityEditor.AddressableAssets.Settings.GroupSchemas.BundledAssetGroupSchema
+    - UnityEditor.AddressableAssets.Settings.GroupSchemas.ContentUpdateGroupSchema
+    - UnityEditor.AddressableAssets.Settings.GroupSchemas.PlayerDataGroupSchema
+    Unity.Localization.dll:
+    - UnityEngine.Localization.Components.LocalizeStringEvent
+    - UnityEngine.Localization.Locale
+    - UnityEngine.Localization.LocalizationBehaviour
+    - UnityEngine.Localization.Settings.LocalizationSettings
+    - UnityEngine.Localization.VariantsPropertyDriver
+    Unity.Rider.Editor.dll:
+    - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.TextMeshPro:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    - TMPro.TMP_SubMeshUI
+    - TMPro.TextMeshProUGUI
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
+    UnityEditor.TestRunner.dll:
+    - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
+    - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.EventTrigger
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.AspectRatioFitter
+    - UnityEngine.UI.Button
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.ContentSizeFitter
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.GridLayoutGroup
+    - UnityEngine.UI.HorizontalLayoutGroup
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.Mask
+    - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Scrollbar
+    - UnityEngine.UI.Slider
+    - UnityEngine.UI.Text
+    - UnityEngine.UI.VerticalLayoutGroup
+  serializedClasses:
+    Assembly-CSharp:
+    - AmNuamRunner.Upgrades/UpgradeSave
+    - SoundScriptable/SoundData
+    - YG.InfoYG/AuthorizationSettings
+    - YG.InfoYG/BasicSettings
+    - YG.InfoYG/InterstitialAdvSettings
+    - YG.InfoYG/LeaderboardsSettings
+    - YG.InfoYG/LocalizationSettings
+    - YG.InfoYG/PaymentsSettings
+    - YG.InfoYG/RewardedAdvSettings
+    - YG.InfoYG/SimulationSettings
+    - YG.InfoYG/StorageSettings
+    - YG.InfoYG/TemplatesSettings
+    - YG.InfoYG/TemplatesSettings/Gradient
+    - YG.InfoYG/TemplatesSettings/ProgressBar
+    - YG.Insides.CommonOptions
+    - YG.Insides.PlatformInfo
+    - YG.Insides.PlatformToggles
+    - YG.Insides.ProjectSettings
+    - YG.LBPlayerDataYG/TextLegasy
+    - YG.LBPlayerDataYG/TextMP
+    - YG.PurchaseYG/TextLegasy
+    - YG.PurchaseYG/TextMP
+    - YG.Utils.LB.LBCurrentPlayerData
+    - YG.Utils.LB.LBData
+    - YG.Utils.LB.LBPlayerData
+    - YG.Utils.Pay.Purchase
+    DOTween:
+    - DG.Tweening.Core.DOTweenSettings/ModulesSetup
+    - DG.Tweening.Core.DOTweenSettings/SafeModeOptions
+    Unity.Localization:
+    - UnityEngine.Localization.Events.UnityEventString
+    - UnityEngine.Localization.LocaleIdentifier
+    - UnityEngine.Localization.LocalizedString
+    - UnityEngine.Localization.Metadata.MetadataCollection
+    - UnityEngine.Localization.Settings.CommandLineLocaleSelector
+    - UnityEngine.Localization.Settings.LocalesProvider
+    - UnityEngine.Localization.Settings.LocalizedAssetDatabase
+    - UnityEngine.Localization.Settings.LocalizedStringDatabase
+    - UnityEngine.Localization.Settings.SpecificLocaleSelector
+    - UnityEngine.Localization.Settings.SystemLocaleSelector
+    - UnityEngine.Localization.SmartFormat.Core.Parsing.Parser
+    - UnityEngine.Localization.SmartFormat.Core.Settings.SmartSettings
+    - UnityEngine.Localization.SmartFormat.Extensions.ChooseFormatter
+    - UnityEngine.Localization.SmartFormat.Extensions.ConditionalFormatter
+    - UnityEngine.Localization.SmartFormat.Extensions.DefaultFormatter
+    - UnityEngine.Localization.SmartFormat.Extensions.DefaultSource
+    - UnityEngine.Localization.SmartFormat.Extensions.DictionarySource
+    - UnityEngine.Localization.SmartFormat.Extensions.IsMatchFormatter
+    - UnityEngine.Localization.SmartFormat.Extensions.ListFormatter
+    - UnityEngine.Localization.SmartFormat.Extensions.PersistentVariablesSource
+    - UnityEngine.Localization.SmartFormat.Extensions.PluralLocalizationFormatter
+    - UnityEngine.Localization.SmartFormat.Extensions.ReflectionSource
+    - UnityEngine.Localization.SmartFormat.Extensions.SubStringFormatter
+    - UnityEngine.Localization.SmartFormat.Extensions.TimeFormatter
+    - UnityEngine.Localization.SmartFormat.Extensions.ValueTupleSource
+    - UnityEngine.Localization.SmartFormat.Extensions.XElementFormatter
+    - UnityEngine.Localization.SmartFormat.Extensions.XmlSource
+    - UnityEngine.Localization.SmartFormat.SmartFormatter
+    - UnityEngine.Localization.Tables.TableEntryReference
+    - UnityEngine.Localization.Tables.TableReference
+    Unity.TextMeshPro:
+    - TMPro.FaceInfo_Legacy
+    - TMPro.FontAssetCreationSettings
+    - TMPro.KerningTable
+    - TMPro.TMP_Character
+    - TMPro.TMP_FontFeatureTable
+    - TMPro.TMP_FontWeightPair
+    - TMPro.TMP_Glyph
+    - TMPro.TMP_GlyphAdjustmentRecord
+    - TMPro.TMP_GlyphPairAdjustmentRecord
+    - TMPro.TMP_GlyphValueRecord
+    - TMPro.TMP_Sprite
+    - TMPro.TMP_SpriteCharacter
+    - TMPro.TMP_SpriteGlyph
+    - TMPro.TMP_Style
+    - TMPro.VertexGradient
+    UnityEngine.CoreModule:
+    - UnityEngine.Events.ArgumentCache
+    - UnityEngine.Events.PersistentCallGroup
+    - UnityEngine.Events.PersistentListenerMode
+    - UnityEngine.Events.UnityEvent
+    - UnityEngine.RectOffset
+    UnityEngine.TextCoreFontEngineModule:
+    - UnityEngine.TextCore.FaceInfo
+    - UnityEngine.TextCore.Glyph
+    - UnityEngine.TextCore.GlyphMetrics
+    - UnityEngine.TextCore.GlyphRect
+    UnityEngine.UI:
+    - UnityEngine.EventSystems.EventTrigger/Entry
+    - UnityEngine.EventSystems.EventTrigger/TriggerEvent
+    - UnityEngine.UI.AnimationTriggers
+    - UnityEngine.UI.Button/ButtonClickedEvent
+    - UnityEngine.UI.ColorBlock
+    - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
+    - UnityEngine.UI.Navigation
+    - UnityEngine.UI.ScrollRect/ScrollRectEvent
+    - UnityEngine.UI.Scrollbar/ScrollEvent
+    - UnityEngine.UI.Slider/SliderEvent
+    - UnityEngine.UI.SpriteState
+  methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: PanelWindow
+    methodName: OpenPanel
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Assembly-CSharp
+    fullTypeName: AmNuamRunner.BuyUpgrade
+    methodName: Buy
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Assembly-CSharp
+    fullTypeName: AmNuamRunner.BuyUpgrade
+    methodName: Buy
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Assembly-CSharp
+    fullTypeName: AmNuamRunner.BuyUpgrade
+    methodName: Buy
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Assembly-CSharp
+    fullTypeName: AmNuamRunner.BuyUpgrade
+    methodName: Buy
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Assembly-CSharp
+    fullTypeName: YG.PurchaseYG
+    methodName: BuyPurchase
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Assembly-CSharp
+    fullTypeName: YG.PurchaseYG
+    methodName: BuyPurchase
+  - assembly: Assembly-CSharp
+    fullTypeName: PanelWindow
+    methodName: ClosePanel
+  - assembly: Assembly-CSharp
+    fullTypeName: PanelWindow
+    methodName: ClosePanel
+  - assembly: Assembly-CSharp
+    fullTypeName: AmNuamRunner.VolumeValue
+    methodName: SaveSettingsToCloud
+  - assembly: Assembly-CSharp
+    fullTypeName: AmNuamRunner.LanguageChanger
+    methodName: ChooseNextLanguage
+  - assembly: Assembly-CSharp
+    fullTypeName: AmNuamRunner.LanguageChanger
+    methodName: ChoosePreviousLanguage
+  - assembly: Assembly-CSharp
+    fullTypeName: AmNuamRunner.VolumeValue
+    methodName: ChangeVolume
+  - assembly: Assembly-CSharp
+    fullTypeName: AmNuamRunner.VolumeValue
+    methodName: SliderMusic
+  - assembly: Assembly-CSharp
+    fullTypeName: PanelWindow
+    methodName: OpenPanel
+  - assembly: Assembly-CSharp
+    fullTypeName: AmNuamRunner.VolumeValue
+    methodName: SetSliderValue
+  - assembly: Assembly-CSharp
+    fullTypeName: LevelChangerDotween
+    methodName: FadeToLevelWithAd
+  - assembly: Assembly-CSharp
+    fullTypeName: PanelWindow
+    methodName: ClosePanel
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Assembly-CSharp
+    fullTypeName: PanelWindow
+    methodName: OpenPanel
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Assembly-CSharp
+    fullTypeName: AmNuamRunner.BuyUpgrade
+    methodName: Buy
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Assembly-CSharp
+    fullTypeName: AmNuamRunner.BuyUpgrade
+    methodName: Buy
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Assembly-CSharp
+    fullTypeName: AmNuamRunner.BuyUpgrade
+    methodName: Buy
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Assembly-CSharp
+    fullTypeName: AmNuamRunner.BuyUpgrade
+    methodName: Buy
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Assembly-CSharp
+    fullTypeName: YG.PurchaseYG
+    methodName: BuyPurchase
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Assembly-CSharp
+    fullTypeName: YG.PurchaseYG
+    methodName: BuyPurchase
+  - assembly: Assembly-CSharp
+    fullTypeName: PanelWindow
+    methodName: ClosePanel
+  - assembly: Assembly-CSharp
+    fullTypeName: GameOverUIManager
+    methodName: CompleteShopTutorial
+  - assembly: Assembly-CSharp
+    fullTypeName: PanelWindow
+    methodName: OpenPanel
+  - assembly: Assembly-CSharp
+    fullTypeName: AmNuamRunner.MainMenuSceneChange
+    methodName: SceneChange
+  - assembly: Assembly-CSharp
+    fullTypeName: AmNuamRunner.MainMenuSceneChange
+    methodName: SceneChange
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Assembly-CSharp
+    fullTypeName: ButtonsRewarded
+    methodName: StartRewarded
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: RestartGame
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Assembly-CSharp
+    fullTypeName: PanelWindow
+    methodName: ClosePanel
+  - assembly: Assembly-CSharp
+    fullTypeName: AmNuamRunner.VolumeValue
+    methodName: SaveSettingsToCloud
+  - assembly: Assembly-CSharp
+    fullTypeName: PanelWindow
+    methodName: OpenPanel
+  - assembly: Assembly-CSharp
+    fullTypeName: AmNuamRunner.VolumeValue
+    methodName: SetSliderValue
+  - assembly: Assembly-CSharp
+    fullTypeName: AmNuamRunner.VolumeValue
+    methodName: ChangeVolume
+  - assembly: Assembly-CSharp
+    fullTypeName: AmNuamRunner.LanguageChanger
+    methodName: ChoosePreviousLanguage
+  - assembly: Assembly-CSharp
+    fullTypeName: AmNuamRunner.LanguageChanger
+    methodName: ChooseNextLanguage
+  - assembly: Assembly-CSharp
+    fullTypeName: AmNuamRunner.VolumeValue
+    methodName: SliderMusic
+  sceneClasses:
+    Assets/Scenes/MainLvl.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 70
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 16668}
+    - Class: 114
+      Script: {instanceID: 16706}
+    - Class: 114
+      Script: {instanceID: 16710}
+    - Class: 114
+      Script: {instanceID: 16714}
+    - Class: 114
+      Script: {instanceID: 16764}
+    - Class: 114
+      Script: {instanceID: 16820}
+    - Class: 114
+      Script: {instanceID: 16870}
+    - Class: 114
+      Script: {instanceID: 17350}
+    - Class: 114
+      Script: {instanceID: 17466}
+    - Class: 114
+      Script: {instanceID: 17514}
+    - Class: 114
+      Script: {instanceID: 17730}
+    - Class: 114
+      Script: {instanceID: 17922}
+    - Class: 114
+      Script: {instanceID: 17964}
+    - Class: 114
+      Script: {instanceID: 18046}
+    - Class: 114
+      Script: {instanceID: 18094}
+    - Class: 114
+      Script: {instanceID: 18184}
+    - Class: 114
+      Script: {instanceID: 18238}
+    - Class: 114
+      Script: {instanceID: 18554}
+    - Class: 114
+      Script: {instanceID: 18576}
+    - Class: 114
+      Script: {instanceID: 18722}
+    - Class: 114
+      Script: {instanceID: 18804}
+    - Class: 114
+      Script: {instanceID: 18922}
+    - Class: 114
+      Script: {instanceID: 18966}
+    - Class: 114
+      Script: {instanceID: 19044}
+    - Class: 114
+      Script: {instanceID: 19058}
+    - Class: 114
+      Script: {instanceID: 19268}
+    - Class: 114
+      Script: {instanceID: 19388}
+    - Class: 114
+      Script: {instanceID: 19422}
+    - Class: 114
+      Script: {instanceID: 19498}
+    - Class: 114
+      Script: {instanceID: 19516}
+    - Class: 114
+      Script: {instanceID: 19558}
+    - Class: 114
+      Script: {instanceID: 19756}
+    - Class: 114
+      Script: {instanceID: 19900}
+    - Class: 114
+      Script: {instanceID: 20480}
+    - Class: 114
+      Script: {instanceID: 20512}
+    - Class: 114
+      Script: {instanceID: 20616}
+    - Class: 114
+      Script: {instanceID: 20776}
+    - Class: 114
+      Script: {instanceID: 20824}
+    - Class: 114
+      Script: {instanceID: 20918}
+    - Class: 114
+      Script: {instanceID: 21296}
+    - Class: 114
+      Script: {instanceID: 21482}
+    - Class: 114
+      Script: {instanceID: 21682}
+    - Class: 114
+      Script: {instanceID: 21890}
+    - Class: 114
+      Script: {instanceID: 21952}
+    - Class: 114
+      Script: {instanceID: 22344}
+    - Class: 114
+      Script: {instanceID: 22358}
+    - Class: 114
+      Script: {instanceID: 22370}
+    - Class: 114
+      Script: {instanceID: 22762}
+    - Class: 114
+      Script: {instanceID: 22860}
+    - Class: 114
+      Script: {instanceID: 22988}
+    - Class: 114
+      Script: {instanceID: 23052}
+    - Class: 114
+      Script: {instanceID: 23132}
+    - Class: 114
+      Script: {instanceID: 23222}
+    - Class: 114
+      Script: {instanceID: 23230}
+    - Class: 114
+      Script: {instanceID: 23408}
+    - Class: 114
+      Script: {instanceID: 23410}
+    - Class: 114
+      Script: {instanceID: 23656}
+    - Class: 114
+      Script: {instanceID: 23860}
+    - Class: 114
+      Script: {instanceID: 23932}
+    - Class: 114
+      Script: {instanceID: 24182}
+    - Class: 114
+      Script: {instanceID: 24336}
+    - Class: 114
+      Script: {instanceID: 43436}
+    - Class: 114
+      Script: {instanceID: 44430}
+    - Class: 114
+      Script: {instanceID: 121324}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 120
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 225
+      Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
+      Script: {instanceID: 0}
+    - Class: 250
+      Script: {instanceID: 0}
+    - Class: 850595691
+      Script: {instanceID: 0}
+    Assets/Scenes/Menu.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 16662}
+    - Class: 114
+      Script: {instanceID: 16668}
+    - Class: 114
+      Script: {instanceID: 16670}
+    - Class: 114
+      Script: {instanceID: 16672}
+    - Class: 114
+      Script: {instanceID: 16706}
+    - Class: 114
+      Script: {instanceID: 16710}
+    - Class: 114
+      Script: {instanceID: 16714}
+    - Class: 114
+      Script: {instanceID: 16716}
+    - Class: 114
+      Script: {instanceID: 16764}
+    - Class: 114
+      Script: {instanceID: 16820}
+    - Class: 114
+      Script: {instanceID: 16856}
+    - Class: 114
+      Script: {instanceID: 17116}
+    - Class: 114
+      Script: {instanceID: 17394}
+    - Class: 114
+      Script: {instanceID: 17744}
+    - Class: 114
+      Script: {instanceID: 17922}
+    - Class: 114
+      Script: {instanceID: 17964}
+    - Class: 114
+      Script: {instanceID: 18094}
+    - Class: 114
+      Script: {instanceID: 18184}
+    - Class: 114
+      Script: {instanceID: 18298}
+    - Class: 114
+      Script: {instanceID: 18722}
+    - Class: 114
+      Script: {instanceID: 18908}
+    - Class: 114
+      Script: {instanceID: 19044}
+    - Class: 114
+      Script: {instanceID: 19058}
+    - Class: 114
+      Script: {instanceID: 19282}
+    - Class: 114
+      Script: {instanceID: 19388}
+    - Class: 114
+      Script: {instanceID: 19404}
+    - Class: 114
+      Script: {instanceID: 19422}
+    - Class: 114
+      Script: {instanceID: 19498}
+    - Class: 114
+      Script: {instanceID: 19516}
+    - Class: 114
+      Script: {instanceID: 19558}
+    - Class: 114
+      Script: {instanceID: 19698}
+    - Class: 114
+      Script: {instanceID: 19756}
+    - Class: 114
+      Script: {instanceID: 20038}
+    - Class: 114
+      Script: {instanceID: 20344}
+    - Class: 114
+      Script: {instanceID: 20824}
+    - Class: 114
+      Script: {instanceID: 20918}
+    - Class: 114
+      Script: {instanceID: 21296}
+    - Class: 114
+      Script: {instanceID: 21656}
+    - Class: 114
+      Script: {instanceID: 21818}
+    - Class: 114
+      Script: {instanceID: 21890}
+    - Class: 114
+      Script: {instanceID: 21952}
+    - Class: 114
+      Script: {instanceID: 22156}
+    - Class: 114
+      Script: {instanceID: 22358}
+    - Class: 114
+      Script: {instanceID: 22370}
+    - Class: 114
+      Script: {instanceID: 22860}
+    - Class: 114
+      Script: {instanceID: 23408}
+    - Class: 114
+      Script: {instanceID: 23656}
+    - Class: 114
+      Script: {instanceID: 23984}
+    - Class: 114
+      Script: {instanceID: 24182}
+    - Class: 114
+      Script: {instanceID: 24588}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 225
+      Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
+      Script: {instanceID: 0}
+    - Class: 850595691
+      Script: {instanceID: 0}
+  scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: 05f57979cd05e5290fbd3785133738fc
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: AnalyticsManager
+  - hash:
+      serializedVersion: 2
+      Hash: 313a273ccab6d4a46fbb48e638efb32d
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LocalizationManager
+  - hash:
+      serializedVersion: 2
+      Hash: debf7cbfdc093d176fb2adedbd6643fa
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Pause
+  - hash:
+      serializedVersion: 2
+      Hash: 396255b4651f695f2bbdeb9caebe4925
+    assemblyName: Assembly-CSharp
+    namespaceName: AmNuamRunner
+    className: LanguageChanger
+  - hash:
+      serializedVersion: 2
+      Hash: 5e59ec925945cfd82203511648dc48b1
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: RewardedAds
+  - hash:
+      serializedVersion: 2
+      Hash: 5474f7bc16b6d6b7759ad15fcf297d15
+    assemblyName: Assembly-CSharp
+    namespaceName: AmNuamRunner
+    className: LocaleSelector
+  - hash:
+      serializedVersion: 2
+      Hash: b5007673bbbdb9d12597a1d8201370f5
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: Text
+  - hash:
+      serializedVersion: 2
+      Hash: 915204dac8acad99f076d6e72ada0a0f
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: 67f2e533bbfe68206e21fd8cf233561c
+    assemblyName: UnityEngine.SpatialTracking
+    namespaceName: UnityEngine.SpatialTracking
+    className: TrackedPoseDriver
+  - hash:
+      serializedVersion: 2
+      Hash: 540882762544409cc4530e60db00e951
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: 1ab136900c0edaeeb49424c852595030
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: 33f160a5c07e580c29aba2bd1e4db811
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: HorizontalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 8dc40a01667ca02b3354a4e7a61be082
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 55060a7bf226ac385ce19ebd450f199f
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UIElements
+    className: PanelRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: dd9dda1dfd39e605c49e72003342ef5d
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: 40bdadcd1cc14ab9d74347f31c1d4dd2
+    assemblyName: UnityEngine.XR.LegacyInputHelpers
+    namespaceName: UnityEngine.XR.LegacyInputHelpers
+    className: ArmModel
+  - hash:
+      serializedVersion: 2
+      Hash: 0a7be01235d738f8aef89f5ab2b47b7c
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PanelWindow
+  - hash:
+      serializedVersion: 2
+      Hash: 166da66d8c83380223922ee12f6bb893
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Audio
+  - hash:
+      serializedVersion: 2
+      Hash: ee91927698501dc19d7c8cab66fac4fb
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: AdsManager
+  - hash:
+      serializedVersion: 2
+      Hash: 1c6710fc8b92a5cd042c7e8f36df81cf
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: RandomScale
+  - hash:
+      serializedVersion: 2
+      Hash: a3901985eb076c1c9b7562fca82ca3e0
+    assemblyName: Unity.Timeline
+    namespaceName: UnityEngine.Timeline
+    className: SignalAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 12b93ffc65cba4e1b821e2383f744f71
+    assemblyName: Assembly-CSharp
+    namespaceName: YG.Example
+    className: ExampleRewardedAd
+  - hash:
+      serializedVersion: 2
+      Hash: 8dff8e9853297d341afa0c11f9091b59
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: LayoutElement
+  - hash:
+      serializedVersion: 2
+      Hash: 00bbd9db8634496d079d17711b2ff7c4
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: 8703b6ae2b0eefd9dafbc44d8d333fb1
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: Shadow
+  - hash:
+      serializedVersion: 2
+      Hash: 4589663d9152f056bd461affcfe2eb8a
+    assemblyName: Unity.Localization
+    namespaceName: UnityEngine.Localization.Tables
+    className: SharedTableData
+  - hash:
+      serializedVersion: 2
+      Hash: 7ede53d14ca89aa90385e229b4651459
+    assemblyName: Assembly-CSharp
+    namespaceName: YG
+    className: InfoYG
+  - hash:
+      serializedVersion: 2
+      Hash: d37ad14256fd8981fb1b86529147c9aa
+    assemblyName: Unity.Localization
+    namespaceName: UnityEngine.Localization.SmartFormat.PersistentVariables
+    className: VariablesGroupAsset
+  - hash:
+      serializedVersion: 2
+      Hash: a50baf3e7c572b737a2b6906ddbe4302
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PointGreen
+  - hash:
+      serializedVersion: 2
+      Hash: 0c6de72eaf8c1070da824268c4bfad9d
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TMP_StyleSheet
+  - hash:
+      serializedVersion: 2
+      Hash: 5df69f4b207be9c37f06bbd002553671
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LocalizationText
+  - hash:
+      serializedVersion: 2
+      Hash: 7e93247d600e115dac0cdd880de94e99
+    assemblyName: UnityEngine.TestRunner
+    namespaceName: UnityEngine.TestTools.TestRunner
+    className: PlaymodeTestsController
+  - hash:
+      serializedVersion: 2
+      Hash: 6b4ab90a42cf495c21de474349a7e765
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GameHUD
+  - hash:
+      serializedVersion: 2
+      Hash: caa7cab84dd4619d43f84782ae10ab2e
+    assemblyName: Unity.ResourceManager
+    namespaceName: UnityEngine.ResourceManagement.Util
+    className: DelayedActionManager
+  - hash:
+      serializedVersion: 2
+      Hash: 41cf4f0e516f26acc8feddb86ba36034
+    assemblyName: Assembly-CSharp
+    namespaceName: YG.Example
+    className: LanguageExample
+  - hash:
+      serializedVersion: 2
+      Hash: e3f29f58d7134b08fb608c948d197488
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ShopManager
+  - hash:
+      serializedVersion: 2
+      Hash: 57103178e8540738a23b3d1f2b724291
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Paralax
+  - hash:
+      serializedVersion: 2
+      Hash: 96321e23bef5b53a1bef5b270ffbacd9
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LevelChangerDotween
+  - hash:
+      serializedVersion: 2
+      Hash: 8c97e300d548db3674f812a2dd91be73
+    assemblyName: Assembly-CSharp
+    namespaceName: YG.Example
+    className: EnvirLangExample
+  - hash:
+      serializedVersion: 2
+      Hash: 1bef9ab456363dda2bddd820f4f4c1d8
+    assemblyName: Assembly-CSharp
+    namespaceName: YG.Example
+    className: DebugViewing
+  - hash:
+      serializedVersion: 2
+      Hash: aee55580aa13e5d9c67e3835b7fcf16f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SoundScriptable
+  - hash:
+      serializedVersion: 2
+      Hash: e987953190eb4c12cf19df790566dc2c
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.EventSystems
+    className: EventSystem
+  - hash:
+      serializedVersion: 2
+      Hash: 52db48e3be0a2b4f8b06f918fd1ebfbc
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TMP_Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: f295412bc00b58b9095a71e9764cc886
+    assemblyName: Unity.Timeline
+    namespaceName: UnityEngine.Timeline
+    className: AudioTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 04b6685b6f724c0d6024e6b6f96c8202
+    assemblyName: Unity.Timeline
+    namespaceName: UnityEngine.Timeline
+    className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: b2a4b2cea96ea192ed11404d8e3d70c6
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Magnit
+  - hash:
+      serializedVersion: 2
+      Hash: b0a268ea6d14cae9244c9b7b12358939
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SafeAreaHelper
+  - hash:
+      serializedVersion: 2
+      Hash: b89792ec352b52216c6d75010dbffd3d
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SceneAchivandBoard
+  - hash:
+      serializedVersion: 2
+      Hash: f172e6128a3242d56f5514cdfd3956b5
+    assemblyName: UnityEngine.Advertisements
+    namespaceName: UnityEngine.Advertisements
+    className: Placeholder
+  - hash:
+      serializedVersion: 2
+      Hash: 6ddf94363c6ce4b02d9fdd51290cb0f9
+    assemblyName: UnityEngine.TestRunner
+    namespaceName: UnityEngine.TestRunner.Utils
+    className: TestRunCallbackListener
+  - hash:
+      serializedVersion: 2
+      Hash: 5a4aa2850fe11587f47e34c270c7fd22
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: GraphicRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 3b5263a98bcc71d9a9d1d78a31b34ced
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TMP_SelectionCaret
+  - hash:
+      serializedVersion: 2
+      Hash: b43c807329d5261defda6a7fc101a86f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GhostEnemy
+  - hash:
+      serializedVersion: 2
+      Hash: 28fd3d045acc780719a17f02073eb448
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: InputField
+  - hash:
+      serializedVersion: 2
+      Hash: 8e6dc3d79712ca4934f6d50c80f010b1
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TMP_SpriteAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: bf40c7a9dc15bc219687c9838aa9b41f
+    assemblyName: UnityEngine.TestRunner
+    namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
+    className: TestResultRendererCallback
+  - hash:
+      serializedVersion: 2
+      Hash: be2b95639ec3696826cca0492bf1eb2e
+    assemblyName: Assembly-CSharp
+    namespaceName: YG
+    className: EventsYG2
+  - hash:
+      serializedVersion: 2
+      Hash: 1c5daf39e054fafb6152f9c00ed8f03d
+    assemblyName: Assembly-CSharp
+    namespaceName: YG.Insides
+    className: PlatformSettings
+  - hash:
+      serializedVersion: 2
+      Hash: 447933b43ae4df1a58de23915900639b
+    assemblyName: Unity.Localization
+    namespaceName: UnityEngine.Localization.Components
+    className: LocalizedGameObjectEvent
+  - hash:
+      serializedVersion: 2
+      Hash: f1f6d80dd6cea3e086bf2021c595c51f
+    assemblyName: Assembly-CSharp
+    namespaceName: YG.Example
+    className: ReceivingPurchaseExample
+  - hash:
+      serializedVersion: 2
+      Hash: a1ac4c50e55874de16eee3db71aa9784
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: ToggleGroup
+  - hash:
+      serializedVersion: 2
+      Hash: ed05888610c4417a8741ca606f34e3d0
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Destroyer
+  - hash:
+      serializedVersion: 2
+      Hash: 785c411e48a7845af13a04682837209a
+    assemblyName: Assembly-CSharp
+    namespaceName: AmNuamRunner
+    className: MainMenuSceneChange
+  - hash:
+      serializedVersion: 2
+      Hash: 302243264eff732c9ac0dc74d67094d3
+    assemblyName: Assembly-CSharp
+    namespaceName: MyGame.Localization
+    className: Localize
+  - hash:
+      serializedVersion: 2
+      Hash: d41ab9b5ea92474f9c0a6937a0607ce1
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: ContentSizeFitter
+  - hash:
+      serializedVersion: 2
+      Hash: fa1d8a58dc27baf229767328dc80e64e
+    assemblyName: Assembly-CSharp
+    namespaceName: YG.Example
+    className: SaverTest
+  - hash:
+      serializedVersion: 2
+      Hash: c25b25a6f5cfdb4e42801cf84ab1101b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GreenFly
+  - hash:
+      serializedVersion: 2
+      Hash: 9928f3d5600356b4b74e93e6f168f5db
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Stone
+  - hash:
+      serializedVersion: 2
+      Hash: 6f04145855263754c1fc237f18e1210c
+    assemblyName: Assembly-CSharp
+    namespaceName: AmNuamRunner
+    className: PurchaseManager
+  - hash:
+      serializedVersion: 2
+      Hash: 5b8b7230ad968399f6726aa1269dcdcb
+    assemblyName: UnityEngine.TestRunner
+    namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
+    className: PlayerQuitHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 2a4bf9bfa4fc85b7c3fd76767f844af6
+    assemblyName: DOTween.dll
+    namespaceName: DG.Tweening.Core
+    className: DOTweenComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 4f1dec93fa2a0b0e7b8b47518da31b1c
+    assemblyName: DOTween.dll
+    namespaceName: DG.Tweening.Core
+    className: DOTweenSettings
+  - hash:
+      serializedVersion: 2
+      Hash: cf32d98954e63b8e30e9334b152e9b8e
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.EventSystems
+    className: BaseInput
+  - hash:
+      serializedVersion: 2
+      Hash: bbc48a11777dea5c71fede7cca28e78a
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LocalizedText
+  - hash:
+      serializedVersion: 2
+      Hash: 4ca283281ec992c1aadfc0b6d1d37016
+    assemblyName: UnityEngine.Advertisements
+    namespaceName: UnityEngine.Advertisements.Platform.Editor
+    className: BannerPlaceholder
+  - hash:
+      serializedVersion: 2
+      Hash: 9e5a61929012004e228f82d114483c16
+    assemblyName: Assembly-CSharp
+    namespaceName: YG.Example
+    className: PlayerStatsExample
+  - hash:
+      serializedVersion: 2
+      Hash: bd26f74e91f3fb487896d8394ca26570
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Spawner
+  - hash:
+      serializedVersion: 2
+      Hash: d382a9ec908ecb89e89510f5138ebace
+    assemblyName: UnityEngine.Purchasing.Codeless
+    namespaceName: UnityEngine.Purchasing
+    className: CodelessIAPButton
+  - hash:
+      serializedVersion: 2
+      Hash: 5ccd61a9f4706f64f79ed95b7f45d921
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: BtnSwitchLang
+  - hash:
+      serializedVersion: 2
+      Hash: 960935b102b3064f4b924de16426e340
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TextMeshPro
+  - hash:
+      serializedVersion: 2
+      Hash: df1114bb0055f8dcd9c2d4c9777e8ef6
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: UIButtonAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: b2d2a01a2a85d9ed12e80cb33a9a6044
+    assemblyName: Unity.Timeline
+    namespaceName: UnityEngine.Timeline
+    className: AnimationTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 6cc0847396b0622ed59920cea4e58eb5
+    assemblyName: Assembly-CSharp
+    namespaceName: YG
+    className: PurchaseYG
+  - hash:
+      serializedVersion: 2
+      Hash: f407dbb0b2e2d44ba84d883904da8783
+    assemblyName: Assembly-CSharp
+    namespaceName: YG.Insides
+    className: YGSendMessage
+  - hash:
+      serializedVersion: 2
+      Hash: abbe840750f50fcc0715f7e799957691
+    assemblyName: Unity.Localization
+    namespaceName: UnityEngine.Localization
+    className: Locale
+  - hash:
+      serializedVersion: 2
+      Hash: 28662d8c07741778bfd0bb72e285f864
+    assemblyName: Assembly-CSharp
+    namespaceName: YG.Example
+    className: GetPlayerData
+  - hash:
+      serializedVersion: 2
+      Hash: fb79e95da8891fc7ac6c36ca6967af23
+    assemblyName: Unity.Timeline
+    namespaceName: UnityEngine.Timeline
+    className: ActivationTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 45986c63da8b3a572e24c2e2f2d98a51
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ObjectPoolManager
+  - hash:
+      serializedVersion: 2
+      Hash: 8b4e06924ea633746af5d7b956d33f1a
+    assemblyName: Assembly-CSharp
+    namespaceName: AmNuamRunner
+    className: IAPHandler
+  - hash:
+      serializedVersion: 2
+      Hash: e43b2afea14a30f60444a1b4bb2fd6a1
+    assemblyName: Unity.Localization
+    namespaceName: UnityEngine.Localization.Components
+    className: LocalizeSpriteEvent
+  - hash:
+      serializedVersion: 2
+      Hash: 8f3ff2c1c73ede5bffb478a1a7b4507d
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MoveSlider
+  - hash:
+      serializedVersion: 2
+      Hash: 60b215e0a76c90e0ddb2cbd43997850f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: FloatingDOTween
+  - hash:
+      serializedVersion: 2
+      Hash: b747f5d40674055dd70e18552f1b0447
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: Mask
+  - hash:
+      serializedVersion: 2
+      Hash: db18e5c5ce9b9109cd1d05c318bfa8ba
+    assemblyName: Unity.Localization
+    namespaceName: UnityEngine.Localization.Components
+    className: LocalizeTextureEvent
+  - hash:
+      serializedVersion: 2
+      Hash: 86d87a9eb401bda72d36bbf0cc8355c8
+    assemblyName: Assembly-CSharp
+    namespaceName: AmNuamRunner
+    className: VolumeValue
+  - hash:
+      serializedVersion: 2
+      Hash: 91bdc08b73cb35dc1cdda9d9a61599e9
+    assemblyName: Assembly-CSharp
+    namespaceName: YG.Example
+    className: CanvasScaleForMobile
+  - hash:
+      serializedVersion: 2
+      Hash: 0076dbba045323b763f9c5a06f4ad35e
+    assemblyName: Assembly-CSharp
+    namespaceName: YG
+    className: ConsumePurchasesYG
+  - hash:
+      serializedVersion: 2
+      Hash: 485e0548da49875743dc90214711bd4a
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: DestroyAllGameObject
+  - hash:
+      serializedVersion: 2
+      Hash: 111242e5168fe3aec6e5975cf99d4d22
+    assemblyName: Assembly-CSharp
+    namespaceName: AmNuamRunner
+    className: Language
+  - hash:
+      serializedVersion: 2
+      Hash: 185e7bacfbbc5defefa609c70f7ff4ce
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TMP_ColorGradient
+  - hash:
+      serializedVersion: 2
+      Hash: 682dfc653b22feea53b38adb3bc66414
+    assemblyName: Unity.Timeline
+    namespaceName: UnityEngine.Timeline
+    className: SignalReceiver
+  - hash:
+      serializedVersion: 2
+      Hash: 7053e305cdc1eb560f4c3be49d3b5136
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.EventSystems
+    className: PhysicsRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 042785b832afb73fd0585521aa7baf43
+    assemblyName: Unity.Timeline
+    namespaceName: UnityEngine.Timeline
+    className: ControlPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: b653d92cb8fce9fad1577ee38ba6d5e1
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MenuManager
+  - hash:
+      serializedVersion: 2
+      Hash: 1a680d9a08de79b0d2c779e78c9843b4
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: RectMask2D
+  - hash:
+      serializedVersion: 2
+      Hash: fa813f87414e840dca41633c4590e2db
+    assemblyName: Assembly-CSharp
+    namespaceName: YG.Insides
+    className: PlatformEventsYG2
+  - hash:
+      serializedVersion: 2
+      Hash: c933b590b3badb5918fa01e73cd5cc0c
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TMP_Settings
+  - hash:
+      serializedVersion: 2
+      Hash: 26f797215a07ffe973602ff173de4d26
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: AudioManager
+  - hash:
+      serializedVersion: 2
+      Hash: 0d747ec795ab2152db7f0cf9c5cef80b
+    assemblyName: Unity.Services.Analytics
+    namespaceName: Unity.Services.Analytics
+    className: AnalyticsContainer
+  - hash:
+      serializedVersion: 2
+      Hash: f25116be9da3650fc106126afe953e1a
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ParalaxBackground
+  - hash:
+      serializedVersion: 2
+      Hash: e7e95903ca66d58e1a7cbd71f824e16d
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TMP_SubMeshUI
+  - hash:
+      serializedVersion: 2
+      Hash: 013614d255daaf0cc606cd3ee6596aca
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Menu
+  - hash:
+      serializedVersion: 2
+      Hash: cfbc633b27da8b0a4ed7579c25bce87c
+    assemblyName: Unity.Localization
+    namespaceName: UnityEngine.Localization.Tables
+    className: AssetTable
+  - hash:
+      serializedVersion: 2
+      Hash: 9078325c2a6f6a2d9612ade897511860
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TMP_SpriteAsset
+  - hash:
+      serializedVersion: 2
+      Hash: dce3d054df971b8426065aaae69c3d76
+    assemblyName: Assembly-CSharp
+    namespaceName: YG.Utils.Lang
+    className: UtilsLang
+  - hash:
+      serializedVersion: 2
+      Hash: 95a7b338088646fb82b08ea02182a786
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SetSkinFons
+  - hash:
+      serializedVersion: 2
+      Hash: f7df4c487880322fb736bdc148528503
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ShieldCooldown
+  - hash:
+      serializedVersion: 2
+      Hash: d953179882a40618b1254d87d0a9a32e
+    assemblyName: Assembly-CSharp
+    namespaceName: YG
+    className: LBPlayerDataYG
+  - hash:
+      serializedVersion: 2
+      Hash: aaeeca9c06ae6aed9ea8f9ce434dadb1
+    assemblyName: Assembly-CSharp
+    namespaceName: YG.Example.DemoScene
+    className: AllDemoScenes
+  - hash:
+      serializedVersion: 2
+      Hash: 4826799e0b15656c3746100a549df202
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MoveDown
+  - hash:
+      serializedVersion: 2
+      Hash: 0b63f6d3335e11939ce8790b904c8691
+    assemblyName: Unity.Timeline
+    namespaceName: UnityEngine.Timeline
+    className: ActivationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: edf3b5887a43c2ae7ae577705feb20fc
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Player
+  - hash:
+      serializedVersion: 2
+      Hash: 98d3a2e00a7509744ca43829f8dcdbaa
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MySaw
+  - hash:
+      serializedVersion: 2
+      Hash: 8a2f78c25d5e92eb97ee5544a162a2e9
+    assemblyName: Unity.AI.Navigation
+    namespaceName: Unity.AI.Navigation
+    className: NavMeshLink
+  - hash:
+      serializedVersion: 2
+      Hash: 32a9ae6c30110bbed0f901fba2d12baf
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ManagerLocalization
+  - hash:
+      serializedVersion: 2
+      Hash: a47182e2cc4ad3e76939204f5ef61278
+    assemblyName: UnityEngine.XR.LegacyInputHelpers
+    namespaceName: UnityEditor.XR.LegacyInputHelpers
+    className: CameraOffset
+  - hash:
+      serializedVersion: 2
+      Hash: fa0b8efbc8d28996cf54d8fccedda4ae
+    assemblyName: Assembly-CSharp
+    namespaceName: YG.Insides
+    className: AdvCallingSimulation
+  - hash:
+      serializedVersion: 2
+      Hash: 51b80d3734ea86b38e3101db98029e15
+    assemblyName: Unity.Timeline
+    namespaceName: UnityEngine.Timeline
+    className: AnimationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: f6e5490a9e97830ddc318c09ed6b39c8
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Teleport
+  - hash:
+      serializedVersion: 2
+      Hash: bd68dd0edf736a7ae0b115f5018add9e
+    assemblyName: Unity.Localization
+    namespaceName: UnityEngine.Localization
+    className: LocalizationBehaviour
+  - hash:
+      serializedVersion: 2
+      Hash: 47ee34eb8b6021efa0289dbbb17a5a85
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TMP_InputField
+  - hash:
+      serializedVersion: 2
+      Hash: eb3689ba55543e2ebdd1aed67d41538a
+    assemblyName: UnityEngine.XR.LegacyInputHelpers
+    namespaceName: UnityEngine.XR.LegacyInputHelpers
+    className: TransitionArmModel
+  - hash:
+      serializedVersion: 2
+      Hash: e3ffaf7038c2becc145e29a924cd5132
+    assemblyName: Unity.Localization
+    namespaceName: UnityEngine.Localization.Pseudo
+    className: PseudoLocale
+  - hash:
+      serializedVersion: 2
+      Hash: feb5d3800cfa94154fd83457e63fc8dd
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LevelChanger
+  - hash:
+      serializedVersion: 2
+      Hash: 10c17b309bdca62b4d7fbaf113ed4ca0
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: Toggle
+  - hash:
+      serializedVersion: 2
+      Hash: 850f4315ecd7c71462878e990f56cd7e
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Gear
+  - hash:
+      serializedVersion: 2
+      Hash: 53e329840e6d03aebec76623c3b054db
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: Slider
+  - hash:
+      serializedVersion: 2
+      Hash: 6fe6c887780392b422e41c0e85d0d79b
+    assemblyName: Assembly-CSharp
+    namespaceName: YG
+    className: GetPlayerYG
+  - hash:
+      serializedVersion: 2
+      Hash: 17f82e3e7d8f8b07a270a4aad9bfe79d
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TMP_FontAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 061a5d77ce0aa52a60c21c566c6d8af2
+    assemblyName: Unity.AI.Navigation
+    namespaceName: Unity.AI.Navigation
+    className: NavMeshModifierVolume
+  - hash:
+      serializedVersion: 2
+      Hash: 52c4de493e6a7e5d06f85e5f15ddc263
+    assemblyName: Assembly-CSharp
+    namespaceName: YG
+    className: ReviewYG
+  - hash:
+      serializedVersion: 2
+      Hash: 5874b789cd9832847c61ebfa803213af
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UIElements
+    className: PanelEventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: d55992199bd2f5a5502658391cdf8ba7
+    assemblyName: Unity.AI.Navigation
+    namespaceName: Unity.AI.Navigation
+    className: NavMeshSurface
+  - hash:
+      serializedVersion: 2
+      Hash: 030e2c38915331d12a94ac77435a56fd
+    assemblyName: Unity.Analytics.Tracker.dll
+    namespaceName: UnityEngine.Analytics
+    className: AnalyticsEventTracker
+  - hash:
+      serializedVersion: 2
+      Hash: 22d05eed6cbc0a37e0b2e0909bc268e6
+    assemblyName: Unity.Analytics.Tracker.dll
+    namespaceName: UnityEngine.Analytics
+    className: AnalyticsTracker
+  - hash:
+      serializedVersion: 2
+      Hash: 9dd54ce33440072d6692a67e0c384ad1
+    assemblyName: Unity.Timeline
+    namespaceName: UnityEngine.Timeline
+    className: GroupTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 5e1385fb810edb502b726897f1f9be65
+    assemblyName: Unity.Localization
+    namespaceName: UnityEngine.Localization.Components
+    className: LocalizeStringEvent
+  - hash:
+      serializedVersion: 2
+      Hash: 42192f5e950f09978986994e19d2bd78
+    assemblyName: UnityEngine.Purchasing.Stores
+    namespaceName: UnityEngine.Purchasing
+    className: LifecycleNotifier
+  - hash:
+      serializedVersion: 2
+      Hash: 1cbbc2e9fefaa31764f6bc5e2f310503
+    assemblyName: Assembly-CSharp
+    namespaceName: YG
+    className: AdNotificationYG
+  - hash:
+      serializedVersion: 2
+      Hash: 792f562b463cd6a56e6ab8368087ffb8
+    assemblyName: Assembly-CSharp
+    namespaceName: YG.Example
+    className: BasicData
+  - hash:
+      serializedVersion: 2
+      Hash: 13862944a5e4b1eb59164a6118cf2588
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GameOverUIManager
+  - hash:
+      serializedVersion: 2
+      Hash: 70c66404775e181b5d028bd5080cfb1f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SpawnerSnow
+  - hash:
+      serializedVersion: 2
+      Hash: 3c1cec94da9a17a60feaa2130e29dd8b
+    assemblyName: Unity.ResourceManager
+    namespaceName: 
+    className: MonoBehaviourCallbackHooks
+  - hash:
+      serializedVersion: 2
+      Hash: 52f4653e0215ae5c394d99659ceb8c7c
+    assemblyName: Assembly-CSharp
+    namespaceName: AmNuamRunner
+    className: Upgrades
+  - hash:
+      serializedVersion: 2
+      Hash: 0c90d8b254c3a87bcb65a13c2eb0f431
+    assemblyName: UnityEngine.Advertisements
+    namespaceName: UnityEngine.Advertisements.Utilities
+    className: CoroutineExecutor
+  - hash:
+      serializedVersion: 2
+      Hash: 46295330a606eb31a62a876900d8aaa1
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GearGreen
+  - hash:
+      serializedVersion: 2
+      Hash: e8dae944469ef27b4780f905325ce04d
+    assemblyName: Assembly-CSharp
+    namespaceName: MyGame.Localization
+    className: LocalizeImage
+  - hash:
+      serializedVersion: 2
+      Hash: 33656f83bb0079184b2206a69690ec46
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: AspectRatioFitter
+  - hash:
+      serializedVersion: 2
+      Hash: 9637dcdf3068a91dfe653e61bb82f13d
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 223ce65fc6a9e91e4a8ad149dcadebde
+    assemblyName: Unity.Localization
+    namespaceName: UnityEngine.Localization
+    className: VariantsPropertyDriver
+  - hash:
+      serializedVersion: 2
+      Hash: 9694711cf2cfbc3739a583dd0eede01e
+    assemblyName: Unity.Localization
+    namespaceName: UnityEngine.Localization.Settings
+    className: LocalizationSettings
+  - hash:
+      serializedVersion: 2
+      Hash: 9be4d32c7c1f95ef1e6a3c69a7fe497c
+    assemblyName: Assembly-CSharp
+    namespaceName: AmNuamRunner
+    className: UpgradeAsset
+  - hash:
+      serializedVersion: 2
+      Hash: e081e91670555e1fcf4a388454e51cd3
+    assemblyName: UnityEngine.Purchasing.Stores
+    namespaceName: UnityEngine.Purchasing.Extension
+    className: UnityUtil
+  - hash:
+      serializedVersion: 2
+      Hash: c2226392b55d6d27f63826feb06aaba2
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: InterstitialAds
+  - hash:
+      serializedVersion: 2
+      Hash: 7fa76d7c96788d93617e359addb9973b
+    assemblyName: Unity.Localization
+    namespaceName: UnityEngine.Localization.Components
+    className: LocalizeStringListEvent
+  - hash:
+      serializedVersion: 2
+      Hash: 73687fe89eeccbb0c18380a5ab227bb5
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ShopManagerFons
+  - hash:
+      serializedVersion: 2
+      Hash: b4c73bd03925ef5a58bb7dcf603be409
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SetSkin
+  - hash:
+      serializedVersion: 2
+      Hash: 10a7eff324a007a8459ba9817a1b7589
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Invulnerable
+  - hash:
+      serializedVersion: 2
+      Hash: 9104447b683bf70406fa01f12ecb564a
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.EventSystems
+    className: StandaloneInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: a90f6a00b23520788be7d89ee3b0773d
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: Scrollbar
+  - hash:
+      serializedVersion: 2
+      Hash: 13f262cc0741566a7ab72682984bc3e1
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TMP_SubMesh
+  - hash:
+      serializedVersion: 2
+      Hash: febcfbf0a0d85e37808a3740e3c2c6fa
+    assemblyName: Unity.Timeline
+    namespaceName: UnityEngine.Timeline
+    className: MarkerTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 68f2cb287af2eee1f639824485a3402b
+    assemblyName: Unity.AI.Navigation
+    namespaceName: Unity.AI.Navigation
+    className: NavMeshModifier
+  - hash:
+      serializedVersion: 2
+      Hash: 672716ae97f6ddb615fa5ac3ec9da349
+    assemblyName: UnityEngine.TestRunner
+    namespaceName: UnityEngine.TestTools
+    className: BeforeAfterTestCommandState
+  - hash:
+      serializedVersion: 2
+      Hash: 499e2758394904763f8c2feae7efd848
+    assemblyName: Assembly-CSharp
+    namespaceName: YG.Example.DemoScene
+    className: DemoScenePartial
+  - hash:
+      serializedVersion: 2
+      Hash: 152f190cfdf75d7c97a07bab46207dca
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: YellowEnemy
+  - hash:
+      serializedVersion: 2
+      Hash: 5142348ca458b21a27b497613a8a6fcc
+    assemblyName: Assembly-CSharp
+    namespaceName: YG.Example
+    className: DebugInterstitialAdv
+  - hash:
+      serializedVersion: 2
+      Hash: 8bbce9932f67ad8e7f4eefec87800f94
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: 0acc65aa24540c28839a8f5cbd26ea2e
+    assemblyName: Unity.Localization
+    namespaceName: UnityEngine.Localization.PropertyVariants
+    className: GameObjectLocalizer
+  - hash:
+      serializedVersion: 2
+      Hash: a75c9872d468b93df207dbeaf8f3e9d0
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SpiderWeb
+  - hash:
+      serializedVersion: 2
+      Hash: 4d2211133ad61dff6e3fbe0299384a1d
+    assemblyName: Unity.Localization
+    namespaceName: UnityEngine.Localization.Components
+    className: LocalizeAudioClipEvent
+  - hash:
+      serializedVersion: 2
+      Hash: 20a120e55ad3ab65556328d5fd8309dd
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: Outline
+  - hash:
+      serializedVersion: 2
+      Hash: 3ea2579bcee10d38d0a75b62368bc878
+    assemblyName: Assembly-CSharp
+    namespaceName: YG.Example
+    className: LBExample
+  - hash:
+      serializedVersion: 2
+      Hash: 07bc9892e96d5f534d103bc7b029471c
+    assemblyName: UnityEngine.Purchasing.Codeless
+    namespaceName: UnityEngine.Purchasing
+    className: IAPButton
+  - hash:
+      serializedVersion: 2
+      Hash: f2305da2400dfe6f069770a1a63f0f7c
+    assemblyName: Unity.Timeline
+    namespaceName: UnityEngine.Timeline
+    className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 4878e735441f4041539853759559c86f
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: VerticalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 12317e5d89a4cbaf53c1fd82f17b085c
+    assemblyName: UnityEngine.Advertisements
+    namespaceName: UnityEngine.Advertisements.Utilities
+    className: ApplicationQuit
+  - hash:
+      serializedVersion: 2
+      Hash: e698ea98e6dd7668dd27a46179d95141
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ButtonsRewarded
+  - hash:
+      serializedVersion: 2
+      Hash: 7bb32d6e4c7614a97d9723ce7e26588c
+    assemblyName: Unity.Timeline
+    namespaceName: UnityEngine.Timeline
+    className: BasicPlayableBehaviour
+  - hash:
+      serializedVersion: 2
+      Hash: e8d390bd9ecacc453a7500b90d0c0292
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.EventSystems
+    className: Physics2DRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 19824dd35debb3fff0983df49f8359ab
+    assemblyName: UnityEngine.TestRunner
+    namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
+    className: PlayModeRunnerCallback
+  - hash:
+      serializedVersion: 2
+      Hash: cdc49808f1e97136583317b85bb31cf1
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: DiagonalEnemy
+  - hash:
+      serializedVersion: 2
+      Hash: afb7b65d28d5a7423e69a1b076be0064
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: PositionAsUV1
+  - hash:
+      serializedVersion: 2
+      Hash: 6a0b5b415c00f783202fd1ae2d556cb2
+    assemblyName: Unity.Timeline
+    namespaceName: UnityEngine.Timeline
+    className: AudioPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 55ce96028e4662586b999352a4d02bd4
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GameManager
+  - hash:
+      serializedVersion: 2
+      Hash: 7938ab90aad04b5a71c0f0ac2a26316f
+    assemblyName: Assembly-CSharp
+    namespaceName: YG
+    className: TimerBeforeAdsYG
+  - hash:
+      serializedVersion: 2
+      Hash: ee13d9b6d158a1642384b30f2f53ae00
+    assemblyName: Assembly-CSharp
+    namespaceName: YG.Example.DemoScene
+    className: DemoSceneLoadButton
+  - hash:
+      serializedVersion: 2
+      Hash: 4b5b15df6b89820a2d9df7353bf68766
+    assemblyName: Assembly-CSharp
+    namespaceName: AmNyamRunner
+    className: CameraAspectCrop
+  - hash:
+      serializedVersion: 2
+      Hash: 830c3b545f6e6ee60a4cebab90516f2c
+    assemblyName: UnityEngine.TestRunner
+    namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
+    className: RemoteTestResultSender
+  - hash:
+      serializedVersion: 2
+      Hash: d0cdd713f9bf4e6a625d9e7804deca42
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.EventSystems
+    className: EventTrigger
+  - hash:
+      serializedVersion: 2
+      Hash: 5ebc58ec194dd44630b25fcc270ad4af
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: 4728e3d21cc2a12e391e71ec9b7eed0b
+    assemblyName: Unity.Timeline
+    namespaceName: UnityEngine.Timeline
+    className: SignalTrack
+  - hash:
+      serializedVersion: 2
+      Hash: b0e32fb111c5b37e6e774a4815b1e720
+    assemblyName: Assembly-CSharp
+    namespaceName: AmNuamRunner
+    className: UpgradeShop
+  - hash:
+      serializedVersion: 2
+      Hash: 88fc30627a6870a0e7883ed555458012
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: AbilityCooldown
+  - hash:
+      serializedVersion: 2
+      Hash: 0468c41f6b5acab8b316fd1fc1a212a7
+    assemblyName: Unity.Localization
+    namespaceName: UnityEngine.Localization.Components
+    className: LocalizedMonoBehaviour
+  - hash:
+      serializedVersion: 2
+      Hash: 12ddb64ce5c420d81fde8928a01cb50a
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SpawnerWalls
+  - hash:
+      serializedVersion: 2
+      Hash: d0392b7f3f52d5af537ade186b4f51f1
+    assemblyName: Unity.Timeline
+    namespaceName: UnityEngine.Timeline
+    className: ControlTrack
+  - hash:
+      serializedVersion: 2
+      Hash: d5cd7f207e91ca8336c65a577a6fb2a0
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: ScrollRect
+  - hash:
+      serializedVersion: 2
+      Hash: d4b968135f38855075545c460a2152c4
+    assemblyName: Unity.ScriptableBuildPipeline
+    namespaceName: UnityEngine.Build.Pipeline
+    className: CompatibilityAssetBundleManifest
+  - hash:
+      serializedVersion: 2
+      Hash: 31b89639975549231bba27f5ce3394e4
+    assemblyName: Assembly-CSharp
+    namespaceName: YG
+    className: PaymentsCatalogYG
+  - hash:
+      serializedVersion: 2
+      Hash: 1ff787596678671f9596e7c038774087
+    assemblyName: Assembly-CSharp
+    namespaceName: YG.Example
+    className: CustomLBExample
+  - hash:
+      serializedVersion: 2
+      Hash: 20ea068f0f10ae0442c315a210ea57db
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: IronEnemy
+  - hash:
+      serializedVersion: 2
+      Hash: 83447eb14ba5f9222c0f703aabb89c38
+    assemblyName: UnityEngine.XR.LegacyInputHelpers
+    namespaceName: UnityEngine.XR.LegacyInputHelpers
+    className: SwingArmModel
+  - hash:
+      serializedVersion: 2
+      Hash: 4188bdcec3bea39da52412cd5949d291
+    assemblyName: UnityEngine.Purchasing.Codeless
+    namespaceName: UnityEngine.Purchasing
+    className: IAPListener
+  - hash:
+      serializedVersion: 2
+      Hash: e345905ad90948dfb4529134de1ac148
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MenuAndTutorialUi
+  - hash:
+      serializedVersion: 2
+      Hash: 095fb569bb43a1505544eebd33a90567
+    assemblyName: Unity.Services.Core.Components
+    namespaceName: Unity.Services.Core.Components
+    className: ServicesInitialization
+  - hash:
+      serializedVersion: 2
+      Hash: 815bdbb2b150f7de3b009b188f7fa77b
+    assemblyName: Assembly-CSharp
+    namespaceName: AmNuamRunner
+    className: MainMenuSkinUpdater
+  - hash:
+      serializedVersion: 2
+      Hash: d0c9ca82d3c1355aa1166f4008517e61
+    assemblyName: Unity.Localization
+    namespaceName: UnityEngine.Localization.Tables
+    className: StringTable
+  - hash:
+      serializedVersion: 2
+      Hash: 6c0b134cd3996ee683123853aab0d770
+    assemblyName: Assembly-CSharp
+    namespaceName: YG.Example
+    className: DemoTextTranslateRU
+  - hash:
+      serializedVersion: 2
+      Hash: fc6a88870d53f2f422de071092620ff3
+    assemblyName: UnityEngine.Purchasing.Stores
+    namespaceName: UnityEngine.Purchasing
+    className: UIFakeStoreWindow
+  - hash:
+      serializedVersion: 2
+      Hash: 82b281fd88a7fc92662f606dce3ad97d
+    assemblyName: Assembly-CSharp
+    namespaceName: YG
+    className: ImageLoadYG
+  - hash:
+      serializedVersion: 2
+      Hash: 1553f209ae0b2d5d3a35685fca55f9c3
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TMP_ScrollbarEventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: cdc27fa880d02f44eea19fc0d4a4056b
+    assemblyName: Assembly-CSharp
+    namespaceName: AmNuamRunner
+    className: BuyUpgrade
+  - hash:
+      serializedVersion: 2
+      Hash: 57e850ddaeb0b685e03b7437db42365f
+    assemblyName: Assembly-CSharp
+    namespaceName: YG
+    className: RewardedAdvLockTimer
+  - hash:
+      serializedVersion: 2
+      Hash: 6ce729894d49e7489fbe15ae71394772
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GameOverUIAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 765f046cc9a569357bbb44473131bd44
+    assemblyName: Unity.Analytics.DataPrivacy
+    namespaceName: UnityEngine.Analytics
+    className: DataPrivacyButton
+  - hash:
+      serializedVersion: 2
+      Hash: 5e5b8bf8421a9c57dd978071b54f179b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Point
+  - hash:
+      serializedVersion: 2
+      Hash: 9deed66df71d8b220b8056c5ae3f901e
+    assemblyName: Assembly-CSharp
+    namespaceName: YG
+    className: PauseGameYG
+  - hash:
+      serializedVersion: 2
+      Hash: ff76cf6cf52b4db7b95af6ffadca9288
+    assemblyName: Unity.Timeline
+    namespaceName: UnityEngine.Timeline
+    className: SignalEmitter
+  - hash:
+      serializedVersion: 2
+      Hash: 4fcf0bb4aff1d14a1dfcdedc4b07bd05
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.EventSystems
+    className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 8520e6c17333ea3d5ff7c7039b20c05a
+    assemblyName: Unity.ResourceManager
+    namespaceName: UnityEngine.ResourceManagement.Diagnostics
+    className: DiagnosticEventCollector
+  - hash:
+      serializedVersion: 2
+      Hash: 7e73df2e130db3725a978d185ca406d1
+    assemblyName: Assembly-CSharp
+    namespaceName: YG
+    className: LeaderboardYG
+  - hash:
+      serializedVersion: 2
+      Hash: a2c9a06ee60209afa9fe5a78c10c6706
+    assemblyName: Assembly-CSharp
+    namespaceName: YG.Example
+    className: GetEnvirData
+  - hash:
+      serializedVersion: 2
+      Hash: 758d7d37da67b6c0bcc1dba159607015
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: KeyPressAnimation
+  platform: 20
+  scenePathNames:
+  - Assets/Scenes/Menu.unity
+  - Assets/Scenes/MainLvl.unity
+  playerPath: G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Builds/Build2

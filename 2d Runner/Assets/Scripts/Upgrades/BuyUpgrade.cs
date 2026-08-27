@@ -55,8 +55,8 @@ namespace AmNuamRunner
         // Метод, который определяет, является ли этот товар скином, и возвращает его ID
         private string GetSkinId(string assetName)
         {
-            if (assetName == "OmNomSkin") return "OmNom";
-            if (assetName == "BooSkin") return "Boo";
+            if (assetName == "RedDragonSkin") return "RedDragon";
+            if (assetName == "BlueDragonSkin") return "BlueDragon";
             if (assetName == "LickSkin") return "Lick";
             return null; // Если это не скин, возвращаем null
         }
@@ -71,8 +71,8 @@ namespace AmNuamRunner
             int savedLevel = Upgrades.GetUpgradeLevel(_asset);
             string skinId = GetSkinId(_asset.name);
             
-            // ХИТРОСТЬ: Ам Ням всегда куплен!
-            if (skinId == "OmNom") savedLevel = 1;
+            // ХИТРОСТЬ: Красный дракон всегда куплен!
+            if (skinId == "RedDragon") savedLevel = 1;
 
             if (_descriptionLocalizer != null)
             {
@@ -107,14 +107,14 @@ namespace AmNuamRunner
                 _costNumber = int.MaxValue; 
                 if (_textCost != null) _textCost.text = "-";
             }
-            else if (savedLevel >= _asset.MaxLevel)
+            else if (savedLevel >= _asset.MaxLevel && !_asset.IsConsumable)
             {
                 // Товар полностью куплен! 
                 // Проверяем: это обычное улучшение или скин?
                 if (!string.IsNullOrEmpty(skinId))
                 {
                     // ЭТО СКИН
-                    string currentSkin = string.IsNullOrEmpty(YG2.saves.currentSkin) ? "OmNom" : YG2.saves.currentSkin;
+                    string currentSkin = string.IsNullOrEmpty(YG2.saves.currentSkin) ? "RedDragon" : YG2.saves.currentSkin;
                     
                     if (currentSkin == skinId)
                     {
@@ -195,11 +195,9 @@ namespace AmNuamRunner
             if (_asset == null) return;
 
             bool isUnlocked = _requiredUpgrade == null || Upgrades.GetUpgradeLevel(_requiredUpgrade) > 0;
-            
-            // Получаем текущий уровень и ID скина
             int savedLevel = Upgrades.GetUpgradeLevel(_asset);
             string skinId = GetSkinId(_asset.name);
-            if (skinId == "OmNom") savedLevel = 1;
+            if (skinId == "RedDragon") savedLevel = 1;
 
             if (!isUnlocked)
             {
@@ -207,29 +205,36 @@ namespace AmNuamRunner
                 return;
             }
 
-            // Если это скин, и он уже куплен, но не надет - кнопка всегда активна (для выбора)
             if (!string.IsNullOrEmpty(skinId) && savedLevel >= _asset.MaxLevel)
             {
-                string currentSkin = string.IsNullOrEmpty(YG2.saves.currentSkin) ? "OmNom" : YG2.saves.currentSkin;
+                string currentSkin = string.IsNullOrEmpty(YG2.saves.currentSkin) ? "RedDragon" : YG2.saves.currentSkin;
                 _buttonBuy.interactable = (currentSkin != skinId);
                 return;
             }
 
-            // Обычная логика покупки
-            if (savedLevel >= _asset.MaxLevel)
+            // Блокируем кнопку только если это НЕ многоразовый товар
+            if (savedLevel >= _asset.MaxLevel && !_asset.IsConsumable) 
             {
                 _buttonBuy.interactable = false;
                 return;
             }
 
-            _buttonBuy.interactable = money >= _costNumber;
+            // Для Инапов кнопка должна быть активна всегда, а для игровых покупок проверяем баланс
+            if (_asset.IsInApp) 
+            {
+                _buttonBuy.interactable = true; 
+            }
+            else
+            {
+                _buttonBuy.interactable = money >= _costNumber;
+            }
         }
 
         public void Buy()
         {
             string skinId = GetSkinId(_asset.name);
             int currentLevel = Upgrades.GetUpgradeLevel(_asset);
-            if (skinId == "OmNom") currentLevel = 1;
+            if (skinId == "RedDragon") currentLevel = 1;
 
             // СЦЕНАРИЙ 1: Игрок нажимает "Выбрать" на уже купленном скине
             if (currentLevel >= _asset.MaxLevel && !string.IsNullOrEmpty(skinId))
@@ -237,33 +242,49 @@ namespace AmNuamRunner
                 YG2.saves.currentSkin = skinId;
                 YG2.SaveProgress();
                 
-                // 2. ВЫЗЫВАЕМ СОБЫТИЕ ВМЕСТО ХАКА С NULL
+                Sound.EquipSound.Play(); 
+                
                 OnSkinChanged?.Invoke(); 
                 return;
             }
 
             // СЦЕНАРИЙ 2: Игрок покупает товар
-            if (currentLevel >= _asset.MaxLevel) return;
+            if (currentLevel >= _asset.MaxLevel && !_asset.IsConsumable) return;
+            
+            // Инапы (за реальные деньги) обрабатываются через IAPHandler, их пропускаем
+            if (_asset.IsInApp) return; 
 
-            Upgrades.BuyUpgrade(_asset);
-
-            // Если купили новый скин, сразу экипируем его
-            if (!string.IsNullOrEmpty(skinId))
+            // --- ДОБАВЛЕНО: Проверяем баланс и списываем монеты ---
+            if (YG2.saves.coin >= _costNumber)
             {
-                YG2.saves.currentSkin = skinId;
-                YG2.SaveProgress();
+                YG2.saves.coin -= _costNumber;
                 
-                // 3. ВЫЗЫВАЕМ СОБЫТИЕ ВМЕСТО ХАКА С NULL
-                OnSkinChanged?.Invoke(); 
-            }
-            else
-            {
-                Initialize();
-            }
+                // Upgrades.BuyUpgrade внутри себя вызывает YG2.SaveProgress(), 
+                // так что новый баланс монет автоматически улетит в облако!
+                Upgrades.BuyUpgrade(_asset);
 
-            int savedLevel = Upgrades.GetUpgradeLevel(_asset);
-            AnalyticsManager.Instance.SaveShopBuy(_asset.name, savedLevel);
-            Sound.BuySound.Play();
+                // Если купили новый скин, сразу экипируем его
+                if (!string.IsNullOrEmpty(skinId))
+                {
+                    YG2.saves.currentSkin = skinId;
+                    YG2.SaveProgress();
+                    OnSkinChanged?.Invoke(); 
+                    
+                    // Если хочешь, чтобы при ПОКУПКЕ скина тоже играл звук экипировки, 
+                    // можешь раскомментировать строку ниже (но тогда она проиграет вместе со звуком покупки)
+                    // Sound.EquipSound.Play(); 
+                }
+                else
+                {
+                    Initialize();
+                }
+
+                int savedLevel = Upgrades.GetUpgradeLevel(_asset);
+                AnalyticsManager.Instance.SaveShopBuy(_asset.name, savedLevel);
+                
+                // Звук покупки
+                Sound.BuySound.Play();
+            }
         }
         
         private void OnDestroy()

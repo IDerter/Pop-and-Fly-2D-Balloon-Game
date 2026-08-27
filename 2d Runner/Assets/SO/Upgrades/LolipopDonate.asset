@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c4f473e967c3c849b44635140fafb8a, type: 3}
   m_Name: LolipopDonate
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 90fcc49acee0da74680705ca88f6a1b2, type: 3}
   localizedName:
     m_TableReference:
       m_TableCollectionName: GUID:a3c22c8e15626da4caa45cc5a69f026b
     m_TableEntryReference:
-      m_KeyId: 15775346688
+      m_KeyId: 1394947154423808
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -26,7 +26,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:b4e1c1df6e8ad0f4f876aedda4ce3130
     m_TableEntryReference:
-      m_KeyId: 25707458560
+      m_KeyId: 1396871870197760
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -34,6 +34,7 @@ MonoBehaviour:
   costByLevel: 00000000
   step: 5
   IsInApp: 1
+  IsConsumable: 1
   references:
     version: 2
     RefIds: []
