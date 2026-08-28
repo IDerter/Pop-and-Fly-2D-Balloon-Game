@@ -617,6 +617,12 @@
             "icon": "package/com.unity.modules.runtimeinitializeonloadmanagerinitializer"
           },
           {
+            "name": "Required by ScreenCapture Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.screencapture"
+          },
+          {
             "name": "Required by TLS Module",
             "scenes": [],
             "dependencyType": 2,
@@ -732,6 +738,12 @@
       {
         "name": "ImageConversion",
         "dependencies": [
+          {
+            "name": "Required by ScreenCapture Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.screencapture"
+          },
           {
             "name": "Required by UnityWebRequestTexture Module",
             "scenes": [],
@@ -930,6 +942,10 @@
         ]
       },
       {
+        "name": "ScreenCapture",
+        "dependencies": []
+      },
+      {
         "name": "SharedInternals",
         "dependencies": [
           {
@@ -1021,6 +1037,12 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.runtimeinitializeonloadmanagerinitializer"
+          },
+          {
+            "name": "Required by ScreenCapture Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.screencapture"
           },
           {
             "name": "Required by TLS Module",

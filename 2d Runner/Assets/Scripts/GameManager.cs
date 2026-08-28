@@ -24,6 +24,9 @@ public class GameManager : MonoBehaviour
     [Header("World")]
     public GameObject backgroundParallax; 
 
+    [Header("Yandex Games")]
+    public string leaderboardName = "BestPlayers";
+
     private bool isGameOver = false;
     
     // БУФЕРНАЯ ПЕРЕМЕННАЯ: Отслеживает, сколько монет мы уже сохранили в текущем забеге
@@ -112,7 +115,14 @@ public class GameManager : MonoBehaviour
             YG2.saves.bestScore = player.score;
         }
 
-        // 3. Отправляем всё (и рекорд, и монеты) в облако Яндекса одним запросом
+        // 3. Отправляем рекорд в Лидерборд Яндекса
+        // Отправляем именно bestScore, чтобы в топе всегда был лучший результат игрока
+        if (!string.IsNullOrEmpty(leaderboardName))
+        {
+            YG2.SetLeaderboard(leaderboardName, YG2.saves.bestScore);
+        }
+
+        // 4. Отправляем всё (и рекорд, и монеты) в облако Яндекса одним запросом
         YG2.SaveProgress(); 
 
         Invoke(nameof(ShowGameOverScreen), 1f);

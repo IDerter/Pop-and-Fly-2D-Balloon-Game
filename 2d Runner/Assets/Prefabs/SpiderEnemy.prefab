@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ce3c7bf3b1c1f488dccf16be521a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 6.7
+  lifeTime: 16
   fadeDuration: 1
   isPooledObject: 1
 --- !u!95 &95892469591096410

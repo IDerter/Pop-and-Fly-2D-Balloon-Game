@@ -58,14 +58,20 @@ public class ObjectPoolManager :  SingletonBase<ObjectPoolManager>
     {
         string cleanName = obj.name.Replace("(Clone)", "").Trim();
         obj.name = cleanName;
-
-        obj.SetActive(false);
         
         if (!poolDictionary.ContainsKey(cleanName))
         {
             poolDictionary[cleanName] = new Queue<GameObject>();
         }
         
+        // --- ЗАЩИТА ОТ ДВОЙНОГО ВОЗВРАТА ---
+        // Если этот объект уже числится в очереди, просто прерываем выполнение
+        if (poolDictionary[cleanName].Contains(obj))
+        {
+            return; 
+        }
+
+        obj.SetActive(false);
         poolDictionary[cleanName].Enqueue(obj);
     }
 }

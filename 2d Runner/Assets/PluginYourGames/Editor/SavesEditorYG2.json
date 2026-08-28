@@ -13,7 +13,7 @@
         false,
         false
     ],
-    "idSave": 155,
+    "idSave": 174,
     "upgradeNames": [
         "NoAdsDonateUpgrade",
         "LolipopDonate",
@@ -30,11 +30,11 @@
         3,
         3
     ],
-    "coin": 89,
+    "coin": 25,
     "bestScore": 80,
     "completedTutorialSteps": [],
-    "musicVolume": 0.4499051868915558,
-    "soundsVolume": 0.8999999761581421,
+    "musicVolume": 0.8285397887229919,
+    "soundsVolume": 1.0,
     "isSFXEnabled": true,
     "boughtStars": 0,
     "lastDailyRewardDate": "",

@@ -189,6 +189,8 @@ public class Player : MonoBehaviour
             ObjectPoolManager.Instance.ReturnToPool(pickup);
         }
 
+        Sound.PopUp.Play();
+
         int level = AmNuamRunner.Upgrades.GetUpgradeLevel(shieldUpgradeAsset);
         float totalDuration = baseAbilityDuration + (level * shieldUpgradeAsset.step);
 
@@ -207,6 +209,8 @@ public class Player : MonoBehaviour
     private void ActivateMagnet(GameObject pickup)
     {
         PlayEatJuice();
+
+        Sound.PopUp.Play();
         if (pointEffector != null) pointEffector.enabled = true;
         ObjectPoolManager.Instance.ReturnToPool(pickup);
 

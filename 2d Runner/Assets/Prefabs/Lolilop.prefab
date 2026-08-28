@@ -101,8 +101,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ce3c7bf3b1c1f488dccf16be521a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 7
+  lifeTime: 12
   fadeDuration: 1
+  isPooledObject: 1
 --- !u!50 &50461513378791504
 Rigidbody2D:
   serializedVersion: 4
@@ -182,11 +183,8 @@ MonoBehaviour:
   effect: {fileID: 1131695174809808, guid: 4e777896002085c479c23dfca7dda6fc, type: 3}
   yellowballon1: {fileID: 4179444456312692}
   istrigger: 1
-  sound: {fileID: 1578284670373976, guid: 7c24d82710a18e04abfd3c1c5b5ab8ad, type: 3}
   IsEntrance: 1
   collider2d: {fileID: 58663277132646758}
-  spriteRenderer: {fileID: 0}
-  scriptskin: {fileID: 0}
 --- !u!95 &95118534949970922
 Animator:
   serializedVersion: 5

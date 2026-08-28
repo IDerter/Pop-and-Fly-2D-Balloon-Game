@@ -7,6 +7,8 @@
 -a="G:\GitHub\PopAndFly2dRunner\Pop-and-Fly-2D-Balloon-Game\2d Runner\Library\Bee\PlayerScriptAssemblies\Unity.Analytics.DataPrivacy.dll"
 -a="G:\GitHub\PopAndFly2dRunner\Pop-and-Fly-2D-Balloon-Game\2d Runner\Library\Bee\PlayerScriptAssemblies\Unity.InternalAPIEngineBridge.013.dll"
 -a="G:\GitHub\PopAndFly2dRunner\Pop-and-Fly-2D-Balloon-Game\2d Runner\Library\Bee\PlayerScriptAssemblies\Unity.Localization.dll"
+-a="G:\GitHub\PopAndFly2dRunner\Pop-and-Fly-2D-Balloon-Game\2d Runner\Library\Bee\PlayerScriptAssemblies\Unity.Recorder.Base.dll"
+-a="G:\GitHub\PopAndFly2dRunner\Pop-and-Fly-2D-Balloon-Game\2d Runner\Library\Bee\PlayerScriptAssemblies\Unity.Recorder.dll"
 -a="G:\GitHub\PopAndFly2dRunner\Pop-and-Fly-2D-Balloon-Game\2d Runner\Library\Bee\PlayerScriptAssemblies\Unity.ResourceManager.dll"
 -a="G:\GitHub\PopAndFly2dRunner\Pop-and-Fly-2D-Balloon-Game\2d Runner\Library\Bee\PlayerScriptAssemblies\Unity.ScriptableBuildPipeline.dll"
 -a="G:\GitHub\PopAndFly2dRunner\Pop-and-Fly-2D-Balloon-Game\2d Runner\Library\Bee\PlayerScriptAssemblies\Unity.Services.Analytics.dll"
