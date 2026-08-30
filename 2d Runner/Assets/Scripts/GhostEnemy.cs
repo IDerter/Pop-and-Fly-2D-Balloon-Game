@@ -4,7 +4,11 @@ public class GhostEnemy : MonoBehaviour
 {
     public float speed; 
     public GameObject effect;
-    public GameObject sound;
+
+    [Header("Audio")]
+    [Tooltip("Выбери звук из выпадающего списка")]
+    public Sound hitSound; // Заменили GameObject на твой enum Sound
+
     public int damage = 1;
     public Vector2 direction;
     public bool isdamage = true;
@@ -26,7 +30,7 @@ public class GhostEnemy : MonoBehaviour
         if (other.CompareTag("Player") && isdamage)
         {
             if (effect != null) Instantiate(effect, transform.position, Quaternion.identity);
-            if (sound != null) Instantiate(sound, transform.position, Quaternion.identity);
+            hitSound.Play();
             
             Player playerScript = other.GetComponent<Player>();
             if (playerScript != null) playerScript.TakeDamage();

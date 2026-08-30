@@ -7,7 +7,11 @@ public class Gear : MonoBehaviour
     public float speed;
     public Transform gear; 
     public GameObject effect;
-    public GameObject sound;
+
+    [Header("Audio")]
+    [Tooltip("Выбери звук из выпадающего списка")]
+    public Sound hitSound;
+
     public bool isdamage = true;
 
     // Срабатывает при доставании из пула — сбрасываем логику урона
@@ -26,7 +30,7 @@ public class Gear : MonoBehaviour
         if (other.CompareTag("Player") && isdamage)
         {
             if (effect != null) Instantiate(effect, transform.position, Quaternion.identity);
-            if (sound != null) Instantiate(sound, transform.position, Quaternion.identity);
+            hitSound.Play();
             
             Player playerScript = other.GetComponent<Player>();
             if (playerScript != null)

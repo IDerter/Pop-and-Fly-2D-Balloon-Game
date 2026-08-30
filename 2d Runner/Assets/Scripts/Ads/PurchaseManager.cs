@@ -29,12 +29,12 @@ namespace AmNuamRunner
 
 		private void SuccessPurchased(string id)
 		{
-			if (id == TypeReward.X2CoinsAndHearts.ToString())
-			{
-				PurchaseOn?.Invoke(TypeReward.X2CoinsAndHearts.ToString());
+			//if (id == TypeReward.X2CoinsAndHearts.ToString())
+			//{
+			//	PurchaseOn?.Invoke(TypeReward.X2CoinsAndHearts.ToString());
 
 				//YG2.ConsumePurchase(id);
-			}
+			//}
 		}
 
 		private void FailedPurchased(string id)

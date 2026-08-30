@@ -105,7 +105,7 @@ MonoBehaviour:
   speed: 0.05
   gear: {fileID: 4858886539051426}
   effect: {fileID: 1648211914844166, guid: 53b8c2406cc833548bb30c3387cfee4b, type: 3}
-  sound: {fileID: 1195248989485196, guid: 7648c373f21bc8947ab98f3573670ebe, type: 3}
+  hitSound: 2
   isdamage: 1
 --- !u!114 &114008356261123258
 MonoBehaviour:
@@ -175,9 +175,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.025683165, y: 0.054684162}
+  m_Offset: {x: -0.0063312054, y: 0.05468417}
   serializedVersion: 2
-  m_Radius: 0.8206803
+  m_Radius: 0.71101934
 --- !u!50 &50900876334514278
 Rigidbody2D:
   serializedVersion: 4

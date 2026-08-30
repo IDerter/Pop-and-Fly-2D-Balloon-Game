@@ -6,7 +6,10 @@ public class YellowEnemy : MonoBehaviour
     public float speed; // Оставил, если эта переменная читается спавнером
     public Transform gear; // Позиция желтого шарика
     public GameObject effect;
-    public GameObject sound;
+    [Header("Audio")]
+    [Tooltip("Выбери звук из выпадающего списка")]
+    public Sound hitSound;
+
     public int damage = 1;
     public Vector2 direction;
     public bool isdamage = true;
@@ -25,7 +28,7 @@ public class YellowEnemy : MonoBehaviour
         if (other.CompareTag("Player") && isdamage)
         {
             if (effect != null) Instantiate(effect, transform.position, Quaternion.identity);
-            if (sound != null) Instantiate(sound, transform.position, Quaternion.identity);
+            hitSound.Play();
             
             Player playerScript = other.GetComponent<Player>();
             if (playerScript != null)
@@ -40,7 +43,7 @@ public class YellowEnemy : MonoBehaviour
         else if (other.CompareTag("Destroyer"))
         {
             if (effect != null) Instantiate(effect, transform.position, Quaternion.identity);
-            if (sound != null) Instantiate(sound, transform.position, Quaternion.identity);
+            hitSound.Play();
             
             ObjectPoolManager.Instance.ReturnToPool(gameObject);
         }

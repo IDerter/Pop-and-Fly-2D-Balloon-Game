@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using YG; // Используем новую версию YG2
+using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,9 +21,9 @@ public class GameManager : MonoBehaviour
     public Spawner spawnGhostTeleportEnemy;
     public Spawner spawnerStones;
     public Spawner spawnerExplosion;
-    
-    [Header("World")]
-    public GameObject backgroundParallax; 
+
+    [Header("UI Elements")]
+    public GameObject x2RewardButton;
 
     [Header("Yandex Games")]
     public string leaderboardName = "BestPlayers";
@@ -57,6 +58,14 @@ public class GameManager : MonoBehaviour
 
     private void HandleGameStart()
     {
+        if (x2RewardButton != null && x2RewardButton.activeSelf)
+        {
+            // Плавно сжимаем кнопку до нуля с оттяжкой, а потом выключаем
+            x2RewardButton.transform.DOScale(Vector3.zero, 0.35f)
+                .SetEase(Ease.InBack)
+                .OnComplete(() => x2RewardButton.SetActive(false));
+        }
+
         tutorialUI.HideStartMenu();
 
         if (!YG2.saves.isTutorialCompleted)
@@ -66,15 +75,22 @@ public class GameManager : MonoBehaviour
         
         if (mainSpawner) mainSpawner.enabled = true;
         if (lollipopSpawner) lollipopSpawner.enabled = true;
-        
-        if (backgroundParallax) backgroundParallax.SetActive(true);
     }
 
     private void HandleRewardReceived(string rewardType)
     {
-        if (rewardType == "Reborn") // Или TypeReward.Reborn.ToString()
+        if (rewardType == "Reborn") 
         {
             RevivePlayerAfterAd();
+
+            if (x2RewardButton != null)
+            {
+                x2RewardButton.transform.localScale = Vector3.one; 
+            }
+        }
+        else if (rewardType == TypeReward.X2Lolipos.ToString() || rewardType == "X2Lolipos")
+        {
+            player.ActivateX2Lollipops(); // Включаем удвоение
         }
     }
 

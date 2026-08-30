@@ -1,0 +1,40 @@
+﻿{
+  "items": [
+    {
+      "key": "Russian",
+      "value": "Русский"
+    },
+    {
+      "key": "Play",
+      "value": "Играть"
+    },
+    {
+      "key": "Exit",
+      "value": "Выйти"
+    },
+    {
+      "key": "Settings",
+      "value": "Настройки"
+    },
+    {
+      "key": "Languages",
+      "value": "Языки"
+    },
+    {
+      "key": "reborn_button",
+      "value": "Возродиться"
+    },
+    {
+      "key": "score_label",
+      "value": "СЧЕТ"
+    },
+    {
+      "key": "record_label",
+      "value": "РЕКОРД"
+    },
+    {
+        "key": "game_over_title",
+        "value": "АМ НЯМ ГОЛОДЕН"
+    }
+  ]
+}

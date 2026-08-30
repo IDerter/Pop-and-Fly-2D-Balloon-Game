@@ -45,6 +45,8 @@ public class Player : MonoBehaviour
     public GameObject magnitObject; 
     public PointEffector2D pointEffector;
 
+    public bool isX2LollipopsActive = false;
+
     private Vector3 defaultScale;
     private bool isDead = false;
     private bool isStarted = false;
@@ -165,8 +167,18 @@ public class Player : MonoBehaviour
             amount *= 2; 
         }
 
+        if (isX2LollipopsActive)
+        {
+            amount *= 2; // Умножаем очки еще раз!
+        }
+
         score += amount;
         OnScoreChanged?.Invoke(score); 
+    }
+
+    public void ActivateX2Lollipops()
+    {
+        isX2LollipopsActive = true;
     }
 
     private void OnTriggerEnter2D(Collider2D col)

@@ -24287,7 +24287,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_t22068F38F1C588BBF423F30D8
 		return L_0;
 	}
 }
-// Method Definition Index: 53252
+// Method Definition Index: 53254
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Dictionary_2_t7F154285701FEE8A2D1423A47795F0A9F418BC46* AssetBundleProvider_get_UnloadingBundles_mE2A2813B5F21B3CFC98586F90C36A8CA7F1CD961_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24783,7 +24783,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Enumerator_get_Current_m7768
 		return;
 	}
 }
-// Method Definition Index: 53506
+// Method Definition Index: 53508
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AsyncOperationBase_1_get_Result_m9B367F42A3EFB239A2DB1E1EEE00C64653FC3C47_gshared_inline (AsyncOperationBase_1_tC223E14A32A76ACAD6A5CFD6C86F5C96F083B751* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
 {
 	const uint32_t SizeOf_TObject_tE3CBD04F86F44F9E70B44A1B40F8A61A8A461688 = il2cpp_codegen_sizeof(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1));

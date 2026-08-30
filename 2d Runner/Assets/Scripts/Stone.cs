@@ -4,7 +4,9 @@ public class Stone : MonoBehaviour
 {
     [Header("Effects")]
     public GameObject effect;
-    public GameObject sound;
+    [Header("Audio")]
+    [Tooltip("Выбери звук из выпадающего списка")]
+    public Sound hitSound;
     
     [Header("Settings")]
     public int damage = 1;
@@ -79,6 +81,6 @@ public class Stone : MonoBehaviour
     private void SpawnEffects()
     {
         if (effect != null) Instantiate(effect, transform.position, Quaternion.identity);
-        if (sound != null) Instantiate(sound, transform.position, Quaternion.identity);
+        hitSound.Play();
     }
 }

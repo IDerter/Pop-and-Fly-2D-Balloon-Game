@@ -140,7 +140,7 @@ MonoBehaviour:
   speed: 1
   gear: {fileID: 4878581820539010}
   effect: {fileID: 1615718917081576, guid: 8a47a024b3c7dab42893d77effc3080a, type: 3}
-  sound: {fileID: 1195248989485196, guid: 7648c373f21bc8947ab98f3573670ebe, type: 3}
+  hitSound: 2
   direction: {x: 0.018, y: -0.015}
   isdamage: 1
 --- !u!58 &58753684201643770

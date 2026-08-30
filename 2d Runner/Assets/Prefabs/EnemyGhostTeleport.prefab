@@ -222,7 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   effect: {fileID: 1745074618317960, guid: be4fdee2f54a47b4f9965806ca395fb6, type: 3}
-  sound: {fileID: 1195248989485196, guid: 7648c373f21bc8947ab98f3573670ebe, type: 3}
+  hitSound: 2
   damage: 1
   direction: {x: 0, y: -0.04}
   isdamage: 1

@@ -5,7 +5,10 @@ public class DiagonalEnemy : MonoBehaviour
     public float speed = 1f; // Можно умножать direction на speed в FixedUpdate
     public Transform gear; 
     public GameObject effect;
-    public GameObject sound;
+
+    [Header("Audio")]
+    [Tooltip("Выбери звук из выпадающего списка")]
+    public Sound hitSound;
     
     // Направление теперь задается из PointGreen
     public Vector2 direction; 
@@ -49,6 +52,6 @@ public class DiagonalEnemy : MonoBehaviour
     private void SpawnEffects()
     {
         if (effect != null) Instantiate(effect, transform.position, Quaternion.identity);
-        if (sound != null) Instantiate(sound, transform.position, Quaternion.identity);
+        hitSound.Play();
     }
 }

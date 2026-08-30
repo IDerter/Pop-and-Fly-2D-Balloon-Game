@@ -4710,12 +4710,12 @@ struct U3CU3Ec__DisplayClass5_0_t7C7F2306DB46CAD22F72A22CEA00343032B26E8E  : pub
 	int32_t ___currentDisplayScore;
 	GameOverUIAnimator_tBBBD5EBE6C2824DF2910C37A6E8E4F4CD55B0D0E* ___U3CU3E4__this;
 };
-struct U3CU3Ec__DisplayClass12_0_t7D38D8AB829AB89CD30E2086663C6B1A868003D0  : public RuntimeObject
+struct U3CU3Ec__DisplayClass13_0_t663F4571D13E30525389EF06D6557FA2602A4DE5  : public RuntimeObject
 {
 	GameOverUIManager_tEE82A16A0BE488FE0D4FC4C4AFAEFBF14C85D07F* ___U3CU3E4__this;
 	int32_t ___currentScore;
 };
-struct U3CU3Ec__DisplayClass14_0_t99E7A6FBA6F516D3B751B58BF5130C5A48CCADD3  : public RuntimeObject
+struct U3CU3Ec__DisplayClass15_0_t2C56B5EA800B397BAD71ACF7269B9600BC5C7658  : public RuntimeObject
 {
 	int32_t ___displayScore;
 	GameOverUIManager_tEE82A16A0BE488FE0D4FC4C4AFAEFBF14C85D07F* ___U3CU3E4__this;
@@ -21204,7 +21204,7 @@ struct DiagonalEnemy_t1E3E05D019372D121AB8DF2232F6DAE159D75CB1  : public MonoBeh
 	float ___speed;
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___gear;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___effect;
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___sound;
+	int32_t ___hitSound;
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___direction;
 	bool ___isdamage;
 };
@@ -21252,7 +21252,7 @@ struct GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6  : public MonoBehav
 	Spawner_t387EDFC7BADAEFFD3305FD31D1E8DDE8998FCDD7* ___spawnGhostTeleportEnemy;
 	Spawner_t387EDFC7BADAEFFD3305FD31D1E8DDE8998FCDD7* ___spawnerStones;
 	Spawner_t387EDFC7BADAEFFD3305FD31D1E8DDE8998FCDD7* ___spawnerExplosion;
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___backgroundParallax;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___x2RewardButton;
 	String_t* ___leaderboardName;
 	bool ___isGameOver;
 	int32_t ____coinsSavedThisRun;
@@ -21281,6 +21281,7 @@ struct GameOverUIManager_tEE82A16A0BE488FE0D4FC4C4AFAEFBF14C85D07F  : public Mon
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___shopTutorialFinger;
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___shopButtonTransform;
 	ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* ___buttonsToLockInTutorial;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___rebornAdImage;
 	Tween_t8CB06EBC48A5B6F5065C490E4F4909C18CE7983C* ____scoreTween;
 };
 struct Gear_t288E2D1B42821541A8B02E3550D7715AE0B7A9EB  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
@@ -21288,7 +21289,7 @@ struct Gear_t288E2D1B42821541A8B02E3550D7715AE0B7A9EB  : public MonoBehaviour_t5
 	float ___speed;
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___gear;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___effect;
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___sound;
+	int32_t ___hitSound;
 	bool ___isdamage;
 };
 struct GearGreen_tBD700BFA0D6ADC933E358F98E2AF062D5E62A8CE  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
@@ -21323,7 +21324,7 @@ struct GhostEnemy_t8F21A3467CF11DC439D6DD4E1810518D5E819ECD  : public MonoBehavi
 {
 	float ___speed;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___effect;
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___sound;
+	int32_t ___hitSound;
 	int32_t ___damage;
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___direction;
 	bool ___isdamage;
@@ -21607,6 +21608,7 @@ struct Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74  : public MonoBehaviour_
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___areol;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___magnitObject;
 	PointEffector2D_t98A80A410087F37F96EC2418AF1388DC29CF0C46* ___pointEffector;
+	bool ___isX2LollipopsActive;
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___defaultScale;
 	bool ___isDead;
 	bool ___isStarted;
@@ -21806,7 +21808,7 @@ struct SpiderWeb_t959530F278127569F3EBBDA9B8C8C86E255B7F32  : public MonoBehavio
 struct Stone_t2A631AE03CA1CB2356CD346BE3305CB275FB6184  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___effect;
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___sound;
+	int32_t ___hitSound;
 	int32_t ___damage;
 	bool ___isdamage;
 	Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74* ___script;
@@ -22031,7 +22033,7 @@ struct YellowEnemy_tF28EAA79C7194D42C6AB8F466D937CEDEC2F4024  : public MonoBehav
 	float ___speed;
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___gear;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___effect;
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___sound;
+	int32_t ___hitSound;
 	int32_t ___damage;
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___direction;
 	bool ___isdamage;
@@ -28818,9 +28820,9 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize7035 = { sizeof(U3CU3Ec__Dis
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7036;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize7036 = { sizeof(GameOverUIAnimator_tBBBD5EBE6C2824DF2910C37A6E8E4F4CD55B0D0E), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7037;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize7037 = { sizeof(U3CU3Ec__DisplayClass12_0_t7D38D8AB829AB89CD30E2086663C6B1A868003D0), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize7037 = { sizeof(U3CU3Ec__DisplayClass13_0_t663F4571D13E30525389EF06D6557FA2602A4DE5), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7038;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize7038 = { sizeof(U3CU3Ec__DisplayClass14_0_t99E7A6FBA6F516D3B751B58BF5130C5A48CCADD3), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize7038 = { sizeof(U3CU3Ec__DisplayClass15_0_t2C56B5EA800B397BAD71ACF7269B9600BC5C7658), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7039;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize7039 = { sizeof(GameOverUIManager_tEE82A16A0BE488FE0D4FC4C4AFAEFBF14C85D07F), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7040;

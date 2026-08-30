@@ -17,6 +17,9 @@ public class GameOverUIManager : MonoBehaviour
     public GameObject shopTutorialFinger;    
     public Transform shopButtonTransform;    
     public Button[] buttonsToLockInTutorial; 
+    
+    [Tooltip("Объект с картинкой рекламы на кнопке Reborn")]
+    public GameObject rebornAdImage; // <--- НОВАЯ ПЕРЕМЕННАЯ
 
     private Tween _scoreTween; // Сохраняем ссылку на анимацию очков, чтобы надежно ее убивать
 
@@ -73,6 +76,9 @@ public class GameOverUIManager : MonoBehaviour
             shopButtonTransform.localScale = Vector3.one;
         }
 
+        // --- Включаем картинку рекламы обратно, так как туториал пройден ---
+        if (rebornAdImage != null) rebornAdImage.SetActive(true);
+
         foreach (var btn in buttonsToLockInTutorial)
         {
             if (btn != null)
@@ -86,10 +92,18 @@ public class GameOverUIManager : MonoBehaviour
     public void AnimateGameOver(int currentScore, int bestScore)
     {
         gameObject.SetActive(true); 
+        
+        bool isTutorialCompleted = YG2.saves.isTutorialCompleted;
 
-        if (!YG2.saves.isTutorialCompleted)
+        if (!isTutorialCompleted)
         {
             AnalyticsManager.Instance.SaveLearningStep("game_over_first");
+        }
+
+        // --- Прячем или показываем иконку рекламы в зависимости от статуса обучения ---
+        if (rebornAdImage != null)
+        {
+            rebornAdImage.SetActive(false);
         }
 
         // --- БЛОКИРУЕМ ВООБЩЕ ВСЕ КНОПКИ НА СТАРТЕ ---
@@ -181,6 +195,11 @@ public class GameOverUIManager : MonoBehaviour
                 if (shopButtonTransform != null && shopButtonTransform.TryGetComponent(out Button shopBtn))
                 {
                     shopBtn.interactable = true;
+                }
+
+                if (rebornAdImage != null)
+                {
+                    rebornAdImage.SetActive(true);
                 }
 
                 // Остальные кнопки - только если туториал пройден
