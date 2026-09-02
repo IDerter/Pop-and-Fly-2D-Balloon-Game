@@ -15,15 +15,15 @@ public class PointGreen : MonoBehaviour
     {
         if (gearyellow != null)
         {
-            // 1. Вычисляем реальную ширину видимой зоны камеры
-            float screenAspect = (float)Screen.width / (float)Screen.height;
+            // ИЗМЕНЕНИЕ ЗДЕСЬ: Берем аспект камеры, а не физического экрана телефона!
+            float cameraAspect = Camera.main.aspect;
             float cameraHeight = Camera.main.orthographicSize;
-            float cameraWidth = cameraHeight * screenAspect;
+            float cameraWidth = cameraHeight * cameraAspect;
 
             // 2. Берем текущую позицию точки (например, X = -6)
             Vector3 safePosition = transform.position;
 
-            // 3. "Зажимаем" позицию X так, чтобы она не выходила за края экрана минус наш отступ
+            // 3. "Зажимаем" позицию X так, чтобы она не выходила за края камеры минус наш отступ
             safePosition.x = Mathf.Clamp(safePosition.x, -cameraWidth + margin, cameraWidth - margin);
 
             // 4. Спавним объект в безопасной позиции (safePosition)

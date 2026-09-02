@@ -8,20 +8,22 @@ public class ScreenBoundary : MonoBehaviour
     [Tooltip("Какая это сторона экрана?")]
     public BoundarySide side;
 
-    [Tooltip("Отступ от края экрана. Положительное число сдвигает внутрь экрана.")]
-    public float offset = 0.5f;
+    [Tooltip("Отступ от края экрана. Положительное число сдвигает границу НАРУЖУ (за пределы камеры).")]
+    public float offset = 0f;
 
-    private int _lastScreenWidth;
-    private int _lastScreenHeight;
+    // Ставим -1, чтобы скрипт гарантированно обновил границы в первом же кадре
+    private int _lastScreenWidth = -1;
+    private int _lastScreenHeight = -1;
 
     private void Start()
     {
-        UpdateBoundaryPosition();
+        // Убрали вызов отсюда. Ждем, пока отработает скрипт камеры!
     }
 
-    private void Update()
+    // LateUpdate срабатывает строго ПОСЛЕ того, как все скрипты сделали свои дела в Update
+    private void LateUpdate()
     {
-        // Проверяем, не изменился ли размер окна браузера/экрана
+        // Проверяем, не изменился ли размер окна (сработает сразу при запуске из-за -1)
         if (Screen.width != _lastScreenWidth || Screen.height != _lastScreenHeight)
         {
             UpdateBoundaryPosition();
@@ -35,20 +37,21 @@ public class ScreenBoundary : MonoBehaviour
         _lastScreenWidth = Screen.width;
         _lastScreenHeight = Screen.height;
 
-        // Вычисляем реальные размеры камеры в игровых координатах
-        float cameraHeight = Camera.main.orthographicSize;
-        float cameraWidth = cameraHeight * Camera.main.aspect;
+        Camera cam = Camera.main;
+        
+        float cameraHeight = cam.orthographicSize;
+        float cameraWidth = cameraHeight * cam.aspect;
+        float cameraX = cam.transform.position.x;
 
         Vector3 newPos = transform.position;
 
-        // Сдвигаем объект к левому или правому краю
         if (side == BoundarySide.Left)
         {
-            newPos.x = -cameraWidth + offset;
+            newPos.x = cameraX - cameraWidth - offset; 
         }
         else if (side == BoundarySide.Right)
         {
-            newPos.x = cameraWidth - offset;
+            newPos.x = cameraX + cameraWidth + offset; 
         }
 
         transform.position = newPos;

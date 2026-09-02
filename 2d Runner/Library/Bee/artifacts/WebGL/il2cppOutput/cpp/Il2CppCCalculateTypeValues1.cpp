@@ -21123,7 +21123,6 @@ struct BuyUpgrade_tD73BDCF5D07561F2DD8FAD6171D948DAA04B9252  : public MonoBehavi
 struct CameraAspectCrop_t930949A1138644A7E0D2CC813C749FAC2298A530  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ____targetResolution;
-	float ____targetOrthographicSize;
 	Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* ____camera;
 	float ____targetAspect;
 	float ____lastScreenWidth;

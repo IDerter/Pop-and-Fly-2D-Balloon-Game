@@ -4133,6 +4133,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_CheckScoreMilestones_m535FCA
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameOverUIManager_HidePanel_mEE4B63A34D97BB0682AA73692CE5B318DA41EACD (GameOverUIManager_tEE82A16A0BE488FE0D4FC4C4AFAEFBF14C85D07F* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Player_Revive_mEC5339B82BF2011AFE864B36E75CBEDEF78419CE (Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* GameObject_FindGameObjectsWithTag_mB8AA805DA664EF0221BB338446014F662771B4E3 (String_t* ___0_tag, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Time_set_timeScale_mEF84EE4B2376A458387648079B426B267862D331 (float ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InterstitialAds_remove_OnInterstitialAdClosed_m3913F0AB7C557C428E0B24AA5392D1FE06C8540B (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InterstitialAds_add_OnInterstitialAdClosed_m17541C9621E3783BE3E27C1559E66E203F630A2E (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InterstitialAds_ShowInterstitialAd_m4098FD22C39DE04686F833DBF1530C7E47AB3FC1 (InterstitialAds_tBA5E7C80BBFE70D9C3F902E7677776A4299401B9* __this, const RuntimeMethod* method) ;
@@ -4218,8 +4219,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IronEnemy_SpawnEffects_mC97DF93A7A13A33C
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerPrefs_SetInt_m956D3E2DB966F20CF42F842880DDF9E2BE94D948 (String_t* ___0_key, int32_t ___1_value, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_get_right_m99043ED6B3D5AEA5033313FE3DA9571F39D1B280_inline (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* Camera_get_main_m52C992F18E05355ABB9EEB64A4BF2215E12762DF (const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Screen_get_width_mF608FF3252213E7EFA1F0D2F744C28110E9E5AC9 (const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Screen_get_height_m01A3102DE71EE1FBEA51D09D6B0261CF864FE8F9 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Camera_get_aspect_m48BF8820EA2D55BE0D154BC5546819FB65BE257D (Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Camera_get_orthographicSize_m7950C5627086253E02992A43ADFE59039DB473F8 (Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TweenerCore_3_tCD82DFC45FB71C681FA8659EA63A7D7D16BFFE77* ShortcutExtensions_DOLocalMoveY_mA4BDBF3ACA5B305B59551FBF9813D5BF35487CD5 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___0_target, float ___1_endValue, float ___2_duration, bool ___3_snapping, const RuntimeMethod* method) ;
@@ -4358,7 +4358,6 @@ inline void SingletonBase_1__ctor_m152387AE6A4A2D44EF72D47A47DE75BBAA92B99B (Sin
 {
 	((  void (*) (SingletonBase_1_tE007147ECA5318C41084B3F8C92864EEE1C7F30B*, const RuntimeMethod*))SingletonBase_1__ctor_m5BD6B53F113F040ED751EE13DE70681E05A7E308_gshared)(__this, method);
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Time_set_timeScale_mEF84EE4B2376A458387648079B426B267862D331 (float ___0_value, const RuntimeMethod* method) ;
 inline TweenerCore_3_t88CA32E51F4E95E6907CE2C6FD5D8122059AC2C1* TweenSettingsExtensions_SetUpdate_TisTweenerCore_3_t88CA32E51F4E95E6907CE2C6FD5D8122059AC2C1_mD8AB99F65F3BB4077CF90EC80A3A0AC5615B4E43 (TweenerCore_3_t88CA32E51F4E95E6907CE2C6FD5D8122059AC2C1* ___0_t, bool ___1_isIndependentUpdate, const RuntimeMethod* method)
 {
 	return ((  TweenerCore_3_t88CA32E51F4E95E6907CE2C6FD5D8122059AC2C1* (*) (TweenerCore_3_t88CA32E51F4E95E6907CE2C6FD5D8122059AC2C1*, bool, const RuntimeMethod*))TweenSettingsExtensions_SetUpdate_TisRuntimeObject_m31DAD606349424C0FDDA8FD20A1155DB5DE576D7_gshared)(___0_t, ___1_isIndependentUpdate, method);
@@ -4454,11 +4453,12 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Rect_op_Inequality_mB5D7316E
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Rect_get_position_m9B7E583E67443B6F4280A676E644BB0B9E7C4E38_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Rect_get_size_mFB990FFC0FE0152179C8C74A59E4AC258CB44267_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Addition_m8136742CE6EE33BA4EB81C5F584678455917D2AE_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_a, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_b, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Screen_get_width_mF608FF3252213E7EFA1F0D2F744C28110E9E5AC9 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Screen_get_height_m01A3102DE71EE1FBEA51D09D6B0261CF864FE8F9 (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RectTransform_set_anchorMin_m931442ABE3368D6D4309F43DF1D64AB64B0F52E3 (RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RectTransform_set_anchorMax_m52829ABEDD229ABD3DA20BCA676FA1DCA4A39B7D (RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_value, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, float ___0_x, float ___1_y, float ___2_width, float ___3_height, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScreenBoundary_UpdateBoundaryPosition_mB7BFE93060AB7344B415A2149E83DEC109A4C93B (ScreenBoundary_t02081EC9BB7BEFF207E0490F8C957637292B56A7* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Camera_get_aspect_m48BF8820EA2D55BE0D154BC5546819FB65BE257D (Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D DateTime_get_Now_m636CB9651A9099D20BA1CF813A0C69637317325C (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* DateTime_ToString_m6963A84785C320DA776C9FCFFEDAF26C8F1A8D78 (DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* __this, String_t* ___0_format, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScreenCapture_CaptureScreenshot_m37F1E4165A2EF8B8F30294E91DC0CCA9CE0DD18A (String_t* ___0_filename, int32_t ___1_superSize, const RuntimeMethod* method) ;
@@ -11304,21 +11304,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_RestartGame_m03813C863F1F1AB
 	memset((&V_0), 0, sizeof(V_0));
 	{
 		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:198>
+		Time_set_timeScale_mEF84EE4B2376A458387648079B426B267862D331((0.0f), NULL);
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:201>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_0 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_0, __this, (intptr_t)((void*)GameManager_OnAdClosedForRestart_m14C02D955184E5BCBCEB2610717EDE235293740F_RuntimeMethod_var), NULL);
 		InterstitialAds_remove_OnInterstitialAdClosed_m3913F0AB7C557C428E0B24AA5392D1FE06C8540B(L_0, NULL);
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:201>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:204>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_1 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_1, __this, (intptr_t)((void*)GameManager_OnAdClosedForRestart_m14C02D955184E5BCBCEB2610717EDE235293740F_RuntimeMethod_var), NULL);
 		InterstitialAds_add_OnInterstitialAdClosed_m17541C9621E3783BE3E27C1559E66E203F630A2E(L_1, NULL);
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:204>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:207>
 		AdsManager_tE059594BE435B356831188671B794CDE032FC41B* L_2;
 		L_2 = SingletonBase_1_get_Instance_m22BF1CE9940E83B6AED783528EF950E8ABCF339F_inline(SingletonBase_1_get_Instance_m22BF1CE9940E83B6AED783528EF950E8ABCF339F_RuntimeMethod_var);
 		NullCheck(L_2);
 		InterstitialAds_tBA5E7C80BBFE70D9C3F902E7677776A4299401B9* L_3 = L_2->____interstitialAds;
 		NullCheck(L_3);
 		InterstitialAds_ShowInterstitialAd_m4098FD22C39DE04686F833DBF1530C7E47AB3FC1(L_3, NULL);
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:206>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:209>
 		AnalyticsManager_tB9D7FCD9B04F424AD3AC1A5EA3665C48C9FE9B38* L_4;
 		L_4 = SingletonBase_1_get_Instance_mF7A5809405BBA407A27732558FB57027332E86DD_inline(SingletonBase_1_get_Instance_mF7A5809405BBA407A27732558FB57027332E86DD_RuntimeMethod_var);
 		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
@@ -11329,7 +11331,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_RestartGame_m03813C863F1F1AB
 		L_6 = Scene_get_buildIndex_m82B6E0C96C85C952B7A2D794DB73CDA99AA9A57E((&V_0), NULL);
 		NullCheck(L_4);
 		AnalyticsManager_RestartLeveStats_m273617DBC54DCBD227E97CBF39A7A647616070C9(L_4, L_6, NULL);
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:207>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:210>
 		return;
 	}
 }
@@ -11347,11 +11349,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnAdClosedForRestart_m14C02D
 	Scene_tA1DC762B79745EB5140F054C884855B922318356 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:211>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:214>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_0 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_0, __this, (intptr_t)((void*)GameManager_OnAdClosedForRestart_m14C02D955184E5BCBCEB2610717EDE235293740F_RuntimeMethod_var), NULL);
 		InterstitialAds_remove_OnInterstitialAdClosed_m3913F0AB7C557C428E0B24AA5392D1FE06C8540B(L_0, NULL);
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:212>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:217>
+		Time_set_timeScale_mEF84EE4B2376A458387648079B426B267862D331((1.0f), NULL);
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:219>
 		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
 		Scene_tA1DC762B79745EB5140F054C884855B922318356 L_1;
 		L_1 = SceneManager_GetActiveScene_m0B320EC4302F51A71495D1CCD1A0FF9C2ED1FDC8(NULL);
@@ -11359,7 +11363,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnAdClosedForRestart_m14C02D
 		String_t* L_2;
 		L_2 = Scene_get_name_m3C818DFA663E159274DAD823B780C7616C5E2A8C((&V_0), NULL);
 		SceneManager_LoadScene_mBB3DBC1601A21F8F4E8A5D68FED30EA9412F218E(L_2, NULL);
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:213>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:220>
 		return;
 	}
 }
@@ -11375,22 +11379,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_LoadMenu_mACB4A8984610545DB3
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:218>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:225>
+		Time_set_timeScale_mEF84EE4B2376A458387648079B426B267862D331((0.0f), NULL);
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:227>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_0 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_0, __this, (intptr_t)((void*)GameManager_OnAdClosedForMenu_m7DB2C1E2C8B9596005D31642E88724D35D2B8182_RuntimeMethod_var), NULL);
 		InterstitialAds_remove_OnInterstitialAdClosed_m3913F0AB7C557C428E0B24AA5392D1FE06C8540B(L_0, NULL);
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:219>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:228>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_1 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_1, __this, (intptr_t)((void*)GameManager_OnAdClosedForMenu_m7DB2C1E2C8B9596005D31642E88724D35D2B8182_RuntimeMethod_var), NULL);
 		InterstitialAds_add_OnInterstitialAdClosed_m17541C9621E3783BE3E27C1559E66E203F630A2E(L_1, NULL);
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:221>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:230>
 		AdsManager_tE059594BE435B356831188671B794CDE032FC41B* L_2;
 		L_2 = SingletonBase_1_get_Instance_m22BF1CE9940E83B6AED783528EF950E8ABCF339F_inline(SingletonBase_1_get_Instance_m22BF1CE9940E83B6AED783528EF950E8ABCF339F_RuntimeMethod_var);
 		NullCheck(L_2);
 		InterstitialAds_tBA5E7C80BBFE70D9C3F902E7677776A4299401B9* L_3 = L_2->____interstitialAds;
 		NullCheck(L_3);
 		InterstitialAds_ShowInterstitialAd_m4098FD22C39DE04686F833DBF1530C7E47AB3FC1(L_3, NULL);
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:222>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:231>
 		return;
 	}
 }
@@ -11407,14 +11413,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnAdClosedForMenu_m7DB2C1E2C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:226>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:235>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_0 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_0, __this, (intptr_t)((void*)GameManager_OnAdClosedForMenu_m7DB2C1E2C8B9596005D31642E88724D35D2B8182_RuntimeMethod_var), NULL);
 		InterstitialAds_remove_OnInterstitialAdClosed_m3913F0AB7C557C428E0B24AA5392D1FE06C8540B(L_0, NULL);
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:227>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:238>
+		Time_set_timeScale_mEF84EE4B2376A458387648079B426B267862D331((1.0f), NULL);
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:240>
 		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
 		SceneManager_LoadScene_mBB3DBC1601A21F8F4E8A5D68FED30EA9412F218E(_stringLiteral000E6F488C4BFBAD929A9ED558662797D830E719, NULL);
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:228>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:241>
 		return;
 	}
 }
@@ -11430,15 +11438,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnDestroy_m15D42F0A634069A09
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:233>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:246>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_0 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_0, __this, (intptr_t)((void*)GameManager_OnAdClosedForRestart_m14C02D955184E5BCBCEB2610717EDE235293740F_RuntimeMethod_var), NULL);
 		InterstitialAds_remove_OnInterstitialAdClosed_m3913F0AB7C557C428E0B24AA5392D1FE06C8540B(L_0, NULL);
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:234>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:247>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_1 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_1, __this, (intptr_t)((void*)GameManager_OnAdClosedForMenu_m7DB2C1E2C8B9596005D31642E88724D35D2B8182_RuntimeMethod_var), NULL);
 		InterstitialAds_remove_OnInterstitialAdClosed_m3913F0AB7C557C428E0B24AA5392D1FE06C8540B(L_1, NULL);
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:235>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/GameManager.cs:248>
 		return;
 	}
 }
@@ -14253,7 +14261,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KeepPlayerInBounds_LateUpdate_mFA35B57FC
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_2;
 	memset((&V_2), 0, sizeof(V_2));
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/KeepPlayerInBounds.cs:12>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/KeepPlayerInBounds.cs:11>
 		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_0;
 		L_0 = Camera_get_main_m52C992F18E05355ABB9EEB64A4BF2215E12762DF(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -14265,18 +14273,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KeepPlayerInBounds_LateUpdate_mFA35B57FC
 		}
 	}
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/KeepPlayerInBounds.cs:12>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/KeepPlayerInBounds.cs:11>
 		return;
 	}
 
 IL_000e:
 	{
 		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/KeepPlayerInBounds.cs:15>
-		int32_t L_2;
-		L_2 = Screen_get_width_mF608FF3252213E7EFA1F0D2F744C28110E9E5AC9(NULL);
-		int32_t L_3;
-		L_3 = Screen_get_height_m01A3102DE71EE1FBEA51D09D6B0261CF864FE8F9(NULL);
-		V_0 = ((float)(((float)L_2)/((float)L_3)));
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_2;
+		L_2 = Camera_get_main_m52C992F18E05355ABB9EEB64A4BF2215E12762DF(NULL);
+		NullCheck(L_2);
+		float L_3;
+		L_3 = Camera_get_aspect_m48BF8820EA2D55BE0D154BC5546819FB65BE257D(L_2, NULL);
+		V_0 = L_3;
 		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/KeepPlayerInBounds.cs:16>
 		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_4;
 		L_4 = Camera_get_main_m52C992F18E05355ABB9EEB64A4BF2215E12762DF(NULL);
@@ -14286,59 +14295,59 @@ IL_000e:
 		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/KeepPlayerInBounds.cs:17>
 		float L_6 = V_0;
 		V_1 = ((float)il2cpp_codegen_multiply(L_5, L_6));
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/KeepPlayerInBounds.cs:20>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/KeepPlayerInBounds.cs:19>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7;
 		L_7 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_7);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8;
 		L_8 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_7, NULL);
 		V_2 = L_8;
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/KeepPlayerInBounds.cs:23>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/KeepPlayerInBounds.cs:21>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9 = V_2;
 		float L_10 = L_9.___x;
 		float L_11 = V_1;
 		float L_12 = __this->___margin;
 		if ((!(((float)L_10) < ((float)((float)il2cpp_codegen_add(((-L_11)), L_12))))))
 		{
-			goto IL_0058;
+			goto IL_0055;
 		}
 	}
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/KeepPlayerInBounds.cs:25>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/KeepPlayerInBounds.cs:23>
 		float L_13 = V_1;
 		float L_14 = __this->___margin;
 		(&V_2)->___x = ((float)il2cpp_codegen_add(((-L_13)), L_14));
-		goto IL_0077;
+		goto IL_0074;
 	}
 
-IL_0058:
+IL_0055:
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/KeepPlayerInBounds.cs:28>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/KeepPlayerInBounds.cs:25>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15 = V_2;
 		float L_16 = L_15.___x;
 		float L_17 = V_1;
 		float L_18 = __this->___margin;
 		if ((!(((float)L_16) > ((float)((float)il2cpp_codegen_subtract(L_17, L_18))))))
 		{
-			goto IL_0077;
+			goto IL_0074;
 		}
 	}
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/KeepPlayerInBounds.cs:30>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/KeepPlayerInBounds.cs:27>
 		float L_19 = V_1;
 		float L_20 = __this->___margin;
 		(&V_2)->___x = ((float)il2cpp_codegen_subtract(L_19, L_20));
 	}
 
-IL_0077:
+IL_0074:
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/KeepPlayerInBounds.cs:34>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/KeepPlayerInBounds.cs:30>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_21;
 		L_21 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_22 = V_2;
 		NullCheck(L_21);
 		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_21, L_22, NULL);
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/KeepPlayerInBounds.cs:35>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/KeepPlayerInBounds.cs:31>
 		return;
 	}
 }
@@ -14632,17 +14641,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelChangerDotween_FadeToLevelWithAd_mE
 		int32_t L_0 = ___0_levelIndex;
 		__this->____targetLevelIndex = L_0;
 		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:37>
+		Time_set_timeScale_mEF84EE4B2376A458387648079B426B267862D331((0.0f), NULL);
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:39>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_1 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_1, __this, (intptr_t)((void*)LevelChangerDotween_OnAdClosedForTransition_mAA26AC89A950A47E3055F7B4C5BC1FD8615D22AE_RuntimeMethod_var), NULL);
 		InterstitialAds_add_OnInterstitialAdClosed_m17541C9621E3783BE3E27C1559E66E203F630A2E(L_1, NULL);
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:38>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:40>
 		AdsManager_tE059594BE435B356831188671B794CDE032FC41B* L_2;
 		L_2 = SingletonBase_1_get_Instance_m22BF1CE9940E83B6AED783528EF950E8ABCF339F_inline(SingletonBase_1_get_Instance_m22BF1CE9940E83B6AED783528EF950E8ABCF339F_RuntimeMethod_var);
 		NullCheck(L_2);
 		InterstitialAds_tBA5E7C80BBFE70D9C3F902E7677776A4299401B9* L_3 = L_2->____interstitialAds;
 		NullCheck(L_3);
 		InterstitialAds_ShowInterstitialAd_m4098FD22C39DE04686F833DBF1530C7E47AB3FC1(L_3, NULL);
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:39>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:41>
 		return;
 	}
 }
@@ -14663,36 +14674,38 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelChangerDotween_OnAdClosedForTransit
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:43>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:45>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_0 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_0, __this, (intptr_t)((void*)LevelChangerDotween_OnAdClosedForTransition_mAA26AC89A950A47E3055F7B4C5BC1FD8615D22AE_RuntimeMethod_var), NULL);
 		InterstitialAds_remove_OnInterstitialAdClosed_m3913F0AB7C557C428E0B24AA5392D1FE06C8540B(L_0, NULL);
 		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:47>
+		Time_set_timeScale_mEF84EE4B2376A458387648079B426B267862D331((1.0f), NULL);
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:51>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_1 = __this->___fadeImage;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
 		L_2 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_1, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_2)
 		{
-			goto IL_006b;
+			goto IL_0075;
 		}
 	}
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:49>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:53>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_3 = __this->___fadeImage;
 		NullCheck(L_3);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4;
 		L_4 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_3, NULL);
 		NullCheck(L_4);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_4, (bool)1, NULL);
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:50>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:54>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_5 = __this->___fadeImage;
 		NullCheck(L_5);
 		VirtualActionInvoker1< bool >::Invoke(25, L_5, (bool)1);
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:52>
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:53>
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:54>
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:55>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:56>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:57>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:58>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:59>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_6 = __this->___fadeImage;
 		float L_7 = __this->___fadeDuration;
 		TweenerCore_3_tC0593021331EF2AF46590E2184F512C0D38FD4C3* L_8;
@@ -14706,13 +14719,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelChangerDotween_OnAdClosedForTransit
 		return;
 	}
 
-IL_006b:
+IL_0075:
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:60>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:64>
 		int32_t L_12 = __this->____targetLevelIndex;
 		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
 		SceneManager_LoadScene_m0957E62F2A0A0243C79394E5B74E8EFA86BE5ED1(L_12, NULL);
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:62>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:66>
 		return;
 	}
 }
@@ -14727,11 +14740,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelChangerDotween_OnDestroy_m38229D44E
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:66>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:70>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_0 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_0, __this, (intptr_t)((void*)LevelChangerDotween_OnAdClosedForTransition_mAA26AC89A950A47E3055F7B4C5BC1FD8615D22AE_RuntimeMethod_var), NULL);
 		InterstitialAds_remove_OnInterstitialAdClosed_m3913F0AB7C557C428E0B24AA5392D1FE06C8540B(L_0, NULL);
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:67>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:71>
 		return;
 	}
 }
@@ -14767,11 +14780,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelChangerDotween_U3COnAdClosedForTran
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:54>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:58>
 		int32_t L_0 = __this->____targetLevelIndex;
 		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
 		SceneManager_LoadScene_m0957E62F2A0A0243C79394E5B74E8EFA86BE5ED1(L_0, NULL);
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:55>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/LevelChangerDOTween.cs:59>
 		return;
 	}
 }
@@ -20031,16 +20044,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Point_Start_m8C45148E261CB300BB81ADBBDF9
 		L_1 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_1)
 		{
-			goto IL_0070;
+			goto IL_006d;
 		}
 	}
 	{
 		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/Point.cs:16>
-		int32_t L_2;
-		L_2 = Screen_get_width_mF608FF3252213E7EFA1F0D2F744C28110E9E5AC9(NULL);
-		int32_t L_3;
-		L_3 = Screen_get_height_m01A3102DE71EE1FBEA51D09D6B0261CF864FE8F9(NULL);
-		V_0 = ((float)(((float)L_2)/((float)L_3)));
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_2;
+		L_2 = Camera_get_main_m52C992F18E05355ABB9EEB64A4BF2215E12762DF(NULL);
+		NullCheck(L_2);
+		float L_3;
+		L_3 = Camera_get_aspect_m48BF8820EA2D55BE0D154BC5546819FB65BE257D(L_2, NULL);
+		V_0 = L_3;
 		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/Point.cs:17>
 		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_4;
 		L_4 = Camera_get_main_m52C992F18E05355ABB9EEB64A4BF2215E12762DF(NULL);
@@ -20079,7 +20093,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Point_Start_m8C45148E261CB300BB81ADBBDF9
 		L_20 = ObjectPoolManager_SpawnFromPool_m7CF4CAF03917750581D6F5CEBBC07DCECF46E280(L_16, L_17, L_18, L_19, (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1*)NULL, NULL);
 	}
 
-IL_0070:
+IL_006d:
 	{
 		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/Point.cs:31>
 		return;
@@ -20127,16 +20141,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PointGreen_Start_m9399A4A60DA314206DF487
 		L_1 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_1)
 		{
-			goto IL_008a;
+			goto IL_0087;
 		}
 	}
 	{
 		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/PointGreen.cs:19>
-		int32_t L_2;
-		L_2 = Screen_get_width_mF608FF3252213E7EFA1F0D2F744C28110E9E5AC9(NULL);
-		int32_t L_3;
-		L_3 = Screen_get_height_m01A3102DE71EE1FBEA51D09D6B0261CF864FE8F9(NULL);
-		V_0 = ((float)(((float)L_2)/((float)L_3)));
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_2;
+		L_2 = Camera_get_main_m52C992F18E05355ABB9EEB64A4BF2215E12762DF(NULL);
+		NullCheck(L_2);
+		float L_3;
+		L_3 = Camera_get_aspect_m48BF8820EA2D55BE0D154BC5546819FB65BE257D(L_2, NULL);
+		V_0 = L_3;
 		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/PointGreen.cs:20>
 		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_4;
 		L_4 = Camera_get_main_m52C992F18E05355ABB9EEB64A4BF2215E12762DF(NULL);
@@ -20185,7 +20200,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PointGreen_Start_m9399A4A60DA314206DF487
 		L_23 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_22, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_23)
 		{
-			goto IL_008a;
+			goto IL_0087;
 		}
 	}
 	{
@@ -20196,7 +20211,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PointGreen_Start_m9399A4A60DA314206DF487
 		L_24->___direction = L_25;
 	}
 
-IL_008a:
+IL_0087:
 	{
 		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/PointGreen.cs:38>
 		return;
@@ -20429,17 +20444,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneAchivandBoard__ctor_m0B57DD17F88077
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScreenBoundary_Start_m8560844FDB60653A2AE0CE6DEB70F34728951DF1 (ScreenBoundary_t02081EC9BB7BEFF207E0490F8C957637292B56A7* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:19>
-		ScreenBoundary_UpdateBoundaryPosition_mB7BFE93060AB7344B415A2149E83DEC109A4C93B(__this, NULL);
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:20>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:21>
 		return;
 	}
 }
 // Method Definition Index: 50761
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScreenBoundary_Update_m2430584932EE34287F44411F011A8D6F68DC3044 (ScreenBoundary_t02081EC9BB7BEFF207E0490F8C957637292B56A7* __this, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScreenBoundary_LateUpdate_mDF6D5DA36F5C514632BA2C517833527CD95EB70B (ScreenBoundary_t02081EC9BB7BEFF207E0490F8C957637292B56A7* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:25>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:27>
 		int32_t L_0;
 		L_0 = Screen_get_width_mF608FF3252213E7EFA1F0D2F744C28110E9E5AC9(NULL);
 		int32_t L_1 = __this->____lastScreenWidth;
@@ -20460,13 +20473,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScreenBoundary_Update_m2430584932EE34287
 
 IL_001a:
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:27>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:29>
 		ScreenBoundary_UpdateBoundaryPosition_mB7BFE93060AB7344B415A2149E83DEC109A4C93B(__this, NULL);
 	}
 
 IL_0020:
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:29>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:31>
 		return;
 	}
 }
@@ -20479,11 +20492,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScreenBoundary_UpdateBoundaryPosition_mB
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	float V_0 = 0.0f;
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_1;
-	memset((&V_1), 0, sizeof(V_1));
+	Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* V_0 = NULL;
+	float V_1 = 0.0f;
+	float V_2 = 0.0f;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_3;
+	memset((&V_3), 0, sizeof(V_3));
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:33>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:35>
 		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_0;
 		L_0 = Camera_get_main_m52C992F18E05355ABB9EEB64A4BF2215E12762DF(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -20495,80 +20510,94 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScreenBoundary_UpdateBoundaryPosition_mB
 		}
 	}
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:33>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:35>
 		return;
 	}
 
 IL_000e:
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:35>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:37>
 		int32_t L_2;
 		L_2 = Screen_get_width_mF608FF3252213E7EFA1F0D2F744C28110E9E5AC9(NULL);
 		__this->____lastScreenWidth = L_2;
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:36>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:38>
 		int32_t L_3;
 		L_3 = Screen_get_height_m01A3102DE71EE1FBEA51D09D6B0261CF864FE8F9(NULL);
 		__this->____lastScreenHeight = L_3;
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:39>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:40>
 		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_4;
 		L_4 = Camera_get_main_m52C992F18E05355ABB9EEB64A4BF2215E12762DF(NULL);
-		NullCheck(L_4);
-		float L_5;
-		L_5 = Camera_get_orthographicSize_m7950C5627086253E02992A43ADFE59039DB473F8(L_4, NULL);
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:40>
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_6;
-		L_6 = Camera_get_main_m52C992F18E05355ABB9EEB64A4BF2215E12762DF(NULL);
-		NullCheck(L_6);
-		float L_7;
-		L_7 = Camera_get_aspect_m48BF8820EA2D55BE0D154BC5546819FB65BE257D(L_6, NULL);
-		V_0 = ((float)il2cpp_codegen_multiply(L_5, L_7));
+		V_0 = L_4;
 		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:42>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_8;
-		L_8 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_8);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9;
-		L_9 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_8, NULL);
-		V_1 = L_9;
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:45>
-		int32_t L_10 = __this->___side;
-		if (L_10)
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_5 = V_0;
+		NullCheck(L_5);
+		float L_6;
+		L_6 = Camera_get_orthographicSize_m7950C5627086253E02992A43ADFE59039DB473F8(L_5, NULL);
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:43>
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_7 = V_0;
+		NullCheck(L_7);
+		float L_8;
+		L_8 = Camera_get_aspect_m48BF8820EA2D55BE0D154BC5546819FB65BE257D(L_7, NULL);
+		V_1 = ((float)il2cpp_codegen_multiply(L_6, L_8));
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:44>
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_9 = V_0;
+		NullCheck(L_9);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_10;
+		L_10 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_9, NULL);
+		NullCheck(L_10);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_11;
+		L_11 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_10, NULL);
+		float L_12 = L_11.___x;
+		V_2 = L_12;
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:46>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_13;
+		L_13 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_13);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14;
+		L_14 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_13, NULL);
+		V_3 = L_14;
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:48>
+		int32_t L_15 = __this->___side;
+		if (L_15)
 		{
-			goto IL_0060;
+			goto IL_0070;
 		}
 	}
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:47>
-		float L_11 = V_0;
-		float L_12 = __this->___offset;
-		(&V_1)->___x = ((float)il2cpp_codegen_add(((-L_11)), L_12));
-		goto IL_0078;
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:50>
+		float L_16 = V_2;
+		float L_17 = V_1;
+		float L_18 = __this->___offset;
+		(&V_3)->___x = ((float)il2cpp_codegen_subtract(((float)il2cpp_codegen_subtract(L_16, L_17)), L_18));
+		goto IL_008a;
 	}
 
-IL_0060:
+IL_0070:
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:49>
-		int32_t L_13 = __this->___side;
-		if ((!(((uint32_t)L_13) == ((uint32_t)1))))
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:52>
+		int32_t L_19 = __this->___side;
+		if ((!(((uint32_t)L_19) == ((uint32_t)1))))
 		{
-			goto IL_0078;
+			goto IL_008a;
 		}
 	}
-	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:51>
-		float L_14 = V_0;
-		float L_15 = __this->___offset;
-		(&V_1)->___x = ((float)il2cpp_codegen_subtract(L_14, L_15));
-	}
-
-IL_0078:
 	{
 		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:54>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_16;
-		L_16 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_17 = V_1;
-		NullCheck(L_16);
-		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_16, L_17, NULL);
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:55>
+		float L_20 = V_2;
+		float L_21 = V_1;
+		float L_22 = __this->___offset;
+		(&V_3)->___x = ((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(L_20, L_21)), L_22));
+	}
+
+IL_008a:
+	{
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:57>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_23;
+		L_23 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_24 = V_3;
+		NullCheck(L_23);
+		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_23, L_24, NULL);
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:58>
 		return;
 	}
 }
@@ -20576,8 +20605,10 @@ IL_0078:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScreenBoundary__ctor_mC577A72CEB6FACBF82C4458B6EFBA253EB84F951 (ScreenBoundary_t02081EC9BB7BEFF207E0490F8C957637292B56A7* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:12>
-		__this->___offset = (0.5f);
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:15>
+		__this->____lastScreenWidth = (-1);
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/ScreenBoundary.cs:16>
+		__this->____lastScreenHeight = (-1);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}

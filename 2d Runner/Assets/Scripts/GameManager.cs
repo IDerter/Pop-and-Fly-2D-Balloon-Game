@@ -194,13 +194,16 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame() 
     { 
-        // 1. Отписываемся на всякий случай, чтобы предотвратить двойное срабатывание при спаме кнопки
+        // --- 1. МГНОВЕННЫЙ ОТКЛИК (ЗАМОРОЗКА) ---
+        Time.timeScale = 0f;
+
+        // 2. Отписываемся на всякий случай, чтобы предотвратить двойное срабатывание
         InterstitialAds.OnInterstitialAdClosed -= OnAdClosedForRestart;
         
-        // 2. Подписываемся на событие закрытия рекламы
+        // 3. Подписываемся на событие закрытия рекламы
         InterstitialAds.OnInterstitialAdClosed += OnAdClosedForRestart;
         
-        // 3. Вызываем показ рекламы через менеджер
+        // 4. Вызываем показ рекламы
         AdsManager.Instance._interstitialAds.ShowInterstitialAd();
 
         AnalyticsManager.Instance.RestartLeveStats(SceneManager.GetActiveScene().buildIndex);
@@ -209,12 +212,18 @@ public class GameManager : MonoBehaviour
     private void OnAdClosedForRestart()
     {
         InterstitialAds.OnInterstitialAdClosed -= OnAdClosedForRestart; // Отписываемся
+        
+        // --- 5. ОБЯЗАТЕЛЬНО ВОЗВРАЩАЕМ ВРЕМЯ И ЗВУК ПЕРЕД ЗАГРУЗКОЙ ---
+        Time.timeScale = 1f;
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);     // Перезагружаем уровень
     }
 
     public void LoadMenu() 
     { 
-        // Делаем то же самое для кнопки выхода в меню
+        // --- 1. МГНОВЕННЫЙ ОТКЛИК (ЗАМОРОЗКА) ---
+        Time.timeScale = 0f;
+
         InterstitialAds.OnInterstitialAdClosed -= OnAdClosedForMenu;
         InterstitialAds.OnInterstitialAdClosed += OnAdClosedForMenu;
         
@@ -224,6 +233,10 @@ public class GameManager : MonoBehaviour
     private void OnAdClosedForMenu()
     {
         InterstitialAds.OnInterstitialAdClosed -= OnAdClosedForMenu;
+
+        // --- 2. ОБЯЗАТЕЛЬНО ВОЗВРАЩАЕМ ВРЕМЯ И ЗВУК ПЕРЕД ЗАГРУЗКОЙ ---
+        Time.timeScale = 1f;
+
         SceneManager.LoadScene("MainMenu");
     }
 

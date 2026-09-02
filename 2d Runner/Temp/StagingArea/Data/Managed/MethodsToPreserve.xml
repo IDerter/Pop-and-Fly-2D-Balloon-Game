@@ -1,0 +1,108 @@
+<linker>
+	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="AmNuamRunner.BuyUpgrade">
+			<method name="Buy"/>
+			<method name="Buy"/>
+			<method name="Buy"/>
+			<method name="Buy"/>
+			<method name="Buy"/>
+			<method name="Buy"/>
+			<method name="Buy"/>
+			<method name="Buy"/>
+		</type>
+		<type fullname="AmNuamRunner.LanguageChanger">
+			<method name="ChooseNextLanguage"/>
+			<method name="ChooseNextLanguage"/>
+			<method name="ChoosePreviousLanguage"/>
+			<method name="ChoosePreviousLanguage"/>
+		</type>
+		<type fullname="AmNuamRunner.MainMenuSceneChange">
+			<method name="SceneChange"/>
+			<method name="SceneChange"/>
+		</type>
+		<type fullname="AmNuamRunner.VolumeValue">
+			<method name="ChangeVolume"/>
+			<method name="ChangeVolume"/>
+			<method name="SaveSettingsToCloud"/>
+			<method name="SaveSettingsToCloud"/>
+			<method name="SetSliderValue"/>
+			<method name="SetSliderValue"/>
+			<method name="SliderMusic"/>
+			<method name="SliderMusic"/>
+		</type>
+		<type fullname="ButtonsRewarded">
+			<method name="StartRewarded"/>
+			<method name="StartRewarded"/>
+		</type>
+		<type fullname="GameManager">
+			<method name="RestartGame"/>
+		</type>
+		<type fullname="GameOverUIManager">
+			<method name="CompleteShopTutorial"/>
+		</type>
+		<type fullname="LevelChangerDotween">
+			<method name="FadeToLevelWithAd"/>
+		</type>
+		<type fullname="PanelWindow">
+			<method name="ClosePanel"/>
+			<method name="ClosePanel"/>
+			<method name="ClosePanel"/>
+			<method name="ClosePanel"/>
+			<method name="ClosePanel"/>
+			<method name="OpenPanel"/>
+			<method name="OpenPanel"/>
+			<method name="OpenPanel"/>
+			<method name="OpenPanel"/>
+			<method name="OpenPanel"/>
+		</type>
+		<type fullname="YG.PurchaseYG">
+			<method name="BuyPurchase"/>
+			<method name="BuyPurchase"/>
+			<method name="BuyPurchase"/>
+			<method name="BuyPurchase"/>
+		</type>
+	</assembly>
+	<assembly fullname="Unity.TextMeshPro" ignoreIfMissing="1">
+		<type fullname="TMPro.TMP_Text">
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+		</type>
+	</assembly>
+</linker>

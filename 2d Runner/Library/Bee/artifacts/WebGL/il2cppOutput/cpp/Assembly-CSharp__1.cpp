@@ -3413,7 +3413,6 @@ struct BuyUpgrade_tD73BDCF5D07561F2DD8FAD6171D948DAA04B9252  : public MonoBehavi
 struct CameraAspectCrop_t930949A1138644A7E0D2CC813C749FAC2298A530  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ____targetResolution;
-	float ____targetOrthographicSize;
 	Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* ____camera;
 	float ____targetAspect;
 	float ____lastScreenWidth;
@@ -5367,11 +5366,15 @@ inline Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* Component_GetComponent_
 	((  void (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Component_GetComponent_TisIl2CppFullySharedGenericAny_m47CBDD147982125387F078ABBFDAAB92D397A6C2_gshared)((Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
 	return il2cppRetVal;
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CameraAspectCrop_AdjustCameraSize_m226BC0F15CC1AAA2A77DF8DD13BA3C41AD2F3862 (CameraAspectCrop_t930949A1138644A7E0D2CC813C749FAC2298A530* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CameraAspectCrop_AdjustCameraRect_mF1C296E202325529AC0EDC7C6F0CA876391C7BD4 (CameraAspectCrop_t930949A1138644A7E0D2CC813C749FAC2298A530* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Screen_get_width_mF608FF3252213E7EFA1F0D2F744C28110E9E5AC9 (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Screen_get_height_m01A3102DE71EE1FBEA51D09D6B0261CF864FE8F9 (const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Camera_set_orthographicSize_m76DD021032ACB3DDBD052B75EC66DCE3A7295A5C (Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* __this, float ___0_value, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Canvas_ForceUpdateCanvases_m6ECDBC5E85ADA3301BB20611753C45769F15EB51 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D Camera_get_rect_m848C23B32814D1351E43F0A0110DB8ECA19C6772 (Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect_set_width_m93B6217CF3EFF89F9B0C81F34D7345DE90B93E5A_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, float ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect_set_height_mD00038E6E06637137A5626CA8CD421924005BF03_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, float ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect_set_x_mAB91AB71898A20762BC66FD0723C4C739C4C3406_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, float ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect_set_y_mDE91F4B98A6E8623EFB1250FF6526D5DB5855629_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, float ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Camera_set_rect_mA81158BC169AF8674DE240AE9460FC5A0EADBB19 (Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* __this, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___0_value, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, float ___0_x, float ___1_y, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Delegate_t* Delegate_Combine_m1F725AEF318BE6F0426863490691A6F4606E7D00 (Delegate_t* ___0_a, Delegate_t* ___1_b, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Delegate_t* Delegate_Remove_m8B7DD5661308FA972E23CA1CC3FC9CEB355504E3 (Delegate_t* ___0_source, Delegate_t* ___1_value, const RuntimeMethod* method) ;
@@ -5568,6 +5571,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VolumeValue_LoadVolumeData_m89FC31BD1875
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AudioMixer_tE2E8D79241711CDF9AB428C7FB96A35D80E40B04* AudioMixerGroup_get_audioMixer_mFDEDBF17C3B84C6B777D2BF75CF40EECF4C889E4 (AudioMixerGroup_tD29AC8336F7425DF007944F8195CEABF34FC3311* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline (float ___0_a, float ___1_b, float ___2_t, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AudioMixer_SetFloat_m4789959013BE79E4F84F446405914908ADC3F335 (AudioMixer_tE2E8D79241711CDF9AB428C7FB96A35D80E40B04* __this, String_t* ___0_name, float ___1_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Canvas_ForceUpdateCanvases_m6ECDBC5E85ADA3301BB20611753C45769F15EB51 (const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* MoveSlider_get_SliderFillVolume_m1FF5ED82E3AC3D8D9A0F79DC0D4EA88E0374F583_inline (MoveSlider_t14124B63AC88AC4BB00D82D95C3CBABEE55CBAD8* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* MoveSlider_get_SliderFillMusic_mEA1D67FD19636D061FA3403742EA7BBB4EB19A50_inline (MoveSlider_t14124B63AC88AC4BB00D82D95C3CBABEE55CBAD8* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocalizeStringEvent_set_StringReference_mA2F5D77D4713F437EB293BF26DDC9F4149E48249 (LocalizeStringEvent_t83524AA77F75C30A87298998626874EB96431ACF* __this, LocalizedString_tFC63FF1AB38D2E097E3876DF9AA01CD473FF0F28* ___0_value, const RuntimeMethod* method) ;
@@ -10466,18 +10470,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CameraAspectCrop_Awake_mD2A80E8A82B90D0D
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:19>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:21>
 		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_0;
 		L_0 = Component_GetComponent_TisCamera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184_m64AC6C06DD93C5FB249091FEC84FA8475457CCC4(__this, Component_GetComponent_TisCamera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184_m64AC6C06DD93C5FB249091FEC84FA8475457CCC4_RuntimeMethod_var);
 		__this->____camera = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____camera), (void*)L_0);
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:20>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:22>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_1 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&__this->____targetResolution);
 		float L_2 = L_1->___x;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_3 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&__this->____targetResolution);
 		float L_4 = L_3->___y;
 		__this->____targetAspect = ((float)(L_2/L_4));
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:21>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:23>
 		return;
 	}
 }
@@ -10485,9 +10489,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CameraAspectCrop_Awake_mD2A80E8A82B90D0D
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CameraAspectCrop_Start_m157186B7883099BCB79B531394C3D217D065F349 (CameraAspectCrop_t930949A1138644A7E0D2CC813C749FAC2298A530* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:25>
-		CameraAspectCrop_AdjustCameraSize_m226BC0F15CC1AAA2A77DF8DD13BA3C41AD2F3862(__this, NULL);
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:26>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:27>
+		CameraAspectCrop_AdjustCameraRect_mF1C296E202325529AC0EDC7C6F0CA876391C7BD4(__this, NULL);
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:28>
 		return;
 	}
 }
@@ -10495,7 +10499,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CameraAspectCrop_Start_m157186B7883099BC
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CameraAspectCrop_Update_m72D1C87570F6E977B6A25252A388C16164D9ADD0 (CameraAspectCrop_t930949A1138644A7E0D2CC813C749FAC2298A530* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:31>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:33>
 		int32_t L_0;
 		L_0 = Screen_get_width_mF608FF3252213E7EFA1F0D2F744C28110E9E5AC9(NULL);
 		float L_1 = __this->____lastScreenWidth;
@@ -10516,66 +10520,99 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CameraAspectCrop_Update_m72D1C87570F6E97
 
 IL_001c:
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:33>
-		CameraAspectCrop_AdjustCameraSize_m226BC0F15CC1AAA2A77DF8DD13BA3C41AD2F3862(__this, NULL);
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:35>
+		CameraAspectCrop_AdjustCameraRect_mF1C296E202325529AC0EDC7C6F0CA876391C7BD4(__this, NULL);
 	}
 
 IL_0022:
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:35>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:37>
 		return;
 	}
 }
 // Method Definition Index: 50876
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CameraAspectCrop_AdjustCameraSize_m226BC0F15CC1AAA2A77DF8DD13BA3C41AD2F3862 (CameraAspectCrop_t930949A1138644A7E0D2CC813C749FAC2298A530* __this, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CameraAspectCrop_AdjustCameraRect_mF1C296E202325529AC0EDC7C6F0CA876391C7BD4 (CameraAspectCrop_t930949A1138644A7E0D2CC813C749FAC2298A530* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
+	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	float V_2 = 0.0f;
+	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D V_3;
+	memset((&V_3), 0, sizeof(V_3));
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:39>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:41>
 		int32_t L_0;
 		L_0 = Screen_get_width_mF608FF3252213E7EFA1F0D2F744C28110E9E5AC9(NULL);
 		__this->____lastScreenWidth = ((float)L_0);
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:40>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:42>
 		int32_t L_1;
 		L_1 = Screen_get_height_m01A3102DE71EE1FBEA51D09D6B0261CF864FE8F9(NULL);
 		__this->____lastScreenHeight = ((float)L_1);
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:42>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:44>
 		float L_2 = __this->____lastScreenWidth;
 		float L_3 = __this->____lastScreenHeight;
-		V_0 = ((float)(((float)L_2)/L_3));
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:44>
-		float L_4 = V_0;
-		float L_5 = __this->____targetAspect;
-		if ((!(((float)L_4) > ((float)L_5))))
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:45>
+		float L_4 = __this->____targetAspect;
+		V_0 = ((float)(((float)(L_2/L_3))/L_4));
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:48>
+		float L_5 = V_0;
+		if ((!(((float)L_5) < ((float)(1.0f)))))
 		{
-			goto IL_004c;
+			goto IL_0082;
 		}
 	}
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:46>
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_6 = __this->____camera;
-		float L_7 = __this->____targetOrthographicSize;
-		float L_8 = __this->____targetAspect;
-		float L_9 = V_0;
-		NullCheck(L_6);
-		Camera_set_orthographicSize_m76DD021032ACB3DDBD052B75EC66DCE3A7295A5C(L_6, ((float)il2cpp_codegen_multiply(L_7, ((float)(L_8/L_9)))), NULL);
-		goto IL_005d;
-	}
-
-IL_004c:
-	{
 		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:50>
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_6 = __this->____camera;
+		NullCheck(L_6);
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_7;
+		L_7 = Camera_get_rect_m848C23B32814D1351E43F0A0110DB8ECA19C6772(L_6, NULL);
+		V_1 = L_7;
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:51>
+		Rect_set_width_m93B6217CF3EFF89F9B0C81F34D7345DE90B93E5A_inline((&V_1), (1.0f), NULL);
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:52>
+		float L_8 = V_0;
+		Rect_set_height_mD00038E6E06637137A5626CA8CD421924005BF03_inline((&V_1), L_8, NULL);
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:53>
+		Rect_set_x_mAB91AB71898A20762BC66FD0723C4C739C4C3406_inline((&V_1), (0.0f), NULL);
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:54>
+		float L_9 = V_0;
+		Rect_set_y_mDE91F4B98A6E8623EFB1250FF6526D5DB5855629_inline((&V_1), ((float)(((float)il2cpp_codegen_subtract((1.0f), L_9))/(2.0f))), NULL);
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:55>
 		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_10 = __this->____camera;
-		float L_11 = __this->____targetOrthographicSize;
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_11 = V_1;
 		NullCheck(L_10);
-		Camera_set_orthographicSize_m76DD021032ACB3DDBD052B75EC66DCE3A7295A5C(L_10, L_11, NULL);
+		Camera_set_rect_mA81158BC169AF8674DE240AE9460FC5A0EADBB19(L_10, L_11, NULL);
+		return;
 	}
 
-IL_005d:
+IL_0082:
 	{
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:54>
-		Canvas_ForceUpdateCanvases_m6ECDBC5E85ADA3301BB20611753C45769F15EB51(NULL);
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:55>
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:60>
+		float L_12 = V_0;
+		V_2 = ((float)((1.0f)/L_12));
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:61>
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_13 = __this->____camera;
+		NullCheck(L_13);
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_14;
+		L_14 = Camera_get_rect_m848C23B32814D1351E43F0A0110DB8ECA19C6772(L_13, NULL);
+		V_3 = L_14;
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:62>
+		float L_15 = V_2;
+		Rect_set_width_m93B6217CF3EFF89F9B0C81F34D7345DE90B93E5A_inline((&V_3), L_15, NULL);
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:63>
+		Rect_set_height_mD00038E6E06637137A5626CA8CD421924005BF03_inline((&V_3), (1.0f), NULL);
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:64>
+		float L_16 = V_2;
+		Rect_set_x_mAB91AB71898A20762BC66FD0723C4C739C4C3406_inline((&V_3), ((float)(((float)il2cpp_codegen_subtract((1.0f), L_16))/(2.0f))), NULL);
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:65>
+		Rect_set_y_mDE91F4B98A6E8623EFB1250FF6526D5DB5855629_inline((&V_3), (0.0f), NULL);
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:66>
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_17 = __this->____camera;
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_18 = V_3;
+		NullCheck(L_17);
+		Camera_set_rect_mA81158BC169AF8674DE240AE9460FC5A0EADBB19(L_17, L_18, NULL);
+		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:68>
 		return;
 	}
 }
@@ -10588,8 +10625,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CameraAspectCrop__ctor_m6A0C2BE540D072A1
 		memset((&L_0), 0, sizeof(L_0));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_0), (1024.0f), (576.0f), NULL);
 		__this->____targetResolution = L_0;
-		//<source_info:G:/GitHub/PopAndFly2dRunner/Pop-and-Fly-2D-Balloon-Game/2d Runner/Assets/Scripts/CameraAspectCrop.cs:10>
-		__this->____targetOrthographicSize = (5.0f);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}
@@ -30301,6 +30336,42 @@ IL_001a:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_5 = V_0;
 		return L_5;
+	}
+}
+// Method Definition Index: 43776
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect_set_width_m93B6217CF3EFF89F9B0C81F34D7345DE90B93E5A_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, float ___0_value, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = ___0_value;
+		__this->___m_Width = L_0;
+		return;
+	}
+}
+// Method Definition Index: 43778
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect_set_height_mD00038E6E06637137A5626CA8CD421924005BF03_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, float ___0_value, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = ___0_value;
+		__this->___m_Height = L_0;
+		return;
+	}
+}
+// Method Definition Index: 43765
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect_set_x_mAB91AB71898A20762BC66FD0723C4C739C4C3406_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, float ___0_value, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = ___0_value;
+		__this->___m_XMin = L_0;
+		return;
+	}
+}
+// Method Definition Index: 43767
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect_set_y_mDE91F4B98A6E8623EFB1250FF6526D5DB5855629_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, float ___0_value, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = ___0_value;
+		__this->___m_YMin = L_0;
+		return;
 	}
 }
 // Method Definition Index: 44569

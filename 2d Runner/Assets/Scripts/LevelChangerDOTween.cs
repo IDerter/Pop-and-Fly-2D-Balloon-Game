@@ -33,7 +33,9 @@ public class LevelChangerDotween : MonoBehaviour
     {
         _targetLevelIndex = levelIndex; 
         
-        // 1. СРАЗУ показываем рекламу (Требование Яндекса < 0.33 сек)
+        // Мгновенная заморозка
+        Time.timeScale = 0f;
+
         InterstitialAds.OnInterstitialAdClosed += OnAdClosedForTransition;
         AdsManager.Instance._interstitialAds.ShowInterstitialAd();
     }
@@ -41,6 +43,8 @@ public class LevelChangerDotween : MonoBehaviour
     private void OnAdClosedForTransition()
     {
         InterstitialAds.OnInterstitialAdClosed -= OnAdClosedForTransition;
+
+        Time.timeScale = 1f;
 
         // 2. Реклама закончилась (или была пропущена из-за кулдауна). 
         // Теперь делаем плавное затемнение и меняем сцену!

@@ -12,10 +12,10 @@ public class Point : MonoBehaviour
     {
         if (gear != null)
         {
-            // 1. Вычисляем реальную ширину видимой зоны камеры
-            float screenAspect = (float)Screen.width / (float)Screen.height;
+            // ИЗМЕНЕНИЕ ЗДЕСЬ: Вычисляем реальную ширину видимой зоны КАМЕРЫ, а не экрана
+            float cameraAspect = Camera.main.aspect;
             float cameraHeight = Camera.main.orthographicSize;
-            float cameraWidth = cameraHeight * screenAspect;
+            float cameraWidth = cameraHeight * cameraAspect;
 
             // 2. Берем текущую позицию точки (из инспектора)
             Vector3 safePosition = transform.position;
